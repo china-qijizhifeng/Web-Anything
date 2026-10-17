@@ -4638,7 +4638,8 @@
     "files_audited": 336,
     "head": "84ff12366e752943d6c1acfb80344e17a5a53724",
     "requested_ref": null,
-    "root": "/Users/xietianci/.codex/.chatgpt-projects/g-p-6aace13402348191821b145027256c06/work/webanything",
+    "root": ".",
+    "root_kind": "repository_root",
     "scope": "working_tree",
     "status": []
   },
@@ -4656,7 +4657,8 @@
   "upstream": {
     "commit": "7269be89c93b72cf1d8596b4fde65ba1c7453c15",
     "files_audited": 667,
-    "root": "/private/tmp/webharbor-7269be8-tree.dsZ24h",
+    "root": "<external-upstream-tree>",
+    "root_kind": "external_audit_input",
     "root_license_files": [],
     "url": "https://github.com/aiming-lab/WebHarbor.git"
   }

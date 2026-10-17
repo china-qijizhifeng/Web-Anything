@@ -296,7 +296,8 @@ def main() -> int:
         "generated_at": datetime.now(UTC).replace(microsecond=0).isoformat(),
         "disclaimer": "Similarity evidence is an engineering signal, not a copyright determination.",
         "local": {
-            "root": str(root),
+            "root": ".",
+            "root_kind": "repository_root",
             "scope": audit_scope,
             "requested_ref": args.local_ref,
             "head": local_head,
@@ -306,7 +307,8 @@ def main() -> int:
             "deleted_tracked_paths": deleted_paths,
         },
         "upstream": {
-            "root": str(upstream_root),
+            "root": "<external-upstream-tree>",
+            "root_kind": "external_audit_input",
             "url": args.upstream_url,
             "commit": args.upstream_commit,
             "files_audited": len(upstream_records),

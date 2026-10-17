@@ -6,7 +6,7 @@ This staging tree was assembled from:
 - audited upstream commit: `7269be89c93b72cf1d8596b4fde65ba1c7453c15`;
 - an internally developed standalone Interaction Verifier promoted from four
   isolated site workspaces whose canonical pre-promotion trees were identical;
-- new NexGarden CLI, schemas, contract compiler, release gate, documentation,
+- new WebAnything CLI, schemas, contract compiler, release gate, documentation,
   CI, and release scanning code created during the consolidation.
 
 No site candidates, captured screenshots, generated run workspaces, cookies,
