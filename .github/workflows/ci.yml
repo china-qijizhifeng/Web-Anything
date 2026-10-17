@@ -1,0 +1,33 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: tools/codex-mirror-trace/package-lock.json
+      - run: python -m pip install --upgrade pip
+      - run: pip install -e '.[dev,browser,visual,builder]'
+      - run: python -m playwright install --with-deps chromium
+      - run: npm --prefix tools/codex-mirror-trace ci
+      - run: npm --prefix tools/codex-mirror-trace test
+      - run: python -m pytest tests
+      - run: python -m pytest pipeline-tools/interaction-verifier-v1/tests
+      - run: python -m compileall -q src scripts pipeline-tools/interaction-verifier-v1/scripts
+      - run: python scripts/verify_site_inventory.py
+      - run: webanything doctor --json
+      - run: webanything release-scan .

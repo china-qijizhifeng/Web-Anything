@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://webharbor.local/schemas/interaction-diff-v1.schema.json",
+  "title": "WebHarbor source-contract-browser-route interaction diff v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "diff", "analyzer", "status", "site",
+    "inventory_identity", "contract_identity", "browser_identity",
+    "route_map_identity", "joins", "gap_categories", "hard_gap_count",
+    "hard_gaps", "payload_sha256"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "diff": {"const": "webharbor-immersive-interaction-diff-v1"},
+    "analyzer": {"const": "webharbor-immersive-code-analyzer-v1"},
+    "status": {"enum": ["passed", "failed"]},
+    "site": {"type": "string", "minLength": 1},
+    "inventory_identity": {"$ref": "#/$defs/artifactIdentity"},
+    "contract_identity": {"type": "object"},
+    "browser_identity": {"type": "object"},
+    "route_map_identity": {"type": "object"},
+    "joins": {"type": "object"},
+    "gap_categories": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_active_control_missing_from_contract",
+        "declared_control_without_source_basis",
+        "rendered_active_control_missing_from_source_or_contract",
+        "source_control_hidden_disabled_unhit_testable_or_absent",
+        "local_target_without_actual_route",
+        "actual_public_get_route_omitted_from_declared_or_reachable_graph",
+        "code_browser_route_query_or_method_mismatch",
+        "unexpected_external_target",
+        "unresolved_dynamic_action_or_target",
+        "duplicate_or_generic_fallback_relationship"
+      ],
+      "properties": {
+        "source_active_control_missing_from_contract": {"$ref": "#/$defs/gaps"},
+        "declared_control_without_source_basis": {"$ref": "#/$defs/gaps"},
+        "rendered_active_control_missing_from_source_or_contract": {"$ref": "#/$defs/gaps"},
+        "source_control_hidden_disabled_unhit_testable_or_absent": {"$ref": "#/$defs/gaps"},
+        "local_target_without_actual_route": {"$ref": "#/$defs/gaps"},
+        "actual_public_get_route_omitted_from_declared_or_reachable_graph": {"$ref": "#/$defs/gaps"},
+        "code_browser_route_query_or_method_mismatch": {"$ref": "#/$defs/gaps"},
+        "unexpected_external_target": {"$ref": "#/$defs/gaps"},
+        "unresolved_dynamic_action_or_target": {"$ref": "#/$defs/gaps"},
+        "duplicate_or_generic_fallback_relationship": {"$ref": "#/$defs/gaps"}
+      }
+    },
+    "hard_gap_count": {"type": "integer", "minimum": 0},
+    "hard_gaps": {"$ref": "#/$defs/gaps"},
+    "payload_sha256": {"$ref": "#/$defs/sha256"},
+    "candidate_fingerprint": {"type": "object"}
+  },
+  "allOf": [{
+    "if": {"properties": {"status": {"const": "passed"}}},
+    "then": {
+      "properties": {
+        "hard_gap_count": {"const": 0},
+        "hard_gaps": {"maxItems": 0}
+      }
+    }
+  }],
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "artifactIdentity": {
+      "type": "object",
+      "required": ["schema", "analyzer", "analyzer_implementation_sha256", "payload_sha256"],
+      "properties": {
+        "schema": {"type": "string", "minLength": 1},
+        "analyzer": {"type": "string", "minLength": 1},
+        "analyzer_implementation_sha256": {"$ref": "#/$defs/sha256"},
+        "payload_sha256": {"$ref": "#/$defs/sha256"},
+        "path": {"type": "string"}
+      }
+    },
+    "gaps": {"type": "array", "items": {"type": "object"}}
+  }
+}

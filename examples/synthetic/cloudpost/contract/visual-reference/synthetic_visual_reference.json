@@ -1,0 +1,671 @@
+{
+  "auth": {
+    "profile_id": null,
+    "used": false
+  },
+  "blocked_resource_origin_sha256s": [],
+  "capture_spec_sha256": "cccb04088bcd789ca54fb7761c0272f5709e5b7998d08d0c576fc206a63824b9",
+  "content_strategy": "source_visible",
+  "created_at": "2026-08-29T13:05:12Z",
+  "raw_material_persisted": true,
+  "reference_sha256": "8402947f3d5f3cdfc97d2542aa601bed5fdee55c9e61266e9d4f590da2ed5b51",
+  "routes": [
+    {
+      "comparison_screenshot": {
+        "path": "routes/route_login.comparison.png",
+        "sha256": "66df86e03985bb48cebc8653ea943e0bda2e2e7c163096f8e54ea80729a6f851"
+      },
+      "geometry": {
+        "path": "routes/route_login.geometry.json",
+        "sha256": "1fbc111f850446cef5bc2088dafd5bf8357f8136a18cd1e4354eeedf82361638"
+      },
+      "id": "route_login",
+      "metrics": {
+        "columns": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.507,
+          0.507,
+          0.507,
+          0.507,
+          0.507,
+          0.507,
+          0.507,
+          0.507,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "counts": {
+          "container": 1,
+          "control": 2,
+          "identity": 3,
+          "media": 0,
+          "text": 5
+        },
+        "coverage": {
+          "container": 0.151396,
+          "control": 0.012167,
+          "identity": 0.018069,
+          "media": 0.0,
+          "text": 0.035113
+        },
+        "landmarks": {
+          "main": {
+            "height": 1000,
+            "width": 1440,
+            "x": 0,
+            "y": 0
+          }
+        },
+        "max_rectangle_coverage": 0.151396,
+        "overlap": {
+          "container": 0.0,
+          "control": 0.0,
+          "identity": 0.049808,
+          "media": 0.0,
+          "text": 0.0
+        },
+        "spacing": [
+          0.0,
+          0.016,
+          0.022,
+          0.025
+        ]
+      },
+      "quality": {
+        "failures": [],
+        "metrics": {
+          "landmark_count": 1,
+          "max_overlap_ratio": 0.049808,
+          "max_rectangle_coverage": 0.151396,
+          "normalization": {
+            "dropped_nested_media": 0,
+            "dropped_overlaps": 0,
+            "dropped_page_ancestors": 2,
+            "dropped_transparent_ancestors": 1,
+            "input_count": 14,
+            "output_count": 11
+          },
+          "saturated_columns": 0
+        },
+        "status": "passed"
+      },
+      "screenshot": {
+        "path": "routes/route_login.source-visible.png",
+        "sha256": "8c463174a82883bb23ba2fbf9c13026b1307ab585bad8417b721a40d1b1d587a"
+      },
+      "source_url_sha256": "d9e24051768adefcf30328afa7199e0ece43a920275fcb2afb2f68fd13539ddd",
+      "synthetic_route": "/login"
+    },
+    {
+      "comparison_screenshot": {
+        "path": "routes/route_inbox.comparison.png",
+        "sha256": "2cfe26122ce178f09cf3747a510631aaf8ddb6986769f4a94694d67ba7b20fc8"
+      },
+      "geometry": {
+        "path": "routes/route_inbox.geometry.json",
+        "sha256": "9a6557d9ac03d3c1cc86491b8596ad79c6c1a60b7a26ec5c29cb8c7320f0cb8e"
+      },
+      "id": "route_inbox",
+      "metrics": {
+        "columns": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972
+        ],
+        "counts": {
+          "container": 10,
+          "control": 21,
+          "identity": 3,
+          "media": 0,
+          "text": 29
+        },
+        "coverage": {
+          "container": 0.966778,
+          "control": 0.241762,
+          "identity": 0.007128,
+          "media": 0.0,
+          "text": 0.086813
+        },
+        "landmarks": {
+          "aside": {
+            "height": 932,
+            "width": 248,
+            "x": 0,
+            "y": 68
+          },
+          "header": {
+            "height": 68,
+            "width": 1440,
+            "x": 0,
+            "y": 0
+          },
+          "main": {
+            "height": 904,
+            "width": 1176,
+            "x": 248,
+            "y": 82
+          },
+          "nav": {
+            "height": 168,
+            "width": 220,
+            "x": 14,
+            "y": 157
+          }
+        },
+        "max_rectangle_coverage": 0.738267,
+        "overlap": {
+          "container": 0.356768,
+          "control": 0.0,
+          "identity": 0.126267,
+          "media": 0.0,
+          "text": 0.001368
+        },
+        "spacing": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.005,
+          0.012,
+          0.018,
+          0.024,
+          0.525
+        ]
+      },
+      "quality": {
+        "failures": [],
+        "metrics": {
+          "landmark_count": 4,
+          "max_overlap_ratio": 0.356768,
+          "max_rectangle_coverage": 0.738267,
+          "normalization": {
+            "dropped_nested_media": 0,
+            "dropped_overlaps": 0,
+            "dropped_page_ancestors": 3,
+            "dropped_transparent_ancestors": 5,
+            "input_count": 71,
+            "output_count": 63
+          },
+          "saturated_columns": 5
+        },
+        "status": "passed"
+      },
+      "screenshot": {
+        "path": "routes/route_inbox.source-visible.png",
+        "sha256": "496f3192ee7a8eab95bb49a43191a05e5eb62a92d8c487588bf00398ee4b9ea8"
+      },
+      "source_url_sha256": "58401aea210d865e76238e98512934799c4e29c7b6c19dbcd5f9a964a2f0fea6",
+      "synthetic_route": "/inbox"
+    },
+    {
+      "comparison_screenshot": {
+        "path": "routes/route_message.comparison.png",
+        "sha256": "c652a1e0f0b23c37ee5bb066117274c5f2e2fc8aa60db886b8cacd9e437253b9"
+      },
+      "geometry": {
+        "path": "routes/route_message.geometry.json",
+        "sha256": "0467bcb52c19256e87cf0628ace84b00c433df4a09821b21726588a13fb8ffbb"
+      },
+      "id": "route_message",
+      "metrics": {
+        "columns": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972
+        ],
+        "counts": {
+          "container": 5,
+          "control": 13,
+          "identity": 4,
+          "media": 0,
+          "text": 17
+        },
+        "coverage": {
+          "container": 0.966778,
+          "control": 0.053619,
+          "identity": 0.008472,
+          "media": 0.0,
+          "text": 0.08578
+        },
+        "landmarks": {
+          "aside": {
+            "height": 932,
+            "width": 248,
+            "x": 0,
+            "y": 68
+          },
+          "header": {
+            "height": 68,
+            "width": 1440,
+            "x": 0,
+            "y": 0
+          },
+          "main": {
+            "height": 904,
+            "width": 1176,
+            "x": 248,
+            "y": 82
+          },
+          "nav": {
+            "height": 168,
+            "width": 220,
+            "x": 14,
+            "y": 157
+          }
+        },
+        "max_rectangle_coverage": 0.738267,
+        "overlap": {
+          "container": 0.133295,
+          "control": 0.0,
+          "identity": 0.10623,
+          "media": 0.0,
+          "text": 0.001384
+        },
+        "spacing": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.004,
+          0.004,
+          0.008,
+          0.02,
+          0.021,
+          0.024
+        ]
+      },
+      "quality": {
+        "failures": [],
+        "metrics": {
+          "landmark_count": 4,
+          "max_overlap_ratio": 0.133295,
+          "max_rectangle_coverage": 0.738267,
+          "normalization": {
+            "dropped_nested_media": 0,
+            "dropped_overlaps": 0,
+            "dropped_page_ancestors": 3,
+            "dropped_transparent_ancestors": 8,
+            "input_count": 50,
+            "output_count": 39
+          },
+          "saturated_columns": 5
+        },
+        "status": "passed"
+      },
+      "screenshot": {
+        "path": "routes/route_message.source-visible.png",
+        "sha256": "575adca94784f38e51044a8dfcc5839218fe5a1c66fdbdfab17990f888345ca7"
+      },
+      "source_url_sha256": "caf10153280ad98ba4ec42135014eea14d5ae61e06cc96e54e89b8c2c0e041e9",
+      "synthetic_route": "/message/msg_004"
+    },
+    {
+      "comparison_screenshot": {
+        "path": "routes/route_compose.comparison.png",
+        "sha256": "49b1b4c5b00eeddc61a145a6b7a06d484f7d25f1581c11e76213e0ac246ae26b"
+      },
+      "geometry": {
+        "path": "routes/route_compose.geometry.json",
+        "sha256": "60e305809199989de0519e312caf2c394c3bce0df20422e0cafc0c2f89840222"
+      },
+      "id": "route_compose",
+      "metrics": {
+        "columns": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972
+        ],
+        "counts": {
+          "container": 7,
+          "control": 13,
+          "identity": 3,
+          "media": 0,
+          "text": 18
+        },
+        "coverage": {
+          "container": 0.966778,
+          "control": 0.225837,
+          "identity": 0.007128,
+          "media": 0.0,
+          "text": 0.084342
+        },
+        "landmarks": {
+          "aside": {
+            "height": 932,
+            "width": 248,
+            "x": 0,
+            "y": 68
+          },
+          "header": {
+            "height": 68,
+            "width": 1440,
+            "x": 0,
+            "y": 0
+          },
+          "main": {
+            "height": 904,
+            "width": 1176,
+            "x": 248,
+            "y": 82
+          },
+          "nav": {
+            "height": 168,
+            "width": 220,
+            "x": 14,
+            "y": 157
+          }
+        },
+        "max_rectangle_coverage": 0.738267,
+        "overlap": {
+          "container": 0.415728,
+          "control": 0.0,
+          "identity": 0.126267,
+          "media": 0.0,
+          "text": 0.026438
+        },
+        "spacing": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.001,
+          0.001,
+          0.004,
+          0.004,
+          0.004,
+          0.02,
+          0.024,
+          0.135
+        ]
+      },
+      "quality": {
+        "failures": [],
+        "metrics": {
+          "landmark_count": 4,
+          "max_overlap_ratio": 0.415728,
+          "max_rectangle_coverage": 0.738267,
+          "normalization": {
+            "dropped_nested_media": 0,
+            "dropped_overlaps": 0,
+            "dropped_page_ancestors": 3,
+            "dropped_transparent_ancestors": 3,
+            "input_count": 47,
+            "output_count": 41
+          },
+          "saturated_columns": 5
+        },
+        "status": "passed"
+      },
+      "screenshot": {
+        "path": "routes/route_compose.source-visible.png",
+        "sha256": "c269fd636a9c8929b1a120d20b64d58524bff2867b19e1a81ef987dcb8e1041b"
+      },
+      "source_url_sha256": "e205af95acb4546760bdd8157163b590a1ef44f274daade4bc4884de527b8239",
+      "synthetic_route": "/compose"
+    },
+    {
+      "comparison_screenshot": {
+        "path": "routes/route_settings.comparison.png",
+        "sha256": "3fba6e38eea8db7557214674f6c342581bb84451dde168cca7326090dc4bd980"
+      },
+      "geometry": {
+        "path": "routes/route_settings.geometry.json",
+        "sha256": "9f90aeb5adde9f0f0893cf0d54a6c83fb620a1c8e14e02985797aa97fd68ba2e"
+      },
+      "id": "route_settings",
+      "metrics": {
+        "columns": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972,
+          0.972
+        ],
+        "counts": {
+          "container": 7,
+          "control": 11,
+          "identity": 3,
+          "media": 0,
+          "text": 19
+        },
+        "coverage": {
+          "container": 0.966778,
+          "control": 0.051874,
+          "identity": 0.007128,
+          "media": 0.0,
+          "text": 0.067435
+        },
+        "landmarks": {
+          "aside": {
+            "height": 932,
+            "width": 248,
+            "x": 0,
+            "y": 68
+          },
+          "header": {
+            "height": 68,
+            "width": 1440,
+            "x": 0,
+            "y": 0
+          },
+          "main": {
+            "height": 904,
+            "width": 1176,
+            "x": 248,
+            "y": 82
+          },
+          "nav": {
+            "height": 168,
+            "width": 220,
+            "x": 14,
+            "y": 157
+          }
+        },
+        "max_rectangle_coverage": 0.738267,
+        "overlap": {
+          "container": 0.239323,
+          "control": 0.0,
+          "identity": 0.126267,
+          "media": 0.0,
+          "text": 0.001761
+        },
+        "spacing": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.002,
+          0.004,
+          0.008,
+          0.024,
+          0.476
+        ]
+      },
+      "quality": {
+        "failures": [],
+        "metrics": {
+          "landmark_count": 4,
+          "max_overlap_ratio": 0.239323,
+          "max_rectangle_coverage": 0.738267,
+          "normalization": {
+            "dropped_nested_media": 0,
+            "dropped_overlaps": 0,
+            "dropped_page_ancestors": 3,
+            "dropped_transparent_ancestors": 6,
+            "input_count": 49,
+            "output_count": 40
+          },
+          "saturated_columns": 5
+        },
+        "status": "passed"
+      },
+      "screenshot": {
+        "path": "routes/route_settings.source-visible.png",
+        "sha256": "9c2414d20e4626076dcfabf2c8ac331e9a81fdfc05194a2b0721c546a66d32db"
+      },
+      "source_url_sha256": "972f867dd4ee762692e3481f97314af0609c697cd09fadf2d26cb4d131f0dd22",
+      "synthetic_route": "/settings"
+    }
+  ],
+  "sanitizer_version": 4,
+  "schema": "webanything-synthetic-visual-reference-v1",
+  "schema_version": 1,
+  "site": "cloudpost",
+  "source_origin_sha256": "4c466522f2c5bcecaca3db070f3edd0de142970e74ec935289f1a41abefab8fa",
+  "state": "reference_frozen",
+  "thresholds": {
+    "columns": 0.72,
+    "composite": 0.78,
+    "density": 0.72,
+    "geometry": 0.74,
+    "masked_region": 0.7,
+    "spacing": 0.68
+  },
+  "viewport": {
+    "height": 1000,
+    "width": 1440
+  },
+  "weights": {
+    "columns": 0.15,
+    "density": 0.15,
+    "geometry": 0.3,
+    "masked_region": 0.3,
+    "spacing": 0.1
+  }
+}

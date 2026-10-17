@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://webharbor.local/schemas/interaction-verifier-terminal-result-v1.schema.json",
+  "title": "Standalone WebHarbor interaction verifier terminal result v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "terminal_result", "status", "site", "candidate", "candidate_identity_sha256", "candidate_tree_sha256", "input_contract", "artifacts", "repair_package", "failures", "exhaustive"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "terminal_result": {"const": "webharbor-interaction-verifier-terminal-v1"},
+    "status": {"enum": ["passed", "failed", "invalid_contract", "candidate_mutated", "invalid_input"]},
+    "site": {"type": "string", "minLength": 1},
+    "candidate": {"type": "object", "required": ["workspace", "site_path", "pre_hash", "post_hash", "unchanged"]},
+    "candidate_identity_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+    "candidate_tree_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "input_contract": {"type": "object", "required": ["path", "sha256"]},
+    "surface": {"type": "object"},
+    "budgets": {"type": "object"},
+    "browser": {"type": "object"},
+    "artifacts": {"type": "object"},
+    "closure": {"type": "object"},
+    "repair_package": {"type": "object", "required": ["path", "status", "group_count"]},
+    "failures": {"type": "array", "items": {"type": "object"}}
+    ,"exhaustive": {"type": "object", "required": ["status", "plan", "checkpoint_dir", "batch_size", "resume", "merge"]}
+  }
+}

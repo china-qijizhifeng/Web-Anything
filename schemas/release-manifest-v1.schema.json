@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://webanything.dev/schemas/release-manifest-v1.schema.json",
+  "title": "WebAnything release manifest",
+  "type": "object",
+  "required": ["schema", "site", "profile", "candidate_sha256", "seed_reset", "privacy_scan", "verification"],
+  "properties": {
+    "schema": {"const": "webanything-release-manifest-v1"},
+    "site": {"type": "string"},
+    "profile": {"enum": ["task-driven", "immersive", "authenticated"]},
+    "candidate_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "seed_reset": {
+      "type": "object",
+      "required": ["status", "seed_sha256", "runtime_sha256"],
+      "properties": {
+        "status": {"const": "passed"},
+        "seed_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "runtime_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "privacy_scan": {"type": "object", "properties": {"status": {"const": "passed"}}},
+    "verification": {"type": "object"},
+    "artifact_tree_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://webanything.dev/schemas/release-gate-result-v1.schema.json",
+  "title": "Authoritative WebAnything release gate result v1",
+  "type": "object",
+  "required": ["schema", "site", "profile", "status", "candidate_identity_sha256", "candidate_sha256", "reason_codes", "required_gates"],
+  "properties": {
+    "schema": {"const": "webanything-release-gate-result-v1"},
+    "status": {"enum": ["passed", "failed"]},
+    "site": {"type": "string", "minLength": 1},
+    "profile": {"enum": ["task-driven", "immersive", "authenticated", "benchmark_synthetic", "benchmark_synthetic_replay"]},
+    "build_mode": {"enum": ["mirror", "benchmark_synthetic", "benchmark_synthetic_replay"]},
+    "candidate_identity_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+    "candidate_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+    "reason_codes": {"type": "array", "items": {"type": "object", "required": ["code", "message"]}},
+    "required_gates": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["status", "artifacts"],
+        "properties": {
+          "status": {"enum": ["passed", "failed"]},
+          "artifacts": {"type": "integer", "minimum": 0}
+        }
+      }
+    }
+  },
+  "allOf": [{
+    "if": {"properties": {"status": {"const": "passed"}}},
+    "then": {"properties": {"reason_codes": {"maxItems": 0}}}
+  }, {
+    "if": {"properties": {"profile": {"const": "benchmark_synthetic_replay"}}},
+    "then": {
+      "required": ["build_mode"],
+      "properties": {
+        "build_mode": {"const": "benchmark_synthetic_replay"},
+        "required_gates": {
+          "required": ["replay_contract", "capture_bundle", "product_coverage", "route_interaction", "auth_workflows", "task_execution", "semantic_task_execution", "sqlite_reset", "state_persistence", "determinism", "resource_privacy", "proxy_prefix", "concurrency_isolation", "candidate_immutability", "visual_fidelity"]
+        }
+      }
+    }
+  }, {
+    "if": {"properties": {"profile": {"const": "benchmark_synthetic"}}},
+    "then": {
+      "required": ["build_mode"],
+      "properties": {
+        "build_mode": {"const": "benchmark_synthetic"},
+        "required_gates": {
+          "required": ["synthetic_contract", "task_execution", "browser_state_reset", "state_persistence", "determinism", "resource_privacy", "content_policy", "candidate_immutability", "visual_fidelity"]
+        }
+      }
+    }
+  }, {
+    "if": {"properties": {"profile": {"enum": ["task-driven", "immersive", "authenticated"]}}},
+    "then": {
+      "properties": {
+        "required_gates": {
+          "required": ["fidelity", "quality", "interaction", "resource_privacy", "runtime_reset", "candidate_immutability"]
+        }
+      }
+    }
+  }]
+}

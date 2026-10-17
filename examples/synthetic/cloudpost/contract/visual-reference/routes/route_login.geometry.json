@@ -1,0 +1,136 @@
+{
+  "elements": [
+    {
+      "category": "container",
+      "height": 507,
+      "position": "flow",
+      "radius": 22,
+      "surface": true,
+      "width": 430,
+      "x": 505,
+      "y": 247
+    },
+    {
+      "category": "identity",
+      "height": 67,
+      "position": "flow",
+      "radius": 12,
+      "surface": true,
+      "width": 348,
+      "x": 546,
+      "y": 550
+    },
+    {
+      "category": "text",
+      "height": 66,
+      "position": "flow",
+      "radius": 0,
+      "surface": false,
+      "width": 348,
+      "x": 546,
+      "y": 393
+    },
+    {
+      "category": "text",
+      "height": 50,
+      "position": "flow",
+      "radius": 0,
+      "surface": false,
+      "width": 348,
+      "x": 546,
+      "y": 475
+    },
+    {
+      "category": "control",
+      "height": 39,
+      "position": "flow",
+      "radius": 9,
+      "surface": true,
+      "width": 348,
+      "x": 546,
+      "y": 639
+    },
+    {
+      "category": "text",
+      "height": 17,
+      "position": "flow",
+      "radius": 0,
+      "surface": false,
+      "width": 348,
+      "x": 546,
+      "y": 364
+    },
+    {
+      "category": "control",
+      "height": 21,
+      "position": "flow",
+      "radius": 0,
+      "surface": false,
+      "width": 188,
+      "x": 626,
+      "y": 691
+    },
+    {
+      "category": "identity",
+      "height": 52,
+      "position": "flow",
+      "radius": 11,
+      "surface": true,
+      "width": 52,
+      "x": 546,
+      "y": 288
+    },
+    {
+      "category": "text",
+      "height": 15,
+      "position": "flow",
+      "radius": 0,
+      "surface": false,
+      "width": 170,
+      "x": 609,
+      "y": 587
+    },
+    {
+      "category": "text",
+      "height": 19,
+      "position": "flow",
+      "radius": 0,
+      "surface": false,
+      "width": 91,
+      "x": 609,
+      "y": 565
+    },
+    {
+      "category": "identity",
+      "height": 36,
+      "position": "flow",
+      "radius": 50,
+      "surface": true,
+      "width": 36,
+      "x": 561,
+      "y": 566
+    }
+  ],
+  "landmarks": {
+    "main": {
+      "height": 1000,
+      "width": 1440,
+      "x": 0,
+      "y": 0
+    }
+  },
+  "normalization": {
+    "dropped_nested_media": 0,
+    "dropped_overlaps": 0,
+    "dropped_page_ancestors": 2,
+    "dropped_transparent_ancestors": 1,
+    "input_count": 14,
+    "output_count": 11
+  },
+  "schema": "webanything-sanitized-dom-geometry-v1",
+  "truncated": false,
+  "viewport": {
+    "height": 1000,
+    "width": 1440
+  }
+}

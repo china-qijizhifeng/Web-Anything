@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://webharbor.local/schemas/interaction-closure-v2.schema.json",
+  "title": "WebHarbor immersive interaction closure v2",
+  "type": "object",
+  "required": [
+    "schema_version", "closure", "tool", "status", "site",
+    "candidate_fingerprint", "code_inventory", "interaction_diff", "surface",
+    "viewport", "crawl", "route_graph", "page_archetypes",
+    "control_inventory", "control_outcomes", "critical_workflows",
+    "raw_counts", "measured_rates", "unresolved_items", "failures"
+  ],
+  "properties": {
+    "schema_version": {"const": 2},
+    "closure": {"const": "webharbor-standalone-interaction-closure-v2"},
+    "tool": {"const": "webharbor-standalone-interaction-verifier-v1"},
+    "status": {"enum": ["passed", "failed"]},
+    "site": {"type": "string", "minLength": 1},
+    "profile": {"const": "immersive"},
+    "candidate_fingerprint": {
+      "type": "object",
+      "required": [
+        "algorithm", "sha256", "site_implementation", "source_contract_sha256",
+        "code_inventory_sha256", "interaction_diff_sha256", "analyzer",
+        "analyzer_implementation_sha256", "verifier"
+      ]
+    },
+    "code_inventory": {"type": "object", "required": ["path", "schema", "analyzer", "analyzer_implementation_sha256", "payload_sha256"]},
+    "interaction_diff": {"type": "object", "required": ["path", "schema", "analyzer", "payload_sha256", "hard_gap_count"]},
+    "contract_identity": {"type": "object"},
+    "surface": {"type": "object", "required": ["base_url", "origin", "gateway_prefix"]},
+    "viewport": {"type": "object", "required": ["width", "height"]},
+    "crawl": {"type": "object", "required": ["max_pages", "max_depth", "visited_pages", "maximum_depth_visited", "inventory_complete"]},
+    "route_graph": {"type": "object", "required": ["declared_edges", "observed_edges"]},
+    "page_archetypes": {"type": "array"},
+    "control_inventory": {"type": "array"},
+    "source_control_dom_states": {"type": "array"},
+    "control_outcomes": {"type": "array"},
+    "disclosure_proofs": {"type": "array"},
+    "critical_workflows": {"type": "array"},
+    "canonical_control_families": {"type": "array"},
+    "site_contract_derivation": {"type": "object"},
+    "loaded_local_resources": {"type": "array"},
+    "unexpected_requests": {"type": "array"},
+    "unresolved_items": {"type": "array"},
+    "failures": {"type": "array"},
+    "raw_counts": {
+      "type": "object",
+      "required": [
+        "inventoried_active_controls", "resolved_active_controls",
+        "source_active_controls", "actual_public_get_routes", "triangulation_hard_gaps",
+        "critical_workflows", "critical_workflows_passed",
+        "dead_empty_or_404_destinations", "defensive_pages",
+        "unexpected_external_requests", "unaudited_limit"
+      ]
+    },
+    "measured_rates": {
+      "type": "object",
+      "required": ["active_control_resolution_percent", "critical_workflow_semantics_percent"],
+      "properties": {
+        "active_control_resolution_percent": {"type": "number", "minimum": 0, "maximum": 100},
+        "critical_workflow_semantics_percent": {"type": "number", "minimum": 0, "maximum": 100}
+      }
+    },
+    "repair_package": {"type": "object"}
+  },
+  "allOf": [{
+    "if": {"properties": {"status": {"const": "passed"}}},
+    "then": {
+      "properties": {
+        "failures": {"maxItems": 0},
+        "unresolved_items": {"maxItems": 0},
+        "raw_counts": {"properties": {"triangulation_hard_gaps": {"const": 0}}},
+        "measured_rates": {
+          "properties": {
+            "active_control_resolution_percent": {"const": 100},
+            "critical_workflow_semantics_percent": {"const": 100}
+          }
+        }
+      }
+    }
+  }]
+}

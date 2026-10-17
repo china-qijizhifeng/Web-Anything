@@ -1,0 +1,8 @@
+{
+  "schema": "webanything-run-config-v1",
+  "url": "https://example.com/",
+  "site": "example",
+  "profile": "task-driven",
+  "viewport": {"width": 1440, "height": 1000},
+  "budgets": {"max_pages": 12, "max_assets": 160}
+}

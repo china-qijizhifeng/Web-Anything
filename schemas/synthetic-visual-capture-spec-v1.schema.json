@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://webanything.dev/schemas/synthetic-visual-capture-spec-v1.schema.json",
+  "title": "WebAnything authenticated synthetic visual capture spec v1",
+  "type": "object",
+  "required": ["schema", "site", "source_origin", "viewport", "routes", "robots_policy", "auth"],
+  "properties": {
+    "schema": {"const": "webanything-synthetic-visual-capture-spec-v1"},
+    "site": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_]*$"},
+    "source_origin": {"type": "string", "format": "uri", "pattern": "^https?://"},
+    "viewport": {
+      "type": "object",
+      "required": ["width", "height"],
+      "properties": {
+        "width": {"type": "integer", "minimum": 320},
+        "height": {"type": "integer", "minimum": 320}
+      },
+      "additionalProperties": false
+    },
+    "robots_policy": {"enum": ["respect", "not_applicable_local_test"]},
+    "user_agent": {"type": "string", "minLength": 1},
+    "browser_profile": {
+      "type": "object",
+      "properties": {
+        "locale": {"type": "string", "pattern": "^[A-Za-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$"},
+        "timezone_id": {"type": "string", "pattern": "^[A-Za-z0-9_+.-]+(?:/[A-Za-z0-9_+.-]+)+$"},
+        "accept_language": {"type": "string", "pattern": "^[A-Za-z0-9*;,=. -]+$"}
+      },
+      "additionalProperties": false
+    },
+    "allowed_resource_origins": {"type": "array", "items": {"type": "string", "format": "uri"}, "uniqueItems": true},
+    "allowed_route_origins": {"type": "array", "items": {"type": "string", "format": "uri"}, "uniqueItems": true},
+    "auth": {
+      "type": "object",
+      "required": ["required"],
+      "properties": {"required": {"type": "boolean"}},
+      "additionalProperties": false
+    },
+    "routes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "source_url", "synthetic_route"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^route_[a-z0-9_]+$"},
+          "source_url": {"type": "string", "format": "uri", "pattern": "^https?://"},
+          "synthetic_route": {"type": "string", "pattern": "^/"},
+          "comparison_mode": {"enum": ["source_visible", "content_neutral"]},
+          "wait_for": {"type": "string", "minLength": 1},
+          "settle_ms": {"type": "integer", "minimum": 0, "maximum": 10000},
+          "authenticated_selector": {"type": "string", "minLength": 1},
+          "auth_failure_selectors": {"type": "array", "items": {"type": "string", "minLength": 1}},
+          "auth_failure_url_contains": {"type": "array", "items": {"type": "string", "minLength": 1}},
+          "private_selectors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["selector", "replacement"],
+              "properties": {
+                "selector": {"type": "string", "minLength": 1, "maxLength": 300},
+                "replacement": {"type": "string", "maxLength": 160}
+              },
+              "additionalProperties": false
+            }
+          },
+          "allow_quality_failures": {
+            "type": "array",
+            "items": {"enum": ["landmarks_missing"]},
+            "uniqueItems": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "thresholds": {
+      "type": "object",
+      "properties": {
+        "composite": {"type": "number", "minimum": 0, "maximum": 1},
+        "masked_region": {"type": "number", "minimum": 0, "maximum": 1},
+        "geometry": {"type": "number", "minimum": 0, "maximum": 1},
+        "density": {"type": "number", "minimum": 0, "maximum": 1},
+        "columns": {"type": "number", "minimum": 0, "maximum": 1},
+        "spacing": {"type": "number", "minimum": 0, "maximum": 1}
+      },
+      "additionalProperties": false
+    },
+    "weights": {
+      "type": "object",
+      "required": ["masked_region", "geometry", "density", "columns", "spacing"],
+      "properties": {
+        "masked_region": {"type": "number", "minimum": 0, "maximum": 1},
+        "geometry": {"type": "number", "minimum": 0, "maximum": 1},
+        "density": {"type": "number", "minimum": 0, "maximum": 1},
+        "columns": {"type": "number", "minimum": 0, "maximum": 1},
+        "spacing": {"type": "number", "minimum": 0, "maximum": 1}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://webanything.dev/schemas/release-manifest-v2.schema.json",
+  "title": "Hash-bound WebAnything release manifest v2",
+  "type": "object",
+  "required": ["schema", "site", "profile", "candidate_sha256", "candidate_identity", "seed_reset", "privacy_scan", "verification", "release_gate", "deployment_binding", "release_status"],
+  "properties": {
+    "schema": {"const": "webanything-release-manifest-v2"},
+    "site": {"type": "string", "minLength": 1},
+    "profile": {"enum": ["task-driven", "immersive", "authenticated", "benchmark_synthetic", "benchmark_synthetic_replay"]},
+    "build_mode": {"enum": ["mirror", "benchmark_synthetic", "benchmark_synthetic_replay"]},
+    "candidate_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "candidate_identity": {
+      "type": "object",
+      "required": ["schema", "sha256", "tree", "contracts", "configuration"],
+      "properties": {
+        "schema": {"const": "webanything-candidate-identity-v1"},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "tree": {"type": "object", "required": ["algorithm", "sha256", "files", "bytes"]},
+        "contracts": {"type": "array"},
+        "references": {"type": "array", "minItems": 1},
+        "configuration": {"type": "object"}
+      }
+    },
+    "seed_reset": {"type": "object", "required": ["status"], "properties": {"status": {"const": "passed"}}},
+    "privacy_scan": {"type": "object", "required": ["status"], "properties": {"status": {"const": "passed"}}},
+    "verification": {"type": "object", "required": ["status"], "properties": {"status": {"const": "passed"}}},
+    "visual_reference": {
+      "type": "object",
+      "required": ["status", "manifest_sha256", "reference_sha256", "raw_material_persisted", "comparison_mode"],
+      "properties": {
+        "status": {"const": "passed"},
+        "manifest_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "reference_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "raw_material_persisted": {"const": false},
+        "comparison_mode": {"enum": ["content_neutral", "source_visible"]}
+      }
+    },
+    "release_gate": {"type": "object", "required": ["path", "sha256"]},
+    "deployment_binding": {
+      "type": "object",
+      "required": ["algorithm", "candidate_sha256", "candidate_identity_sha256"],
+      "properties": {
+        "algorithm": {"type": "string"},
+        "candidate_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "candidate_identity_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "synthetic_contract_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "visual_reference_manifest_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "visual_reference_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "capture_bundle_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "seed_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "concurrency": {
+      "type": "object",
+      "required": ["isolation", "max_parallel_sessions"],
+      "properties": {
+        "isolation": {"enum": ["isolated_instance", "session_partitioned"]},
+        "max_parallel_sessions": {"type": "integer", "minimum": 1}
+      }
+    },
+    "release_status": {"const": "frozen"}
+  },
+  "allOf": [{
+    "if": {"properties": {"profile": {"const": "benchmark_synthetic_replay"}}},
+    "then": {
+      "required": ["build_mode", "visual_reference", "concurrency"],
+      "properties": {
+        "build_mode": {"const": "benchmark_synthetic_replay"},
+        "deployment_binding": {
+          "required": ["synthetic_contract_sha256", "visual_reference_manifest_sha256", "visual_reference_sha256", "capture_bundle_sha256", "seed_sha256"]
+        }
+      }
+    }
+  }, {
+    "if": {"properties": {"profile": {"const": "benchmark_synthetic"}}},
+    "then": {
+      "required": ["build_mode", "visual_reference"],
+      "properties": {
+        "build_mode": {"const": "benchmark_synthetic"},
+        "deployment_binding": {
+          "required": ["synthetic_contract_sha256", "visual_reference_manifest_sha256", "visual_reference_sha256"]
+        }
+      }
+    }
+  }]
+}

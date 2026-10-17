@@ -1,0 +1,11 @@
+{
+  "site_id": "uswds-docs-demo",
+  "source": "https://designsystem.digital.gov/components/overview/",
+  "routes": [
+    {"source": "/components/overview/", "local": "/components/overview/", "workflows": ["filter accordion", "filter unmatched", "clear filter", "open accordion route"]},
+    {"source": "/components/accordion/", "local": "/components/accordion/", "workflows": ["pointer accordion toggle", "keyboard accordion toggle", "return overview link"]}
+  ],
+  "runtime": {"flask_app": "app:app", "reset": "/_reset", "health": "/_health", "external_requests": false},
+  "rights_basis": "USWDS public documentation; public-domain/CC0 source content basis",
+  "viewport": {"width": 1440, "height": 900}
+}

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://webanything.dev/schemas/synthetic-replay-verification-v1.schema.json",
+  "title": "WebAnything full-capture synthetic replay verification v1",
+  "type": "object",
+  "required": ["schema", "status", "site", "build_mode", "candidate_identity_sha256", "candidate_sha256", "contract_sha256", "checks", "reset", "tasks", "network", "candidate", "failures"],
+  "properties": {
+    "schema": {"const": "webanything-synthetic-replay-verification-v1"},
+    "status": {"enum": ["passed", "failed"]},
+    "site": {"type": "string", "minLength": 1},
+    "build_mode": {"const": "benchmark_synthetic_replay"},
+    "candidate_identity_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "candidate_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "contract_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "checks": {
+      "type": "object",
+      "required": ["contract", "capture_bundle", "product_coverage", "routes", "interactions", "auth", "tasks", "semantic_tasks", "reset", "persistence", "determinism", "resource_privacy", "proxy_prefix", "concurrency_isolation", "candidate_immutability"],
+      "additionalProperties": {"enum": ["passed", "failed"]}
+    },
+    "reset": {
+      "type": "object",
+      "required": ["seed_sha256", "first_sha256", "second_sha256", "byte_identical"],
+      "properties": {
+        "seed_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+        "first_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+        "second_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+        "byte_identical": {"type": "boolean"}
+      }
+    },
+    "tasks": {"type": "array", "items": {"type": "object"}},
+    "network": {"type": "object"},
+    "candidate": {"type": "object"},
+    "failures": {"type": "array", "items": {"type": "object", "required": ["code", "message"]}}
+  },
+  "allOf": [{
+    "if": {"properties": {"status": {"const": "passed"}}},
+    "then": {"properties": {"failures": {"maxItems": 0}}}
+  }]
+}

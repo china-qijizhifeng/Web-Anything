@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://webharbor.local/schemas/interaction-verification-plan-v1.schema.json",
+  "title": "Exhaustive interaction verification plan v1",
+  "type": "object",
+  "required": ["schema", "plan_identity", "candidate_sha256", "contract_sha256", "candidate_identity_sha256", "analyzer_implementation_sha256", "shared_artifacts", "verifier", "viewport", "inventory", "item_count"],
+  "properties": {
+    "schema": {"const": "webharbor-interaction-verification-plan-v1"},
+    "plan_identity": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "candidate_sha256": {"type": "string", "minLength": 1},
+    "contract_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "candidate_identity_sha256": {"type": ["string", "null"]},
+    "analyzer_implementation_sha256": {"type": ["string", "null"]},
+    "shared_artifacts": {"type": "object"},
+    "verifier": {"type": "object", "required": ["version", "configuration"]},
+    "viewport": {"type": "object", "required": ["width", "height"]},
+    "inventory": {"type": "object", "required": ["routes", "controls"]},
+    "item_count": {"type": "integer", "minimum": 0}
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "@webanything/codex-mirror-trace",
+  "version": "0.1.0-alpha.1",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@openai/codex-sdk": "0.146.1"
+  }
+}

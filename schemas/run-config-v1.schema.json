@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://webanything.dev/schemas/run-config-v1.schema.json",
+  "title": "WebAnything run configuration",
+  "type": "object",
+  "required": ["schema", "url", "site", "profile", "viewport", "budgets"],
+  "properties": {
+    "schema": {"const": "webanything-run-config-v1"},
+    "status": {"enum": ["dispatched", "completed", "timed_out", "failed"]},
+    "created_at": {"type": "string", "format": "date-time"},
+    "updated_at": {"type": "string", "format": "date-time"},
+    "finished_at": {"type": "string", "format": "date-time"},
+    "runner_exit_code": {"type": "integer"},
+    "url": {"type": "string", "format": "uri", "pattern": "^https?://"},
+    "build_mode": {"enum": ["mirror", "benchmark_synthetic", "benchmark_synthetic_replay"]},
+    "site": {"type": "string", "pattern": "^[a-z0-9_]+$"},
+    "profile": {"enum": ["task-driven", "immersive", "authenticated", "benchmark_synthetic", "benchmark_synthetic_replay"]},
+    "viewport": {
+      "type": "object",
+      "required": ["width", "height"],
+      "properties": {
+        "width": {"type": "integer", "minimum": 320},
+        "height": {"type": "integer", "minimum": 320}
+      },
+      "additionalProperties": false
+    },
+    "budgets": {
+      "type": "object",
+      "required": ["max_pages", "max_assets"],
+      "properties": {
+        "max_pages": {"type": "integer", "minimum": 1},
+        "max_assets": {"type": "integer", "minimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "trace": {
+      "type": "object",
+      "required": ["path", "available", "fatal_error_present"],
+      "properties": {
+        "path": {"type": "string"},
+        "available": {"type": "boolean"},
+        "schema": {"type": ["string", "null"]},
+        "execution_status": {"type": ["string", "null"]},
+        "reflection_status": {"type": ["string", "null"]},
+        "fatal_error_present": {"type": "boolean"},
+        "outer_artifact_status": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"build_mode": {"const": "benchmark_synthetic"}}, "required": ["build_mode"]},
+      "then": {"properties": {"profile": {"const": "benchmark_synthetic"}}}
+    },
+    {
+      "if": {"properties": {"profile": {"const": "benchmark_synthetic"}}},
+      "then": {"required": ["build_mode"], "properties": {"build_mode": {"const": "benchmark_synthetic"}}}
+    },
+    {
+      "if": {"properties": {"build_mode": {"const": "benchmark_synthetic_replay"}}, "required": ["build_mode"]},
+      "then": {"properties": {"profile": {"const": "benchmark_synthetic_replay"}}}
+    },
+    {
+      "if": {"properties": {"profile": {"const": "benchmark_synthetic_replay"}}},
+      "then": {"required": ["build_mode"], "properties": {"build_mode": {"const": "benchmark_synthetic_replay"}}}
+    }
+  ],
+  "additionalProperties": true
+}

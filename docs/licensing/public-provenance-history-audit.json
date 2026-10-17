@@ -1,0 +1,4060 @@
+{
+  "disclaimer": "Similarity evidence is an engineering signal, not a copyright determination.",
+  "findings": [
+    {
+      "best_similarity": 0.025029,
+      "best_upstream_path": ".claude/skills/evolve-env/SKILL.md",
+      "bytes": 5061,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": "fuzzy_candidate",
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": ".agents/skills/build-synthetic-benchmarks/SKILL.md",
+      "same_path_upstream": false,
+      "sha256": "77f791bcc9153ad70b79113dbe9db9a170c2c57c85852d353d595d7920e62ebf",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 270,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": ".agents/skills/build-synthetic-benchmarks/agents/openai.yaml",
+      "same_path_upstream": false,
+      "sha256": "86a8fc18ea8ad84c388092f899af641fe8c271d989355cba1a91c0219255d0f4",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 2605,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": ".agents/skills/build-synthetic-benchmarks/references/contract-runtime-and-evidence.md",
+      "same_path_upstream": false,
+      "sha256": "439bacfae8e2c48c3b8d2e766d5a72a710b3456cb291425a5c9c7bfc4772f497",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 2197,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": ".agents/skills/build-synthetic-benchmarks/references/visual-reference-and-repair.md",
+      "same_path_upstream": false,
+      "sha256": "92edfe985aec92a90ae02fd198dfb93d3bd41b5b69a0b8893e45bb34b6fe5597",
+      "text": true
+    },
+    {
+      "best_similarity": 0.021437,
+      "best_upstream_path": ".claude/skills/clone-website/SKILL.md",
+      "bytes": 10903,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": "fuzzy_candidate",
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": ".agents/skills/build-synthetic-replays/SKILL.md",
+      "same_path_upstream": false,
+      "sha256": "e629e29130b5a8eeda5124bb19290dc602c40a34dac1ee6cd60c7f6a45d05750",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 240,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": ".agents/skills/build-synthetic-replays/agents/openai.yaml",
+      "same_path_upstream": false,
+      "sha256": "4e92168aea3e0773b72176a44ae5810c949ca144fe066b318225a3898b266822",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1244,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": ".agents/skills/build-synthetic-replays/references/capture-and-release-boundaries.md",
+      "same_path_upstream": false,
+      "sha256": "953c7a9027f8da819060477ab585454aa0f8963ddf4978308393b3d7d25f93a5",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1687,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": ".agents/skills/build-synthetic-replays/references/runtime-state-and-reset.md",
+      "same_path_upstream": false,
+      "sha256": "6e55792e25e8e286fd4d4553bce2e1933a44fc5eeb79bc6bf726aa148ebd7967",
+      "text": true
+    },
+    {
+      "best_similarity": 0.026627,
+      "best_upstream_path": ".claude/skills/review-env/SKILL.md",
+      "bytes": 6210,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": "fuzzy_candidate",
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/SKILL.md",
+      "same_path_upstream": false,
+      "sha256": "ef91c186930cb6b33eb227976dc90dee5ce0bffce969a0c1e5ade1ce23268748",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 392,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/agents/openai.yaml",
+      "same_path_upstream": false,
+      "sha256": "da8be642cda559838c1eaec4a02e233f1d04f2b35e8bba01d6377a8f22c1c61f",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 4244,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/references/authenticated-upstream-visuals.md",
+      "same_path_upstream": false,
+      "sha256": "97c2a6c4f974be163463e07f78678945d58e54b32cfb8bf9c40daa865bb83ffe",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 24745,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/references/automation.md",
+      "same_path_upstream": false,
+      "sha256": "0e8f696ea2b9f57323ff5b034e8c52a5f96ced7f1b87a0f2b01d28fba1b4ea61",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 3319,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": ".agents/skills/build-webharbor-mirrors/references/bounded-editorial-coverage.md",
+      "same_path_upstream": false,
+      "sha256": "25b6b42e144f367b9cf616a64e20ad81af20a24005f7e35b1b57c4bd85a60768",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1896,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": ".agents/skills/build-webharbor-mirrors/references/canonical-state-reflection.md",
+      "same_path_upstream": false,
+      "sha256": "65bd198b98c04e218ce5d44eed8eed4f61440c78ff34f3e9650e586b6dcd27d6",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1878,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": ".agents/skills/build-webharbor-mirrors/references/captured-catalog-recovery.md",
+      "same_path_upstream": false,
+      "sha256": "4d095b3b47e4fef649073eb58755f2003c5609ef97e070219df96705f335338f",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 8660,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/references/evidence-contract.md",
+      "same_path_upstream": false,
+      "sha256": "cacc382916a580ae363b1b093b1fbd8b1c93fa27d6e16170ee42bbc0a679c01b",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 12133,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/references/full-site-completeness.md",
+      "same_path_upstream": false,
+      "sha256": "63d658eff616b7e83ac83e3bc54dc0a5289e2ac5305d697ef31610f4802ae47a",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 6315,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": ".agents/skills/build-webharbor-mirrors/references/historical-fallbacks.md",
+      "same_path_upstream": false,
+      "sha256": "72e8db91986d265a5818ea0280410594951bf0fa85cd0b10423ecdc0d7eea639",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 8965,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/references/interaction-closure-loop.md",
+      "same_path_upstream": false,
+      "sha256": "7424ef3ee699553ab39a1514973275f77b463b2e96f60d1158df5d8c15090d1b",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 5521,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/references/local-authenticated-state.md",
+      "same_path_upstream": false,
+      "sha256": "9113b6503a4d9712ae4a9b8f49bdb2f190e0c6243b952683b0e21dc8e3fe20cb",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 3637,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/references/manifest-schema.md",
+      "same_path_upstream": false,
+      "sha256": "c18e3deff35e955eb3e41b34c65f84e38ac087c5a64f0231f3cf2bdf8fee07e3",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1540,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/references/reviewable-workflow.md",
+      "same_path_upstream": false,
+      "sha256": "d80116c462511fc963f3e7827606d127a0d5e1ab63268a07755ffc97ba89459d",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 2377,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": ".agents/skills/build-webharbor-mirrors/references/source-pinned-interaction-recovery.md",
+      "same_path_upstream": false,
+      "sha256": "ef73bde73e4d3ef5edd3ab355432ed3f0a4a8e40aaee700574127feed7e65c92",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 4438,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/references/trace-finalization-and-runtime.md",
+      "same_path_upstream": false,
+      "sha256": "90770f1eb05e30ece93c09120e8d09936fcfe2b69e3bdae8e31c2b0a32ffd8a8",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 7686,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/references/upstream-capture.md",
+      "same_path_upstream": false,
+      "sha256": "e8efe9886db40ad3648973f63e21eb7028afbd22b901965cfde94ed1bbeb53a0",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 153,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": ".agents/skills/build-webharbor-mirrors/requirements-builder.txt",
+      "same_path_upstream": false,
+      "sha256": "3755fe4490a08883a54f22607cd68b8aa1d2cbfb6f3bccec49bc4b48c00cd17e",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 13537,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/audit_candidate_resources.py",
+      "same_path_upstream": false,
+      "sha256": "5af782c8d784cb89915a37397d94c59e4b52c005198825423d4967dbd26d0776",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 6832,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/audit_catalog_quality.py",
+      "same_path_upstream": false,
+      "sha256": "af4416926e77bdf606cd1fe07be3a747a8d65f7918b460177eeeacf08d7a841e",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 36560,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/audit_clickthrough.py",
+      "same_path_upstream": false,
+      "sha256": "9ba99cd2358e334e328f6e092635c49bf6b389976d7ebf2fe5b2182cebf67459",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 28692,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/audit_visual_agent.py",
+      "same_path_upstream": false,
+      "sha256": "becb3f510e17c5cd252c9476a188480ff1202742e58af6e6aeb01b5a12dbd2e3",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 2087,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/bootstrap.sh",
+      "same_path_upstream": false,
+      "sha256": "7cf6384404f5286c59f4ecdc214dec06e10c90f460695ed40058ab5affa834e2",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 7954,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/browser_workflows.py",
+      "same_path_upstream": false,
+      "sha256": "9c6ec044cc37883be3fb0bd863011b1f8cf1d773af5c2fba7f63ebfe14eed915",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 82034,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor",
+        "websyn"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/build_from_upstream.py",
+      "same_path_upstream": false,
+      "sha256": "d75e30b09b4598763a8ae3d92b7c99c77374b65142d47ac022d1765bf77ca1c6",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 31977,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor",
+        "websyn"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/build_historical.py",
+      "same_path_upstream": false,
+      "sha256": "89832730fcecabb6e7175bd266cbad4c8ff4fc6f2db368fb8bfd2d9139dda059",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 15451,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/capture_authenticated_visual.py",
+      "same_path_upstream": false,
+      "sha256": "b5088206df853d223459297b5360584798e97488e3fe0994cdf8e8af18c7b695",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 69975,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/capture_historical.py",
+      "same_path_upstream": false,
+      "sha256": "be70f95c4087120707c767cd2b254c4d5fc9171630d2ed9616ced02ae753e1a7",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 50515,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/capture_upstream.py",
+      "same_path_upstream": false,
+      "sha256": "66a8447bee0989d849df01f21cfa3ce38877220a5f8b94b71e426a639a0b2474",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 50665,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/compile_historical.py",
+      "same_path_upstream": false,
+      "sha256": "457db66761448f0489467cb5bf2e1351edef42b737fb0fed7f87860208a52516",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 114668,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/compile_snapshot.py",
+      "same_path_upstream": false,
+      "sha256": "50eb95da55164695fc99ccffb7aa8c802750c1f98ddfd56582e0c3d2bbfd3b59",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 21673,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/discover_historical.py",
+      "same_path_upstream": false,
+      "sha256": "e0bbd09c7b8c2bfa430c066c6e9c278afa3b45326c2022ce93acb9b95e7737c6",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 10883,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/extract_components.py",
+      "same_path_upstream": false,
+      "sha256": "5da9d2473fe05d364298382c6a89e8a412e9c9445461bdd2b8116bb0e4a33482",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 8766,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/extract_html.py",
+      "same_path_upstream": false,
+      "sha256": "a6761189113c67f2197ec88ef1f4f4e47913a8f5a1d8ca66927bb1e851d647af",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 6633,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/extract_jsonld.py",
+      "same_path_upstream": false,
+      "sha256": "2dd64ce3378a3cf744ab8684d2eb98d8b8543c1571b39e139e128a528b96c4d0",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 7588,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/fidelity_contract.py",
+      "same_path_upstream": false,
+      "sha256": "0854ca53e3d106766e156586778aade38b964efd61564114695e02193ab305b8",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 10955,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/finalize_abandonments.py",
+      "same_path_upstream": false,
+      "sha256": "169418098c29b8406611c5dbcdf94bb39d1bb8d484f6749743708bc0a43ede73",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 18271,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/finalize_preview.py",
+      "same_path_upstream": false,
+      "sha256": "dfcb75f6c0760cea87a2a36220e641533ede57ce862de14cbbbf0591acf67c47",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 16512,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/historical_geometry.py",
+      "same_path_upstream": false,
+      "sha256": "8bcc86c90353cc977e10e4a2ff871c1329e547bf1987c3437b5cf74f3dc4b97a",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 44900,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/intake_upstream.py",
+      "same_path_upstream": false,
+      "sha256": "797a146caa8ea054f962dd1234fb3ee1c0d2c252dc3b248ea3bce0943b5bbdda",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 40931,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor",
+        "websyn"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/iterate_sdk_preview.py",
+      "same_path_upstream": false,
+      "sha256": "3dbade82e8070f02e17822e35b1cb7ac80d076fc0f0aaa69df80feff4f406b68",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 2987,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/localize_css.py",
+      "same_path_upstream": false,
+      "sha256": "03ebe9d920394477c678e3f8978fd05ffd7ddf9c01776881fedb6286287c9b9e",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1117,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/page_content_policy.py",
+      "same_path_upstream": false,
+      "sha256": "d48899825349374fa1661af1baccddf37174c822b7ca2ea791b4dff4f032ec7a",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 21867,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/prerender_snapshot.py",
+      "same_path_upstream": false,
+      "sha256": "a7cf5265e017bc3e7c287ea8631a8fe54838a50f6f97c5cc47ed0dc939143a48",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 4154,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/prerender_worker.py",
+      "same_path_upstream": false,
+      "sha256": "33f9bf4181834731c9fe8ca714529b44b93b642d480635bf1d2f4ce1a3227d32",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 13556,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/probe_common_crawl.py",
+      "same_path_upstream": false,
+      "sha256": "ee35e5d4d3da23a5d538dcbca0e1a005ce2bda818c8d685f70aa0558f5b2a57a",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 27487,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/probe_historical_indexes.py",
+      "same_path_upstream": false,
+      "sha256": "91293b1b8944709b80b72bb91397436c9082d853af044df9e6bd89f3e422fbac",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 21414,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/quality_contract.py",
+      "same_path_upstream": false,
+      "sha256": "9a38917f9073d34ab3fdb8f78f3cadd7bd7a03f83c8f70fe8bc7c618edb0c41f",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 14121,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor",
+        "websyn"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/reaudit_fidelity.py",
+      "same_path_upstream": false,
+      "sha256": "9d75365edc859323bf240c7ff3b37ea3134ea91f4c7bc6383eb3aa64d83c46ab",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 27483,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/replace_generated.py",
+      "same_path_upstream": false,
+      "sha256": "448a13f7ece5c477755b57982d7569e4684be1af8895c544af27f53314fef804",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 4199,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/robots_policy.py",
+      "same_path_upstream": false,
+      "sha256": "a1bbb4a0bd3e042c32c320b364ffc61ef8e2ff2665cd49360ce4795305bffa0d",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 8743,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/run.sh",
+      "same_path_upstream": false,
+      "sha256": "a2167f162c35231714c6aba03a4853f7ea2ff55af13441f356313e064fc168b1",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 6955,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor",
+        "websyn"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/run_owned_site_check.py",
+      "same_path_upstream": false,
+      "sha256": "ba8c99721d85310c974a963b08165f2a3d46045d0f508d2c8d383ac71ebc8109",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 21389,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/scan_parquet_origins.py",
+      "same_path_upstream": false,
+      "sha256": "0acf444ca6380356c2d5f826e261f5bdb4ccaffd4c69932fdf76c84e6c7e6920",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 16372,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/sdk_trace_gate.py",
+      "same_path_upstream": false,
+      "sha256": "5b618fba3d9b96db3254412bc5f52d087321483c5f941f2c6a3120319754ccc8",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1485,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/site_fingerprint.py",
+      "same_path_upstream": false,
+      "sha256": "2f5b40acf9dd472c5b0dcf78c1f873bfe790a15f6c4dc70e3ac08a1da3f0fbd0",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 3091,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/validate_auth_profile.py",
+      "same_path_upstream": false,
+      "sha256": "555ae5df61a2515badddeb22a3fe4bda1ea407e00f77758b4aba9b457cb8ca10",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 56139,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/verify_fidelity.py",
+      "same_path_upstream": false,
+      "sha256": "1b1c3d5b373089b47ac557af367f58ebecb66488f5f8aade0607ff6a455bed92",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 23361,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/verify_quality.py",
+      "same_path_upstream": false,
+      "sha256": "ed62cab8e539953522a6b328a3ea9c72b93d110cc67f635e05db1f159a7122f2",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 17554,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": ".agents/skills/build-webharbor-mirrors/scripts/verify_reviewable_workflow.py",
+      "same_path_upstream": false,
+      "sha256": "c534284db2b9df2d6fa2923a870e316c7c9237c9dbafb7df69dd72dc7d058fce",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 346,
+      "classification": "binary_no_exact_match",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": ".env.example",
+      "same_path_upstream": false,
+      "sha256": "cc012af2503a4c6b3a1a44e9e103845a1c2c1a1d24d2a0dc9ef386acc1ae2a7e",
+      "text": false
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1038,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": ".github/workflows/ci.yml",
+      "same_path_upstream": false,
+      "sha256": "25e5d5020ba9ceb9058a77dfb1fb37d2800f424a3e799203ebaea95375fe9ad9",
+      "text": true
+    },
+    {
+      "best_similarity": 0.032311,
+      "best_upstream_path": ".gitignore",
+      "bytes": 585,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": "same_path",
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": ".gitignore",
+      "same_path_upstream": true,
+      "sha256": "ba58e5737ceb46c427ed0fe761c799c975005f66efb89283118af0f6145ef40a",
+      "text": true
+    },
+    {
+      "best_similarity": 0.006468,
+      "best_upstream_path": "CONTRIBUTING.md",
+      "bytes": 516,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": "same_path",
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "CONTRIBUTING.md",
+      "same_path_upstream": true,
+      "sha256": "39b3993edae9e91e313a772b5067e3a43dd3adfcb5ee451e6bfe7773783fafb6",
+      "text": true
+    },
+    {
+      "best_similarity": 0.766067,
+      "best_upstream_path": "Dockerfile",
+      "bytes": 1324,
+      "classification": "medium_public_similarity",
+      "comparison_method": "same_path",
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor",
+        "websyn"
+      ],
+      "path": "Dockerfile",
+      "same_path_upstream": true,
+      "sha256": "eb3060b4b1a2e4c36a97600d8a8c552818d7a7ca634535828cb0848dc6fababd",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 825,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": "LICENSE-PENDING.md",
+      "same_path_upstream": false,
+      "sha256": "4ec17e79d62227e51579550f6308b133673552309e1043b56554b1185be06775",
+      "text": true
+    },
+    {
+      "best_similarity": 0.024356,
+      "best_upstream_path": "README.md",
+      "bytes": 3333,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": "same_path",
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": "README.md",
+      "same_path_upstream": true,
+      "sha256": "82e930acce1e1f7d4fa93d390f6b3e4fc5cd6b4e9a454798e46800a270bde2a3",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 669,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "SECURITY.md",
+      "same_path_upstream": false,
+      "sha256": "0b2fb9f12389b4a44090e8b6f09eaa3d24d381d1fc458c5c4aa03b3a2ebb7f93",
+      "text": true
+    },
+    {
+      "best_similarity": 0.941395,
+      "best_upstream_path": "control_server.py",
+      "bytes": 7943,
+      "classification": "high_public_similarity",
+      "comparison_method": "same_path",
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "websyn"
+      ],
+      "path": "control_server.py",
+      "same_path_upstream": true,
+      "sha256": "b2b2bc0dd778c45c34f43a689fb820acd3c40e614ac25a1774dd66c89771631a",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 195261,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": "data/sites244.json",
+      "same_path_upstream": false,
+      "sha256": "944804087ed90c98917313b9221ab564bb9e6f406343133caf737610f526e215",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 17772,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": "docs/NEXGARDEN_UPSTREAM.md",
+      "same_path_upstream": false,
+      "sha256": "ba17185fd61e2e6aa5c50df57f3befc7bd17ab83349452de938cbab48aff58d6",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 4441,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": "docs/REPRODUCIBILITY.md",
+      "same_path_upstream": false,
+      "sha256": "9a5a5988085757dfd8ffa856f14d5acfa24489311dc3965fbc1b6d4dfab4ab64",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 3828,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "docs/architecture.md",
+      "same_path_upstream": false,
+      "sha256": "3ba141292a352afae8be70a3cb1df26888e3706533d32de89b85cf83d3ce3fa9",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 6894,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": "docs/coupled-pipeline.md",
+      "same_path_upstream": false,
+      "sha256": "dc989ccb61bd867f73108efb401689474c243a073e0a47140bf5edbf95b7b886",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 2955,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "docs/coupled-recovery.md",
+      "same_path_upstream": false,
+      "sha256": "9e47d5009249d36ca898c39285d44f89d660f7ab836339651e7b5c2cd8350c75",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 2405,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "docs/evidence-contract.md",
+      "same_path_upstream": false,
+      "sha256": "ae37eab115e6e27f45411cc847b898f912ad2d95fb795ecf761659b87f67793e",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 7702,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "docs/getting-started.md",
+      "same_path_upstream": false,
+      "sha256": "d980115348eab41f196c2d3581554ec16397ec78313c6676b58bcdae15c4fb44",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1383,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": "docs/limitations.md",
+      "same_path_upstream": false,
+      "sha256": "5697fe6d9da817a8f66de1fd1d304bf1d546a3864e3609d66e0e4e0cf7d93b46",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 10647,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "docs/module-design.md",
+      "same_path_upstream": false,
+      "sha256": "c5bc4e3f955bd5c4ff06bcac5b99f3ce9b1f1b74ece62f16b94bde608698b564",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 30445,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": "docs/pipeline-io-and-skill-map.md",
+      "same_path_upstream": false,
+      "sha256": "d034fee9adac034c0fe6e89a30544e2cafbd9dc265e230f5f6b2786f7c81d73f",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 850,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": "docs/provenance.md",
+      "same_path_upstream": false,
+      "sha256": "5f0c9c294ef70baec98b996120dbada823a9b323017bddb56de058d5f59fc8cd",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1899,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": "docs/release-status.md",
+      "same_path_upstream": false,
+      "sha256": "e5b44fedc0d20157fe098b69683eb4d993712e94657aeb960c99504c22d93145",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 6757,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "docs/synthetic-replay-production.md",
+      "same_path_upstream": false,
+      "sha256": "491fa52e8ec9c208123bac936d426e34b11c66994c3199adbb9dad4c1741cdeb",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 9884,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "docs/synthetic-visual-pipeline.md",
+      "same_path_upstream": false,
+      "sha256": "c4c44e2e93fbd20fb01af03b4aedcdd9b92aace90b010a4d2dda992d739f22de",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 951,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "examples/coupled-requirements.md",
+      "same_path_upstream": false,
+      "sha256": "98be2ec64195238a1ecebc81e9a56aa2ac0f6526fb1e59749feedbcfa66b09a9",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 815,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "examples/e2b-coupled-batch.json",
+      "same_path_upstream": false,
+      "sha256": "3077684b3023a4a2dbece4b71d1cdee8dad6633fd56a8e78989fd972d7b9329e",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 230,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "examples/immersive.run.json",
+      "same_path_upstream": false,
+      "sha256": "340980962401b553570a02bbe5ad68276d21da589dfb94bae6d34d0e90972b41",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 2409,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "examples/synthetic/cloudpost/contract-input/contract-draft.json",
+      "same_path_upstream": false,
+      "sha256": "cd41fad0cce78c692f0663eb415d637d423adbea25f02e4a89e3f6392288aced",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 2378,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "examples/synthetic/cloudpost/contract-input/fixtures/initial-state.json",
+      "same_path_upstream": false,
+      "sha256": "c4cde83d688b6c172ab034a0f2054b119c92fc0a731c04242c260d9789498a70",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1846,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "examples/synthetic/cloudpost/contract-input/fixtures/messages.json",
+      "same_path_upstream": false,
+      "sha256": "c2a55043cc559439e4f8e059fbae70a3a32c1d40815e950730e6c16f58585bb8",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 413,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "examples/synthetic/cloudpost/contract-input/fixtures/users.json",
+      "same_path_upstream": false,
+      "sha256": "786c888760e9b38c77641d3b26ffe08f78220e6d3f0043419d60a12372657e08",
+      "text": true
+    },
+    {
+      "best_similarity": 0.011077,
+      "best_upstream_path": "sites/github/tasks.jsonl",
+      "bytes": 986,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": "fuzzy_candidate",
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "examples/synthetic/cloudpost/contract-input/tasks.jsonl",
+      "same_path_upstream": false,
+      "sha256": "f052eb4881bf699697e6206ded4654274dd37e1f70996e6d005e67a0d18ea94a",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 179975,
+      "classification": "binary_no_exact_match",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "examples/synthetic/cloudpost/contract-input/visual-reference/routes/route_compose.comparison.png",
+      "same_path_upstream": false,
+      "sha256": "49b1b4c5b00eeddc61a145a6b7a06d484f7d25f1581c11e76213e0ac246ae26b",
+      "text": false
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 8120,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "examples/synthetic/cloudpost/contract-input/visual-reference/routes/route_compose.geometry.json",
+      "same_path_upstream": false,
+      "sha256": "e4ba3a303c423780f9d1230b7008cb82c276860600ded17a9e17be8e0d71cd51",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 227898,
+      "classification": "binary_no_exact_match",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "examples/synthetic/cloudpost/contract-input/visual-reference/routes/route_compose.source-visible.png",
+      "same_path_upstream": false,
+      "sha256": "c269fd636a9c8929b1a120d20b64d58524bff2867b19e1a81ef987dcb8e1041b",
+      "text": false
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 28196,
+      "classification": "binary_no_exact_match",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "examples/synthetic/cloudpost/contract-input/visual-reference/routes/route_inbox.comparison.png",
+      "same_path_upstream": false,
+      "sha256": "2cfe26122ce178f09cf3747a510631aaf8ddb6986769f4a94694d67ba7b20fc8",
+      "text": false
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 12096,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "examples/synthetic/cloudpost/contract-input/visual-reference/routes/route_inbox.geometry.json",
+      "same_path_upstream": false,
+      "sha256": "ff0f514c79bf57ba917549661c3a95443d165a025101884bbf2565c896b221c6",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 82492,
+      "classification": "binary_no_exact_match",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "examples/synthetic/cloudpost/contract-input/visual-reference/routes/route_inbox.source-visible.png",
+      "same_path_upstream": false,
+      "sha256": "496f3192ee7a8eab95bb49a43191a05e5eb62a92d8c487588bf00398ee4b9ea8",
+      "text": false
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 302296,
+      "classification": "binary_no_exact_match",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "examples/synthetic/cloudpost/contract-input/visual-reference/routes/route_login.comparison.png",
+      "same_path_upstream": false,
+      "sha256": "66df86e03985bb48cebc8653ea943e0bda2e2e7c163096f8e54ea80729a6f851",
+      "text": false
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 2459,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "examples/synthetic/cloudpost/contract-input/visual-reference/routes/route_login.geometry.json",
+      "same_path_upstream": false,
+      "sha256": "3b5bc05913ad90cdf165160402abba57078d5438f707496f27ca838b0e3c148f",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 418346,
+      "classification": "binary_no_exact_match",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "examples/synthetic/cloudpost/contract-input/visual-reference/routes/route_login.source-visible.png",
+      "same_path_upstream": false,
+      "sha256": "8c463174a82883bb23ba2fbf9c13026b1307ab585bad8417b721a40d1b1d587a",
+      "text": false
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 25566,
+      "classification": "binary_no_exact_match",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "examples/synthetic/cloudpost/contract-input/visual-reference/routes/route_message.comparison.png",
+      "same_path_upstream": false,
+      "sha256": "c652a1e0f0b23c37ee5bb066117274c5f2e2fc8aa60db886b8cacd9e437253b9",
+      "text": false
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 7755,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "examples/synthetic/cloudpost/contract-input/visual-reference/routes/route_message.geometry.json",
+      "same_path_upstream": false,
+      "sha256": "0f64d4c94efae74a1be83048463ca1ae347e641a01ad3dee82a031277694bc3a",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 62627,
+      "classification": "binary_no_exact_match",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "examples/synthetic/cloudpost/contract-input/visual-reference/routes/route_message.source-visible.png",
+      "same_path_upstream": false,
+      "sha256": "575adca94784f38e51044a8dfcc5839218fe5a1c66fdbdfab17990f888345ca7",
+      "text": false
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 26407,
+      "classification": "binary_no_exact_match",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "examples/synthetic/cloudpost/contract-input/visual-reference/routes/route_settings.comparison.png",
+      "same_path_upstream": false,
+      "sha256": "3fba6e38eea8db7557214674f6c342581bb84451dde168cca7326090dc4bd980",
+      "text": false
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 7936,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "examples/synthetic/cloudpost/contract-input/visual-reference/routes/route_settings.geometry.json",
+      "same_path_upstream": false,
+      "sha256": "10111b434cc05052c497bd76c80314c811e0e34d05094a6e208dbce8f6d5f660",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 63564,
+      "classification": "binary_no_exact_match",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "examples/synthetic/cloudpost/contract-input/visual-reference/routes/route_settings.source-visible.png",
+      "same_path_upstream": false,
+      "sha256": "9c2414d20e4626076dcfabf2c8ac331e9a81fdfc05194a2b0721c546a66d32db",
+      "text": false
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 15940,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "examples/synthetic/cloudpost/contract-input/visual-reference/synthetic_visual_reference.json",
+      "same_path_upstream": false,
+      "sha256": "bf7b88072e1fcd190ba8ff6c6fff62d86f3f644f0c0d193b85612c7b50eab97f",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 2378,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "examples/synthetic/cloudpost/contract/fixtures/initial-state.json",
+      "same_path_upstream": false,
+      "sha256": "c4cde83d688b6c172ab034a0f2054b119c92fc0a731c04242c260d9789498a70",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1846,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "examples/synthetic/cloudpost/contract/fixtures/messages.json",
+      "same_path_upstream": false,
+      "sha256": "c2a55043cc559439e4f8e059fbae70a3a32c1d40815e950730e6c16f58585bb8",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 413,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "examples/synthetic/cloudpost/contract/fixtures/users.json",
+      "same_path_upstream": false,
+      "sha256": "786c888760e9b38c77641d3b26ffe08f78220e6d3f0043419d60a12372657e08",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 3180,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "examples/synthetic/cloudpost/contract/synthetic_contract.json",
+      "same_path_upstream": false,
+      "sha256": "2fd45cfe631450ed923bc86cdd6564c12971344e52034a9965aab1afb67ccae0",
+      "text": true
+    },
+    {
+      "best_similarity": 0.020512,
+      "best_upstream_path": "sites/github/tasks.jsonl",
+      "bytes": 990,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": "fuzzy_candidate",
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "examples/synthetic/cloudpost/contract/tasks.jsonl",
+      "same_path_upstream": false,
+      "sha256": "f4f4c2ae980e7ae7938ed9224c2480786df43215ff939a665638fb2e50a2fdfa",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 179975,
+      "classification": "binary_no_exact_match",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "examples/synthetic/cloudpost/contract/visual-reference/routes/route_compose.comparison.png",
+      "same_path_upstream": false,
+      "sha256": "49b1b4c5b00eeddc61a145a6b7a06d484f7d25f1581c11e76213e0ac246ae26b",
+      "text": false
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 8120,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "examples/synthetic/cloudpost/contract/visual-reference/routes/route_compose.geometry.json",
+      "same_path_upstream": false,
+      "sha256": "e4ba3a303c423780f9d1230b7008cb82c276860600ded17a9e17be8e0d71cd51",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 227898,
+      "classification": "binary_no_exact_match",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "examples/synthetic/cloudpost/contract/visual-reference/routes/route_compose.source-visible.png",
+      "same_path_upstream": false,
+      "sha256": "c269fd636a9c8929b1a120d20b64d58524bff2867b19e1a81ef987dcb8e1041b",
+      "text": false
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 28196,
+      "classification": "binary_no_exact_match",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "examples/synthetic/cloudpost/contract/visual-reference/routes/route_inbox.comparison.png",
+      "same_path_upstream": false,
+      "sha256": "2cfe26122ce178f09cf3747a510631aaf8ddb6986769f4a94694d67ba7b20fc8",
+      "text": false
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 12096,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "examples/synthetic/cloudpost/contract/visual-reference/routes/route_inbox.geometry.json",
+      "same_path_upstream": false,
+      "sha256": "ff0f514c79bf57ba917549661c3a95443d165a025101884bbf2565c896b221c6",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 82492,
+      "classification": "binary_no_exact_match",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "examples/synthetic/cloudpost/contract/visual-reference/routes/route_inbox.source-visible.png",
+      "same_path_upstream": false,
+      "sha256": "496f3192ee7a8eab95bb49a43191a05e5eb62a92d8c487588bf00398ee4b9ea8",
+      "text": false
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 302296,
+      "classification": "binary_no_exact_match",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "examples/synthetic/cloudpost/contract/visual-reference/routes/route_login.comparison.png",
+      "same_path_upstream": false,
+      "sha256": "66df86e03985bb48cebc8653ea943e0bda2e2e7c163096f8e54ea80729a6f851",
+      "text": false
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 2459,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "examples/synthetic/cloudpost/contract/visual-reference/routes/route_login.geometry.json",
+      "same_path_upstream": false,
+      "sha256": "3b5bc05913ad90cdf165160402abba57078d5438f707496f27ca838b0e3c148f",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 418346,
+      "classification": "binary_no_exact_match",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "examples/synthetic/cloudpost/contract/visual-reference/routes/route_login.source-visible.png",
+      "same_path_upstream": false,
+      "sha256": "8c463174a82883bb23ba2fbf9c13026b1307ab585bad8417b721a40d1b1d587a",
+      "text": false
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 25566,
+      "classification": "binary_no_exact_match",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "examples/synthetic/cloudpost/contract/visual-reference/routes/route_message.comparison.png",
+      "same_path_upstream": false,
+      "sha256": "c652a1e0f0b23c37ee5bb066117274c5f2e2fc8aa60db886b8cacd9e437253b9",
+      "text": false
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 7755,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "examples/synthetic/cloudpost/contract/visual-reference/routes/route_message.geometry.json",
+      "same_path_upstream": false,
+      "sha256": "0f64d4c94efae74a1be83048463ca1ae347e641a01ad3dee82a031277694bc3a",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 62627,
+      "classification": "binary_no_exact_match",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "examples/synthetic/cloudpost/contract/visual-reference/routes/route_message.source-visible.png",
+      "same_path_upstream": false,
+      "sha256": "575adca94784f38e51044a8dfcc5839218fe5a1c66fdbdfab17990f888345ca7",
+      "text": false
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 26407,
+      "classification": "binary_no_exact_match",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "examples/synthetic/cloudpost/contract/visual-reference/routes/route_settings.comparison.png",
+      "same_path_upstream": false,
+      "sha256": "3fba6e38eea8db7557214674f6c342581bb84451dde168cca7326090dc4bd980",
+      "text": false
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 7936,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "examples/synthetic/cloudpost/contract/visual-reference/routes/route_settings.geometry.json",
+      "same_path_upstream": false,
+      "sha256": "10111b434cc05052c497bd76c80314c811e0e34d05094a6e208dbce8f6d5f660",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 63564,
+      "classification": "binary_no_exact_match",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "examples/synthetic/cloudpost/contract/visual-reference/routes/route_settings.source-visible.png",
+      "same_path_upstream": false,
+      "sha256": "9c2414d20e4626076dcfabf2c8ac331e9a81fdfc05194a2b0721c546a66d32db",
+      "text": false
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 15940,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "examples/synthetic/cloudpost/contract/visual-reference/synthetic_visual_reference.json",
+      "same_path_upstream": false,
+      "sha256": "bf7b88072e1fcd190ba8ff6c6fff62d86f3f644f0c0d193b85612c7b50eab97f",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 12621,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "examples/synthetic/cloudpost/site/app.js",
+      "same_path_upstream": false,
+      "sha256": "7f4db0044a65077c7cbef0d94d7d955b8741745b0b098af0b98557b884b001a7",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 378,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "examples/synthetic/cloudpost/site/content-provenance.json",
+      "same_path_upstream": false,
+      "sha256": "b7709d8fdc5fb2562be1872da341deb77a09c780592c5f929cda95133337e4c3",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 2378,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "examples/synthetic/cloudpost/site/fixtures/initial-state.json",
+      "same_path_upstream": false,
+      "sha256": "c4cde83d688b6c172ab034a0f2054b119c92fc0a731c04242c260d9789498a70",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1846,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "examples/synthetic/cloudpost/site/fixtures/messages.json",
+      "same_path_upstream": false,
+      "sha256": "c2a55043cc559439e4f8e059fbae70a3a32c1d40815e950730e6c16f58585bb8",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 413,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "examples/synthetic/cloudpost/site/fixtures/users.json",
+      "same_path_upstream": false,
+      "sha256": "786c888760e9b38c77641d3b26ffe08f78220e6d3f0043419d60a12372657e08",
+      "text": true
+    },
+    {
+      "best_similarity": 0.146457,
+      "best_upstream_path": "sites/google_map/templates/base.html",
+      "bytes": 378,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": "fuzzy_candidate",
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "examples/synthetic/cloudpost/site/index.html",
+      "same_path_upstream": false,
+      "sha256": "a64fdc86ee92f388e7653a11080deb517de26866a7aad1b77c92fb81f2da9b3f",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 4700,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "examples/synthetic/cloudpost/site/nexgarden-runtime.js",
+      "same_path_upstream": false,
+      "sha256": "cfa61ffd3a9e9be80d7b43048be7ce0ec905ead484e12f63a2cdfd30136a2628",
+      "text": true
+    },
+    {
+      "best_similarity": 0.131004,
+      "best_upstream_path": "sites/google_map/templates/base.html",
+      "bytes": 565,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": "fuzzy_candidate",
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "examples/synthetic/cloudpost/site/reset.html",
+      "same_path_upstream": false,
+      "sha256": "84f08554bcfd85930ce9ad53491b75d2129b535e0f41cc17906352a0560fbbcb",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1474,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "examples/synthetic/cloudpost/site/reset.js",
+      "same_path_upstream": false,
+      "sha256": "4076ad75a799f7d8a9fe13cdda07e8a72b257a767cd74e392c4547e5083eda12",
+      "text": true
+    },
+    {
+      "best_similarity": 0.037149,
+      "best_upstream_path": "sites/google_search/static/css/main.css",
+      "bytes": 9008,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": "fuzzy_candidate",
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "examples/synthetic/cloudpost/site/styles.css",
+      "same_path_upstream": false,
+      "sha256": "686060cd901fdee2ded0e3a5e1d06212f8630a8665138df62fabe02457a682db",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 3180,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "examples/synthetic/cloudpost/site/synthetic_contract.json",
+      "same_path_upstream": false,
+      "sha256": "2fd45cfe631450ed923bc86cdd6564c12971344e52034a9965aab1afb67ccae0",
+      "text": true
+    },
+    {
+      "best_similarity": 0.020512,
+      "best_upstream_path": "sites/github/tasks.jsonl",
+      "bytes": 990,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": "fuzzy_candidate",
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "examples/synthetic/cloudpost/site/tasks.jsonl",
+      "same_path_upstream": false,
+      "sha256": "f4f4c2ae980e7ae7938ed9224c2480786df43215ff939a665638fb2e50a2fdfa",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1167,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "examples/synthetic/cloudpost/visual-capture-spec.local-test.json",
+      "same_path_upstream": false,
+      "sha256": "cccb04088bcd789ca54fb7761c0272f5709e5b7998d08d0c576fc206a63824b9",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 222,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "examples/task-driven.run.json",
+      "same_path_upstream": false,
+      "sha256": "4102a49d6e0feae74f2ae9b848672b46d22686e3869971ac6c119368738e8291",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 449,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "examples/timeout-recovery-brief.md",
+      "same_path_upstream": false,
+      "sha256": "d7c1bb39d3720c91d5451d590697d12ffa5557d226b0e78c5114a613e6a41359",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 2751,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": "local_http.py",
+      "same_path_upstream": false,
+      "sha256": "7efaa73de3bfb426cc4a8a3ebc6b89309f9575e0817ae9fb4fc8b5f2841c7ad2",
+      "text": true
+    },
+    {
+      "best_similarity": 1.0,
+      "best_upstream_path": "sites/merriam_webster/static/css/.gitkeep",
+      "bytes": 0,
+      "classification": "empty_placeholder_match",
+      "comparison_method": "exact_content",
+      "exact_upstream_paths": [
+        "sites/merriam_webster/static/css/.gitkeep",
+        "sites/merriam_webster/static/icons/.gitkeep",
+        "sites/merriam_webster/static/images/.gitkeep",
+        "sites/merriam_webster/static/js/.gitkeep",
+        "sites/merriam_webster/templates/.gitkeep"
+      ],
+      "legacy_terms": [],
+      "path": "mirror_factory/evidence/.gitkeep",
+      "same_path_upstream": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "text": true
+    },
+    {
+      "best_similarity": 1.0,
+      "best_upstream_path": "sites/merriam_webster/static/css/.gitkeep",
+      "bytes": 0,
+      "classification": "empty_placeholder_match",
+      "comparison_method": "exact_content",
+      "exact_upstream_paths": [
+        "sites/merriam_webster/static/css/.gitkeep",
+        "sites/merriam_webster/static/icons/.gitkeep",
+        "sites/merriam_webster/static/images/.gitkeep",
+        "sites/merriam_webster/static/js/.gitkeep",
+        "sites/merriam_webster/templates/.gitkeep"
+      ],
+      "legacy_terms": [],
+      "path": "mirror_factory/fidelity_specs/.gitkeep",
+      "same_path_upstream": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "text": true
+    },
+    {
+      "best_similarity": 1.0,
+      "best_upstream_path": "sites/merriam_webster/static/css/.gitkeep",
+      "bytes": 0,
+      "classification": "empty_placeholder_match",
+      "comparison_method": "exact_content",
+      "exact_upstream_paths": [
+        "sites/merriam_webster/static/css/.gitkeep",
+        "sites/merriam_webster/static/icons/.gitkeep",
+        "sites/merriam_webster/static/images/.gitkeep",
+        "sites/merriam_webster/static/js/.gitkeep",
+        "sites/merriam_webster/templates/.gitkeep"
+      ],
+      "legacy_terms": [],
+      "path": "mirror_factory/targets.jsonl",
+      "same_path_upstream": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "text": true
+    },
+    {
+      "best_similarity": 1.0,
+      "best_upstream_path": "sites/merriam_webster/static/css/.gitkeep",
+      "bytes": 0,
+      "classification": "empty_placeholder_match",
+      "comparison_method": "exact_content",
+      "exact_upstream_paths": [
+        "sites/merriam_webster/static/css/.gitkeep",
+        "sites/merriam_webster/static/icons/.gitkeep",
+        "sites/merriam_webster/static/images/.gitkeep",
+        "sites/merriam_webster/static/js/.gitkeep",
+        "sites/merriam_webster/templates/.gitkeep"
+      ],
+      "legacy_terms": [],
+      "path": "mirror_factory/upstream_specs/.gitkeep",
+      "same_path_upstream": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "text": true
+    },
+    {
+      "best_similarity": 0.018068,
+      "best_upstream_path": "README.md",
+      "bytes": 4902,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": "fuzzy_candidate",
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "pipeline-tools/interaction-verifier-v1/README.md",
+      "same_path_upstream": false,
+      "sha256": "26800fb880faf1412e08ab93983e9a785c34b9aa21a5a62e8e19796ab3c85598",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 2537,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": "pipeline-tools/interaction-verifier-v1/schemas/batch-spec-v1.schema.json",
+      "same_path_upstream": false,
+      "sha256": "28954cddbd97af5b65d14578b12af3af2eab50f657fbbf48cfb38c8be413398e",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1403,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": "pipeline-tools/interaction-verifier-v1/schemas/builder-repair-package-v1.schema.json",
+      "same_path_upstream": false,
+      "sha256": "d4cea12d7a8cb00fb132a70ce083949e7ec4704ce6d2d954465fed4dd6a062ef",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 986,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": "pipeline-tools/interaction-verifier-v1/schemas/checkpoint-v1.schema.json",
+      "same_path_upstream": false,
+      "sha256": "d4ad4123e776c63f4f92282c9c45d3d4d330340623ad6891c691c7821b60007a",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 5738,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": "pipeline-tools/interaction-verifier-v1/schemas/code-interaction-inventory-v1.schema.json",
+      "same_path_upstream": false,
+      "sha256": "c537ca0e9747efc6fd9b6f4eac3b1a13e7c078e262bc254c77d0004185bf99c0",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 3766,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": "pipeline-tools/interaction-verifier-v1/schemas/interaction-closure-v2.schema.json",
+      "same_path_upstream": false,
+      "sha256": "af9a8031b0ed1658ab1fd967206a254fc60319028a899273095dde232949cac9",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 9222,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": "pipeline-tools/interaction-verifier-v1/schemas/interaction-contract-v1.schema.json",
+      "same_path_upstream": false,
+      "sha256": "43781c654dd06e97bf0757ed0a70455de5ec68484d327b0f20fd03963c4ecf44",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 3547,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": "pipeline-tools/interaction-verifier-v1/schemas/interaction-diff-v1.schema.json",
+      "same_path_upstream": false,
+      "sha256": "560bf3041ef988f1ac942b3724d8a5cb4fd4caddd91a6a353b7ce4b6bcacee13",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1601,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": "pipeline-tools/interaction-verifier-v1/schemas/terminal-result-v1.schema.json",
+      "same_path_upstream": false,
+      "sha256": "785580bbe32068c0d9d794bf1fd9844bd8c5128677ce4d9bf3427c884a78932b",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1190,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": "pipeline-tools/interaction-verifier-v1/schemas/verification-plan-v1.schema.json",
+      "same_path_upstream": false,
+      "sha256": "2f22912f766077244394ac30b0b88b95d2d8dd7edc483e7d6054beeaadc6cbd0",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 78619,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": "pipeline-tools/interaction-verifier-v1/scripts/browser_verifier.py",
+      "same_path_upstream": false,
+      "sha256": "e14b4a9e1661e6fd241cd79553d963a0f0ea9b4f277fdebf2aebf1fbe267079e",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 14449,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": "pipeline-tools/interaction-verifier-v1/scripts/checkpoint.py",
+      "same_path_upstream": false,
+      "sha256": "56e86e9a851b3075b05b8dcdd6d9fe33e368b3ca1fe13c28532cbc70e79eb006",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 45879,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": "pipeline-tools/interaction-verifier-v1/scripts/contract.py",
+      "same_path_upstream": false,
+      "sha256": "652f810b7d6dc5ec0627930a8fd0f30bd77410a125954a977c56d7cbfdd87a0b",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1484,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": "pipeline-tools/interaction-verifier-v1/scripts/fingerprint.py",
+      "same_path_upstream": false,
+      "sha256": "0a5e8b4fee11d9400ceca110b467ef9d26bfffb1edd05b9a29ed3002ac837ae9",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 55173,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": "pipeline-tools/interaction-verifier-v1/scripts/inventory.py",
+      "same_path_upstream": false,
+      "sha256": "20c586cf144b162b72e87128f38ab5a71b740f996eae45148ad7f9b63f0001ff",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 7986,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": "pipeline-tools/interaction-verifier-v1/scripts/pipeline_adapter.py",
+      "same_path_upstream": false,
+      "sha256": "dc83a3684e29f8bd17a28d2d33c95f41cdacecfad521c9e114896575f0b91c18",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 58936,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": "pipeline-tools/interaction-verifier-v1/scripts/terminal.py",
+      "same_path_upstream": false,
+      "sha256": "751e56ab47860057abdb50bc20dee2c91bef86f9439aa7154a0cd6c78e13f9d3",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 26152,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": "pipeline-tools/interaction-verifier-v1/scripts/triangulation.py",
+      "same_path_upstream": false,
+      "sha256": "932e92de11db49844b7dcc04652ad7c53abfb7330ec533e0de9310deb08c8499",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 22016,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": "pipeline-tools/interaction-verifier-v1/tests/fixtures/fixture.py",
+      "same_path_upstream": false,
+      "sha256": "b818aa562407bbd49dd9c3dd68bf0240a054d0f84c36afe491a905d441aca57e",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1941,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "pipeline-tools/interaction-verifier-v1/tests/run_forward_fixture.py",
+      "same_path_upstream": false,
+      "sha256": "65815e26be828cec7449662d96c197f3cd624cc642f780c65c47c522d6e2ce90",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 14302,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "pipeline-tools/interaction-verifier-v1/tests/test_checkpointed_exhaustive.py",
+      "same_path_upstream": false,
+      "sha256": "968dbb02402acab081d46ba99a90e7a7f096af9f5b09bad2ca51b151b315b2c9",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 2724,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": "pipeline-tools/interaction-verifier-v1/tests/test_identity_protocol.py",
+      "same_path_upstream": false,
+      "sha256": "491e619bcf1aebea8e0b161dffebede2ee341212cdf3aeef54f1bb090ba73f31",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 19863,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": "pipeline-tools/interaction-verifier-v1/tests/test_interaction_verifier.py",
+      "same_path_upstream": false,
+      "sha256": "74b66e6d3536733cea80cd7cd48f9106f261e51fc340082960808d2f34337576",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 8235,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": "pipeline-tools/interaction-verifier-v1/tests/test_precision_repair.py",
+      "same_path_upstream": false,
+      "sha256": "96f6c07ee9c295cfb7dad575883a0ee1207848c34e1989f0e970c9e7e9c8f459",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 8540,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": "pipeline-tools/interaction-verifier-v1/tests/test_standalone_contract.py",
+      "same_path_upstream": false,
+      "sha256": "53ff4da88bf0200931d0f9700900aeaeb5494f2262c94e14c0ea1c38bebc3daf",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1635,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": "provenance/QA_REPORT.md",
+      "same_path_upstream": false,
+      "sha256": "20f0cdc29d56b492a68524dbe659b7218bb1ba8992a2ed67ccf662146f037719",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 4723,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": "provenance/source_snapshot.json",
+      "same_path_upstream": false,
+      "sha256": "b2d61e14a05af59954c2d43e40454c8d5b338513925b09319acc8df01b02160f",
+      "text": true
+    },
+    {
+      "best_similarity": 0.109876,
+      "best_upstream_path": "agent_demo/pyproject.toml",
+      "bytes": 1208,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": "fuzzy_candidate",
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "pyproject.toml",
+      "same_path_upstream": false,
+      "sha256": "526d1bad646170bcf728d6f1ab66733de8434879be34a1a2e3b7f004d1e3879f",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 4700,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "runtime/nexgarden-benchmark-runtime.js",
+      "same_path_upstream": false,
+      "sha256": "cfa61ffd3a9e9be80d7b43048be7ce0ec905ead484e12f63a2cdfd30136a2628",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 3420,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "runtime/nexgarden_replay_runtime.py",
+      "same_path_upstream": false,
+      "sha256": "5791c6cf685318ddfebfb16ba37e94c7fe525ebeeb41797985adf9ccff3835d2",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 2918,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "runtime/nexgarden_replay_surface_app.py",
+      "same_path_upstream": false,
+      "sha256": "b1198522547af12f98b982edf27bab5944bf5c44af93570fc4a11e85933dfdc6",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1203,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "schemas/candidate-freeze-v1.schema.json",
+      "same_path_upstream": false,
+      "sha256": "d8ba515b0ac23a4b2aefabf24226808e3279e506701e39bb7d7b001c2682d684",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1148,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "schemas/discovery-package-v1.schema.json",
+      "same_path_upstream": false,
+      "sha256": "041426460ddcdd39be688a958f43aaa4a0b8f6c88d257c4d9903cdacdecae34f",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1708,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "schemas/e2b-coupled-batch-v1.schema.json",
+      "same_path_upstream": false,
+      "sha256": "503b45e1e0de3179706d3cb4e700871034040b9271ea6c91c77858ff48c286bf",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 2853,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "schemas/release-gate-result-v1.schema.json",
+      "same_path_upstream": false,
+      "sha256": "cb628131b5832a94219a769a01d969dd334c205f8ca68ac9f9e36edf60006db6",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1132,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "schemas/release-manifest-v1.schema.json",
+      "same_path_upstream": false,
+      "sha256": "7ebc91f2c914ed2471b76a141ff66d089ed501f2f770735e71b1d083f844b9fa",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 4267,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "schemas/release-manifest-v2.schema.json",
+      "same_path_upstream": false,
+      "sha256": "6a53ae76c6b177c1f088e17f560aeed55032865840d1e3eba7bcea3cc04565d0",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1861,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "schemas/replay-acquisition-v1.schema.json",
+      "same_path_upstream": false,
+      "sha256": "628d7a8d5ffa4173e21dae76907630e0b0e450a5672e48400900a8dc51b27407",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 2130,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "schemas/replay-capture-manifest-v1.schema.json",
+      "same_path_upstream": false,
+      "sha256": "2747ca5f0aa4ae6bc6f4babb3902b53aaffcc9248680858227dabdea95cd43b3",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 2926,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "schemas/run-config-v1.schema.json",
+      "same_path_upstream": false,
+      "sha256": "ed4dc11fa93d92264fd72e8f1387a5facad0217f1c406427d420da4a0c77fae6",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1213,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "schemas/site-contract-v1.schema.json",
+      "same_path_upstream": false,
+      "sha256": "7edb5dd22c8ca82349c5b7c019d8610d2e4f2d35dd2cc1f8604fe8b806daa83b",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 7388,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "schemas/synthetic-contract-v1.schema.json",
+      "same_path_upstream": false,
+      "sha256": "3beeab516858b60b589ebac71196f5975e50ec5804955afb0fab7a8dbeb30202",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 2755,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "schemas/synthetic-pipeline-spec-v1.schema.json",
+      "same_path_upstream": false,
+      "sha256": "848465eccc75480c04e413e931c3893377897fc06ed5d1c55a37d220831a9947",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 7552,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "schemas/synthetic-replay-contract-v1.schema.json",
+      "same_path_upstream": false,
+      "sha256": "fcdc97375b744119f91f8189ca05b05c0f06b8278ec0f60a75e3e01c2ffdadf5",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 2093,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "schemas/synthetic-replay-verification-v1.schema.json",
+      "same_path_upstream": false,
+      "sha256": "8cee80644205b08b46f95586bd6fc55a75b29618ee8bcde284a30d6c114bf095",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1768,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "schemas/synthetic-verification-v1.schema.json",
+      "same_path_upstream": false,
+      "sha256": "3e51bc7fc78319580a2ae71d824337086cdfb01188754d71a6aa3c313f9f1848",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 4431,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "schemas/synthetic-visual-capture-spec-v1.schema.json",
+      "same_path_upstream": false,
+      "sha256": "d196c86c84b243dde675236a69d20ae31c18afadc4b36b1f9d37ff4e3e528268",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 3750,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "schemas/synthetic-visual-reference-v1.schema.json",
+      "same_path_upstream": false,
+      "sha256": "3769c71f1c078b9ee6a617fcd400661fda08554e9837aa32a3bee2244a7e9508",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 2563,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "schemas/synthetic-visual-verification-v1.schema.json",
+      "same_path_upstream": false,
+      "sha256": "f6688ceb8774d042fcb8ef9a71984cb1e80c9208337dd83e22013bb4b3acf13a",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 37,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "scripts/__init__.py",
+      "same_path_upstream": false,
+      "sha256": "dcc8b321b1796c9d109b12eac753c95bc73608a00e96cf82f917ac9cc97bb77f",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 47706,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": "scripts/batch_supervisor.py",
+      "same_path_upstream": false,
+      "sha256": "7fde49e54c033eed78328d1d00ea79e1472e1992e73913f57da2820b2ae4a7d1",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 7844,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": "scripts/coupled_pipeline.py",
+      "same_path_upstream": false,
+      "sha256": "fe9551ed52f555ad12ea5cac9e12cad4c50fd50dd45a24c302c72be0b3c4df2d",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 37030,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": "scripts/deploy_preview_gallery_e2b.py",
+      "same_path_upstream": false,
+      "sha256": "9dd8d30b48557583380df4a3b83a8757d00115bb0610871cb6fde1940c0eaf11",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 27072,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "scripts/e2b_coupled_batch.py",
+      "same_path_upstream": false,
+      "sha256": "71097cf217a31c36c32ae69ce2af48c0223aaa4d163fc3df92ed85e0d190958e",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1878,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "scripts/emit_contract_artifacts.py",
+      "same_path_upstream": false,
+      "sha256": "41f420160beb1401ea285008d074be3f6d4e685ff7e9e8ba3e0a3bba5267324c",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 3603,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "scripts/import_site_inventory.py",
+      "same_path_upstream": false,
+      "sha256": "11e4d13a742e89d9958244b3b849cfd203e6061ba4a4462f7fe3df0d0a7e3dc0",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 41284,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": "scripts/mirror_factory.py",
+      "same_path_upstream": false,
+      "sha256": "c42d5e0228eb0e45801fdab846fd95cc1a8ad090dc746a1d046875b7b6005301",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 4908,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "scripts/prepare_generated_assets.py",
+      "same_path_upstream": false,
+      "sha256": "559d5e6c224169829eff9cbcbfd13ba294d8874af2892e2b09a81220f708be63",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 6370,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": "scripts/preview_gallery_supervisor.py",
+      "same_path_upstream": false,
+      "sha256": "777f3ea988d1fbac17a96c2b0d22f614e8eacdb81bc7dd6167055e787e99ebaf",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 17305,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": "scripts/preview_gateway.py",
+      "same_path_upstream": false,
+      "sha256": "839f6b43a210058c8c54d46ee563dd7d57a141115d6d66dd064fd6862c33069b",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 4487,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "scripts/release_scan.py",
+      "same_path_upstream": false,
+      "sha256": "a0e60558f567a727c89e2739f5697971a217fb5d00a8a33097380488e1ce4762",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1669,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "scripts/run_codex_trace.sh",
+      "same_path_upstream": false,
+      "sha256": "32b820da1a689888ee12b73340fbad71b036818fca749b8745cc22b3bc2d6c47",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 4128,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "scripts/static_site_server.py",
+      "same_path_upstream": false,
+      "sha256": "d8e9493fa9fbe43d027427be7eff6b456b583dc9ea015cb41daa9dfbb2df725c",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 28670,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "scripts/synthetic_pipeline_supervisor.py",
+      "same_path_upstream": false,
+      "sha256": "5b5c078a1dcf9727383d783a67ed0eb1467b2c8ffd23a2abbe2f3f7c1b4c1a15",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 10944,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor",
+        "websyn"
+      ],
+      "path": "scripts/verify_local_runtime_batches.py",
+      "same_path_upstream": false,
+      "sha256": "d7e787aec27ab0214454c85e259bd0e1d8ceb7321792807a6ef7e88037528e03",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 2385,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": "scripts/verify_site_inventory.py",
+      "same_path_upstream": false,
+      "sha256": "5aa0e332c4db68a1a90318b798a8fd972fb18b7b76defdba5577aad24a2f2d0f",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 131,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "site_catalog.json",
+      "same_path_upstream": false,
+      "sha256": "d1fd86b0f057178a8704879e7cbb820b1fc00386919f4993ce4ea8ade5dce47b",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 4557,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": "site_catalog.py",
+      "same_path_upstream": false,
+      "sha256": "6638c1878c30b433640845b26460985b8c6ff5bb80619f03ae7d53ce960c14ba",
+      "text": true
+    },
+    {
+      "best_similarity": 0.938661,
+      "best_upstream_path": "site_runner.py",
+      "bytes": 1857,
+      "classification": "high_public_similarity",
+      "comparison_method": "same_path",
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor",
+        "websyn"
+      ],
+      "path": "site_runner.py",
+      "same_path_upstream": true,
+      "sha256": "4d3021bfe8c5ba0d8003ee7f70de2f0f7d1497e5b967168f85e338b0ef02e16b",
+      "text": true
+    },
+    {
+      "best_similarity": 1.0,
+      "best_upstream_path": "sites/merriam_webster/static/css/.gitkeep",
+      "bytes": 0,
+      "classification": "empty_placeholder_match",
+      "comparison_method": "exact_content",
+      "exact_upstream_paths": [
+        "sites/merriam_webster/static/css/.gitkeep",
+        "sites/merriam_webster/static/icons/.gitkeep",
+        "sites/merriam_webster/static/images/.gitkeep",
+        "sites/merriam_webster/static/js/.gitkeep",
+        "sites/merriam_webster/templates/.gitkeep"
+      ],
+      "legacy_terms": [],
+      "path": "sites/.gitkeep",
+      "same_path_upstream": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 66,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "src/nexgarden/__init__.py",
+      "same_path_upstream": false,
+      "sha256": "f936b0a123233c5a98539d063896c3bc942f42448d64b8332e13c3d42952dcd7",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 77432,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": "src/nexgarden/cli.py",
+      "same_path_upstream": false,
+      "sha256": "6b6dbeccc0c9f5d40288481f3a72c88157678123c883d4b2dc75714c30e2fe0f",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 17107,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": "src/nexgarden/contracts.py",
+      "same_path_upstream": false,
+      "sha256": "11793c1dcb7a3dc223578b4e509a6e45b22c41486795fa1da77b659aa202a317",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 23761,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "src/nexgarden/discovery.py",
+      "same_path_upstream": false,
+      "sha256": "695ed9889bb042f745d64905d90d34dd729fe00eac16394c667c68de801f4280",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 24324,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": "src/nexgarden/release.py",
+      "same_path_upstream": false,
+      "sha256": "2e87293c13a770eaadd22c228627abb987a52bed5f4fdbcdbe8cf322e827ea15",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 28669,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "src/nexgarden/synthetic.py",
+      "same_path_upstream": false,
+      "sha256": "bd475921434117bf5b28105205a03f27b71d52018b1b82d97659b0e663039d2a",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 14405,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "src/nexgarden/synthetic_release.py",
+      "same_path_upstream": false,
+      "sha256": "594ad89384049815ad7092114b4a9b4949283e74106d3ecbc8f9cb3fd976d4fd",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 30104,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "src/nexgarden/synthetic_replay.py",
+      "same_path_upstream": false,
+      "sha256": "ba6554d1e1123a1cdfb117db11f902d567a69b9ccb3fa5f28d1c4344103eca08",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 142245,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "src/nexgarden/synthetic_replay_acquire.py",
+      "same_path_upstream": false,
+      "sha256": "551b0288d114bab215d752006e5cac74d0f6bacdac628606b54ca6d0b848a155",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 10463,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "src/nexgarden/synthetic_replay_capture.py",
+      "same_path_upstream": false,
+      "sha256": "30d7d27626a1830493fa294617fc011adb6690d9798d9ce78cb960d6abb8ac7e",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 12597,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "src/nexgarden/synthetic_replay_release.py",
+      "same_path_upstream": false,
+      "sha256": "56167dd5c6b84915e87c5f27f183d54d5717d8a2a3c18708da1c551f27be0a8f",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 45923,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": "src/nexgarden/synthetic_replay_verify.py",
+      "same_path_upstream": false,
+      "sha256": "dea39471ba62e034f873d42debb994cb7ed61b971af3c65cb000abaa8e50a2db",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 31128,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "src/nexgarden/synthetic_verify.py",
+      "same_path_upstream": false,
+      "sha256": "192a6d279dbdbf110a02656cc1bb9d91dd50a34cf5f2f1a80b7155698c7fc399",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 63809,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "src/nexgarden/synthetic_visual.py",
+      "same_path_upstream": false,
+      "sha256": "eb6757db0e2ce571c76c4c894ddc2943bd32922aa88811831dd586716090147c",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 19362,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": "src/nexgarden/synthetic_visual_verify.py",
+      "same_path_upstream": false,
+      "sha256": "d25dcfd63a2a65f3ecfba0f9e7c59afbd214bbc73597c5e189776f31c7aa44b1",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 7197,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "tests/test_batch_supervisor.py",
+      "same_path_upstream": false,
+      "sha256": "15692d254a0eddeda518101ed1d9391a0bd5a04fd547040e86a7b302dc360746",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 10585,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": "tests/test_cli.py",
+      "same_path_upstream": false,
+      "sha256": "9f4154c0e1e8100e88646fa28823d212a7fca802f3aad978b969d2dd13036cb9",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 2605,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "tests/test_contracts.py",
+      "same_path_upstream": false,
+      "sha256": "02d39c6b5a95037be18c76a088556bdde8adf118c0f45d7ba9453430c4f30132",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 5638,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "tests/test_coupled_pipeline.py",
+      "same_path_upstream": false,
+      "sha256": "c828b2eedc0c9a2d71e0dd027d02a3367908ca39d8d898ead9e6e3baf27fba9e",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 4522,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "tests/test_coupled_recovery.py",
+      "same_path_upstream": false,
+      "sha256": "9f2f4b2a7b61e76d9878016b6abb07fe4ebede7456be2c4e3971ea53a1aba6c5",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 5522,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": "tests/test_discovery_pipeline.py",
+      "same_path_upstream": false,
+      "sha256": "6dabdb4a551a45c482c7aad87ebf88a24737e247065ffdf19cdd3152fecf3f2e",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 5819,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "tests/test_e2b_coupled_batch.py",
+      "same_path_upstream": false,
+      "sha256": "58126ec4379c45e7e5966aafa56b13466a2390f87214d0fc0dd1140362f9624a",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 9511,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": "tests/test_release.py",
+      "same_path_upstream": false,
+      "sha256": "5aa63309fe8c1635c07e9e868504e8a0b52d12a4a289241e4017372430e9e0a7",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1334,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "tests/test_release_scan.py",
+      "same_path_upstream": false,
+      "sha256": "50e71a88223823dd9e26d2f5c5a912128fea690b630941aace0f16d337744253",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 7842,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": "tests/test_schemas_and_skill.py",
+      "same_path_upstream": false,
+      "sha256": "f2e67961800e59ffff2e7eb0071000505119db5d0c4161973bd0043fda96adc6",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1378,
+      "classification": "no_material_public_overlap_detected",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "tests/test_site_inventory.py",
+      "same_path_upstream": false,
+      "sha256": "0dda7bc582e0e682c4cd898d9392a4135811d6a207a58a90867c7d557f5b3fa5",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 43588,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": "tests/test_synthetic.py",
+      "same_path_upstream": false,
+      "sha256": "b77a5aa9dc318cc794aec97915f88ab3048782eb0d9b3ede488ffa0e158566b3",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 13425,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "tests/test_synthetic_pipeline.py",
+      "same_path_upstream": false,
+      "sha256": "0a38e533cf1e3c12b6c4ded1412428d858efdc83973b304e5e19652f989940ee",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 39287,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "tests/test_synthetic_replay.py",
+      "same_path_upstream": false,
+      "sha256": "2e124e21c3064ea1070df966ea1a6cd85d5dbb15d4237a4c212bdc62a7be2821",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 30017,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "tests/test_synthetic_replay_acquire.py",
+      "same_path_upstream": false,
+      "sha256": "700d49289081cb398cf205916b6ab82afd590dff10d1ed33b068f6ade4c5894d",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 39049,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": "tools/codex-mirror-trace/capture.mjs",
+      "same_path_upstream": false,
+      "sha256": "39288c2e783576de74749c79c3f6f309a58afae7c9b39d4bef1cf8c8d57f3bb3",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 27262,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": "tools/codex-mirror-trace/continue.mjs",
+      "same_path_upstream": false,
+      "sha256": "c57fbf5ffad6aa7d719ae514321c8821c81c5987076f2649c36a478bc296e35f",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 65611,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": "tools/codex-mirror-trace/lib.mjs",
+      "same_path_upstream": false,
+      "sha256": "2f9879856195337c99bbdd041b464947e4b90dc4eb1b4ae914308af091ea90d3",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 4517,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "tools/codex-mirror-trace/package-lock.json",
+      "same_path_upstream": false,
+      "sha256": "8a3f0491b5aae48d048282a66b3982e30aed15f5ae5399c19efbd1600c1a59f1",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 222,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "tools/codex-mirror-trace/package.json",
+      "same_path_upstream": false,
+      "sha256": "31c534f42a87cdf6bcad644e762eb0cbd0f1bebfa996207076c946c117c4547a",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 5748,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": "tools/codex-mirror-trace/recover-baseline.mjs",
+      "same_path_upstream": false,
+      "sha256": "288bb9139308dc3162fb6042250227a52ba09f3fe356ecff09a3168b87350c97",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 5120,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": "tools/codex-mirror-trace/seal.mjs",
+      "same_path_upstream": false,
+      "sha256": "5ea519ed43abadb892fa3b847f881c51709997fa2ff248200d38ffe551eb3ca5",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 45365,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": "tools/codex-mirror-trace/test/lib.test.mjs",
+      "same_path_upstream": false,
+      "sha256": "43cac9863b8dcf332d4ed4acf931200bd4162232f0e9935b01b0fb012396326a",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1857,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "tools/coupled-pipeline/candidate_integrity.mjs",
+      "same_path_upstream": false,
+      "sha256": "74bd57e3f883280f43f2748fe17e0599be401527a2e6774cf6527bcb3ba09de9",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 4620,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "tools/coupled-pipeline/preflight_reset.py",
+      "same_path_upstream": false,
+      "sha256": "92bea5201907af465a93937a544ae44e6a1a5a5403cb1b213463d16430a34b48",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 12390,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": "tools/coupled-pipeline/run_coupled_builder.mjs",
+      "same_path_upstream": false,
+      "sha256": "e2c2ef42ed41c292217434384bd86c9d115faa15bae2691d71cd37a466133b97",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 12332,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden",
+        "webharbor"
+      ],
+      "path": "tools/coupled-pipeline/run_independent_verifier.mjs",
+      "same_path_upstream": false,
+      "sha256": "9968bbad6c4554d9e79083246df44ef06f038c6cd7d27bba37af60a0459a9324",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1439,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "tools/coupled-pipeline/run_persistent_site_loop.sh",
+      "same_path_upstream": false,
+      "sha256": "f77dfe72da79cec53606cb3390939699f0258da99649dd7cd8ff9c595a0d6018",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 10589,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "nexgarden"
+      ],
+      "path": "tools/coupled-pipeline/run_site_to_completion.sh",
+      "same_path_upstream": false,
+      "sha256": "ca47a2f264795a48e90976187c9cab8c237dea8154eb0c441c5108fed652c8a5",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 327061,
+      "classification": "binary_no_exact_match",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [],
+      "path": "uv.lock",
+      "same_path_upstream": false,
+      "sha256": "76c6a3779aa3c196ce89d52996ebcd6916d76ed00974b5333ac787d89343fe1c",
+      "text": false
+    },
+    {
+      "best_similarity": 0.715309,
+      "best_upstream_path": "websyn_start.sh",
+      "bytes": 2599,
+      "classification": "medium_public_similarity",
+      "comparison_method": "same_path",
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "websyn"
+      ],
+      "path": "websyn_start.sh",
+      "same_path_upstream": true,
+      "sha256": "c89db01c4b333118084745e8d9dd3786e34c907af4c702b3c6a9868c9eb33530",
+      "text": true
+    }
+  ],
+  "generated_at": "2026-10-17T07:17:16+00:00",
+  "local": {
+    "deleted_tracked_paths": [],
+    "dirty": false,
+    "files_audited": 273,
+    "head": "90fb918ca1fc3ef5071fbecc2868e339217fb875",
+    "requested_ref": "90fb918",
+    "root": "/Users/xietianci/.codex/.chatgpt-projects/g-p-6aace13402348191821b145027256c06/work/webanything",
+    "scope": "git_revision",
+    "status": []
+  },
+  "schema": "webanything-public-provenance-audit-v2",
+  "summary": {
+    "binary_no_exact_match": 22,
+    "empty_placeholder_match": 5,
+    "high_public_similarity": 2,
+    "legacy_name_only_or_unresolved": 197,
+    "medium_public_similarity": 2,
+    "no_material_public_overlap_detected": 45
+  },
+  "thresholds": {
+    "high_similarity": 0.8,
+    "medium_similarity": 0.5
+  },
+  "upstream": {
+    "commit": "7269be89c93b72cf1d8596b4fde65ba1c7453c15",
+    "files_audited": 667,
+    "root": "/private/tmp/webharbor-7269be8-tree.dsZ24h",
+    "root_license_files": [],
+    "url": "https://github.com/aiming-lab/WebHarbor.git"
+  }
+}

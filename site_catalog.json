@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "base_port": 40000,
+  "asset_repo": "local",
+  "default_asset_revision": "unpublished",
+  "sites": []
+}

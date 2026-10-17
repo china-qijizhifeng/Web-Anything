@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block title %}Accordion accessibility tests | U.S. Web Design System (USWDS){% endblock %}
+{% block content %}
+<main class="main accordion-main accessibility-main" id="main-content">
+  <div class="content-layout">
+    <article class="article">
+      <div class="eyebrow">COMPONENTS</div>
+      <h1>Accordion accessibility tests</h1>
+      <p class="lede">Any USWDS accordion should pass these manual accessibility tests.</p>
+      <span class="status">Passed WCAG 2.1 AA</span>
+
+      <section class="doc-section">
+        <h2 id="status-summary">Accordion accessibility status</h2>
+        <p>The USWDS team did 23 tests based on WCAG 2.1 AA success criteria.</p>
+        <table class="status-table">
+          <caption>Overview of recent accessibility test results:</caption>
+          <thead><tr><th>Total tests</th><th>Passed</th><th>Passed with exceptions</th><th>Conditional</th><th>Failed</th></tr></thead>
+          <tbody><tr><td>23</td><td>21</td><td>0</td><td>2</td><td>0</td></tr></tbody>
+        </table>
+
+        <h2 id="test-project">Test the accordion in your project</h2>
+        <p>USWDS tests components in isolation. You need to test the accordion component in the context of your own site to ensure compliance with Section 508 accessibility standards.</p>
+        <ul><li>Use the checklist below.</li><li>Follow the “how to test” instructions for each type of assistive technology.</li><li>Anyone can test for accessibility.</li><li>These quick manual tests don’t require special equipment.</li></ul>
+
+        <h2 id="checklist">Accordion accessibility checklist</h2>
+        <nav class="checklist-links" aria-label="Accessibility checklist sections"><a href="#zoom">Zoom magnification tests</a><a href="#keyboard">Keyboard navigation tests</a><a href="#screen-reader">Screen reader tests</a></nav>
+
+        <h2 id="zoom">Zoom magnification tests</h2>
+        <p>USWDS performed these tests to check accordion accessibility and usability for zoom magnification.</p>
+        <div class="test-list">
+          <section><h3>No need to scroll horizontally when screen is magnified.</h3><p>When you zoom to 200%, accordion panels do not require horizontal scrolling.</p><p class="test-meta"><strong>WCAG AA 1.4.4 Resize text</strong> · USWDS test status: <strong>Passed</strong> · Last test: v3.5.0</p></section>
+          <section><h3>Focus indicator is clear when screen is magnified.</h3><p>When you zoom to 200% and navigate through items with the tab key, each item has a focus highlight that is clear and visible.</p><p class="test-meta"><strong>WCAG AA 1.4.4 Resize text</strong> · USWDS test status: <strong>Passed</strong> · Last test: v3.5.0</p></section>
+          <section><h3>Content does not get cut off or overlap when screen is magnified.</h3><p>When you zoom to 200%, no content is cut off, overlaps, or is obscured by other page elements.</p><p class="test-meta"><strong>WCAG AA 1.4.4 Resize text</strong> · USWDS test status: <strong>Passed</strong> · Last test: v3.5.0</p></section>
+        </div>
+
+        <h2 id="keyboard">Keyboard navigation tests</h2>
+        <p>USWDS performed these tests to check accordion accessibility and usability for keyboard navigation.</p>
+        <div class="test-list">
+          <section><h3>Interactive elements work after tabbing.</h3><p>When you use the tab key to navigate into an open accordion panel, each interactive item inside that panel is selectable.</p><p class="test-meta"><strong>WCAG A 2.1.1 Keyboard</strong> · USWDS test status: <strong>Passed</strong></p></section>
+          <section><h3>Accordion panel opens and closes with keyboard interaction.</h3><p>Using the enter key or spacebar on a panel header toggles the panel, while hover and focus alone do not.</p><p class="test-meta"><strong>WCAG A 2.1.1 Keyboard</strong> · USWDS test status: <strong>Passed</strong></p></section>
+          <section><h3>Focus moves forward and backward in a logical order.</h3><p>Tab and shift + tab move through visible focusable items without skipping them, and focus stays on the panel header after toggling.</p><p class="test-meta"><strong>WCAG A 2.4.3 Focus order</strong> · USWDS test status: <strong>Passed</strong></p></section>
+          <section><h3>Focus indicators are clear.</h3><p>The accordion panel and interactive items inside it have a clear, visible focus highlight.</p><p class="test-meta"><strong>WCAG AA 2.4.7 Focus visible</strong> · USWDS test status: <strong>Passed</strong></p></section>
+        </div>
+
+        <h2 id="screen-reader">Screen reader tests</h2>
+        <p>USWDS performed these tests to check accordion accessibility and usability for screen readers.</p>
+        <div class="test-list">
+          <section><h3>Focus moves in a logical order when using a screen reader.</h3><p>The virtual cursor moves from one panel header to the next in a logical order.</p><p class="test-meta"><strong>WCAG A 2.4.3 Focus order</strong> · USWDS test status: <strong>Passed</strong></p></section>
+          <section><h3>Heading levels are logical and consistent.</h3><p>Test heading levels in the context of your page and keep each accordion panel heading at the same level.</p><p class="test-meta"><strong>WCAG AA 2.4.6 Headings and labels</strong> · USWDS test status: <strong>Conditional</strong></p></section>
+          <section><h3>Screen reader announces collapsed and expanded states.</h3><p>Screen readers announce the current panel state and the changed state after using enter or spacebar.</p><p class="test-meta"><strong>WCAG A 1.3.1 Info and relationships</strong> · USWDS test status: <strong>Passed</strong></p></section>
+        </div>
+
+        <h2 id="feedback">Share your feedback</h2>
+        <p><a href="https://github.com/uswds/uswds-site/issues/new/choose">Propose a new test or report an error</a>.</p>
+        <h2 id="updates">Latest updates</h2>
+        <p>In March 2024, USWDS updated the collapsed and expanded announcement test status to Passed after fixing an issue isolated to the documentation site.</p>
+      </section>
+      <p class="back-link"><a href="{{ url_for('accordion') }}">← Accordion component</a></p>
+    </article>
+    <aside class="toc" aria-label="On this page"><h2>On this page</h2><a href="#status-summary">Accordion accessibility status</a><a href="#test-project">Test the accordion in your project</a><a href="#checklist">Accordion accessibility checklist</a><a href="#zoom">Zoom magnification tests</a><a href="#keyboard">Keyboard navigation tests</a><a href="#screen-reader">Screen reader tests</a><a href="#feedback">Share your feedback</a><a href="#updates">Latest updates</a></aside>
+  </div>
+</main>
+{% endblock %}

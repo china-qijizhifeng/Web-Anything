@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://webanything.dev/schemas/synthetic-pipeline-spec-v1.schema.json",
+  "title": "Checkpointed synthetic visual production pipeline spec v1",
+  "type": "object",
+  "required": ["schema", "root", "pool_limits", "sites"],
+  "properties": {
+    "schema": {"const": "webanything-synthetic-pipeline-spec-v1"},
+    "root": {"type": "string", "minLength": 1},
+    "pool_limits": {
+      "type": "object",
+      "required": ["capture", "builder", "verifier"],
+      "properties": {
+        "capture": {"type": "integer", "minimum": 1},
+        "builder": {"type": "integer", "minimum": 1},
+        "verifier": {"type": "integer", "minimum": 1}
+      },
+      "additionalProperties": false
+    },
+    "sites": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "auth_required", "cwd", "commands"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_]*$"},
+          "build_mode": {"enum": ["benchmark_synthetic", "benchmark_synthetic_replay"]},
+          "auth_required": {"type": "boolean"},
+          "cwd": {"type": "string", "minLength": 1},
+          "max_functional_repairs": {"type": "integer", "minimum": 1, "maximum": 10},
+          "max_visual_repairs": {"type": "integer", "minimum": 1, "maximum": 10},
+          "max_stage_attempts": {"type": "integer", "minimum": 1, "maximum": 10},
+          "artifacts": {
+            "type": "object",
+            "properties": {"auth_profile": {"type": "string", "minLength": 1}},
+            "additionalProperties": true
+          },
+          "timeouts_seconds": {"type": "object", "additionalProperties": {"type": "number", "exclusiveMinimum": 0}},
+          "commands": {
+            "type": "object",
+            "required": ["capture", "build", "freeze", "functional_verify", "visual_verify", "repair", "refreeze", "release"],
+            "properties": {
+              "capture": {"$ref": "#/$defs/command"},
+              "build": {"$ref": "#/$defs/command"},
+              "freeze": {"$ref": "#/$defs/command"},
+              "functional_verify": {"$ref": "#/$defs/command"},
+              "visual_verify": {"$ref": "#/$defs/command"},
+              "repair": {"$ref": "#/$defs/command"},
+              "refreeze": {"$ref": "#/$defs/command"},
+              "release": {"$ref": "#/$defs/command"},
+              "deploy": {"$ref": "#/$defs/command"}
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "$defs": {
+    "command": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+  },
+  "additionalProperties": false
+}

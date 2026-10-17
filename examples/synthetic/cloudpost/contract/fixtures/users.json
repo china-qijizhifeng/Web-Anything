@@ -1,0 +1,20 @@
+{
+  "usr_demo_001": {
+    "id": "usr_demo_001",
+    "name": "Mira Chen",
+    "address": "mira@cloudpost.example",
+    "role": "member"
+  },
+  "usr_alex_001": {
+    "id": "usr_alex_001",
+    "name": "Alex Rivera",
+    "address": "alex@northwind.example",
+    "role": "contact"
+  },
+  "usr_jo_001": {
+    "id": "usr_jo_001",
+    "name": "Jo Bell",
+    "address": "jo@paperkite.example",
+    "role": "contact"
+  }
+}

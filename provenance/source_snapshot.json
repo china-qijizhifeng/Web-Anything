@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "source_path": "public-release/NexGarden (relative to the WebHarbor artifact root)",
+  "source_commit": "ac48c8c62377e4724f2fc00c7c5f441aac614103",
+  "source_branch": "main",
+  "snapshot_date": "2026-10-13",
+  "extraction": "git archive HEAD followed by an allowlisted copy of the modified and untracked working-tree files below",
+  "working_tree_files": [
+    {
+      "upstream_path": "README.md",
+      "snapshot_path": "docs/WEBANYTHING_UPSTREAM.md",
+      "sha256": "ba17185fd61e2e6aa5c50df57f3befc7bd17ab83349452de938cbab48aff58d6"
+    },
+    {
+      "upstream_path": "docs/coupled-recovery.md",
+      "snapshot_path": "docs/coupled-recovery.md",
+      "sha256": "9e47d5009249d36ca898c39285d44f89d660f7ab836339651e7b5c2cd8350c75"
+    },
+    {
+      "upstream_path": "scripts/deploy_preview_gallery_e2b.py",
+      "snapshot_path": "scripts/deploy_preview_gallery_e2b.py",
+      "sha256": "9dd8d30b48557583380df4a3b83a8757d00115bb0610871cb6fde1940c0eaf11"
+    },
+    {
+      "upstream_path": "scripts/preview_gateway.py",
+      "snapshot_path": "scripts/preview_gateway.py",
+      "sha256": "839f6b43a210058c8c54d46ee563dd7d57a141115d6d66dd064fd6862c33069b"
+    },
+    {
+      "upstream_path": "src/nexgarden/cli.py",
+      "snapshot_path": "src/nexgarden/cli.py",
+      "sha256": "6b6dbeccc0c9f5d40288481f3a72c88157678123c883d4b2dc75714c30e2fe0f"
+    },
+    {
+      "upstream_path": "tests/test_cli.py",
+      "snapshot_path": "tests/test_cli.py",
+      "sha256": "9f4154c0e1e8100e88646fa28823d212a7fca802f3aad978b969d2dd13036cb9"
+    },
+    {
+      "upstream_path": "tools/coupled-pipeline/run_coupled_builder.mjs",
+      "snapshot_path": "tools/coupled-pipeline/run_coupled_builder.mjs",
+      "sha256": "e2c2ef42ed41c292217434384bd86c9d115faa15bae2691d71cd37a466133b97"
+    },
+    {
+      "upstream_path": "tools/coupled-pipeline/run_independent_verifier.mjs",
+      "snapshot_path": "tools/coupled-pipeline/run_independent_verifier.mjs",
+      "sha256": "9968bbad6c4554d9e79083246df44ef06f038c6cd7d27bba37af60a0459a9324"
+    },
+    {
+      "upstream_path": "tools/coupled-pipeline/run_site_to_completion.sh",
+      "snapshot_path": "tools/coupled-pipeline/run_site_to_completion.sh",
+      "sha256": "ca47a2f264795a48e90976187c9cab8c237dea8154eb0c441c5108fed652c8a5"
+    },
+    {
+      "upstream_path": "examples/e2b-coupled-batch.json",
+      "snapshot_path": "examples/e2b-coupled-batch.json",
+      "sha256": "3077684b3023a4a2dbece4b71d1cdee8dad6633fd56a8e78989fd972d7b9329e"
+    },
+    {
+      "upstream_path": "schemas/e2b-coupled-batch-v1.schema.json",
+      "snapshot_path": "schemas/e2b-coupled-batch-v1.schema.json",
+      "sha256": "503b45e1e0de3179706d3cb4e700871034040b9271ea6c91c77858ff48c286bf"
+    },
+    {
+      "upstream_path": "scripts/e2b_coupled_batch.py",
+      "snapshot_path": "scripts/e2b_coupled_batch.py",
+      "sha256": "71097cf217a31c36c32ae69ce2af48c0223aaa4d163fc3df92ed85e0d190958e"
+    },
+    {
+      "upstream_path": "tests/test_coupled_recovery.py",
+      "snapshot_path": "tests/test_coupled_recovery.py",
+      "sha256": "9f2f4b2a7b61e76d9878016b6abb07fe4ebede7456be2c4e3971ea53a1aba6c5"
+    },
+    {
+      "upstream_path": "tests/test_e2b_coupled_batch.py",
+      "snapshot_path": "tests/test_e2b_coupled_batch.py",
+      "sha256": "58126ec4379c45e7e5966aafa56b13466a2390f87214d0fc0dd1140362f9624a"
+    },
+    {
+      "upstream_path": "tools/coupled-pipeline/candidate_integrity.mjs",
+      "snapshot_path": "tools/coupled-pipeline/candidate_integrity.mjs",
+      "sha256": "74bd57e3f883280f43f2748fe17e0599be401527a2e6774cf6527bcb3ba09de9"
+    },
+    {
+      "upstream_path": "tools/coupled-pipeline/preflight_reset.py",
+      "snapshot_path": "tools/coupled-pipeline/preflight_reset.py",
+      "sha256": "92bea5201907af465a93937a544ae44e6a1a5a5403cb1b213463d16430a34b48"
+    },
+    {
+      "upstream_path": "tools/coupled-pipeline/run_persistent_site_loop.sh",
+      "snapshot_path": "tools/coupled-pipeline/run_persistent_site_loop.sh",
+      "sha256": "f77dfe72da79cec53606cb3390939699f0258da99649dd7cd8ff9c595a0d6018"
+    }
+  ],
+  "local_organization_changes": [
+    "README.md added",
+    "docs/REPRODUCIBILITY.md added",
+    "pyproject.toml distribution and CLI alias renamed",
+    "data/sites244.json added",
+    "inventory import and verifier scripts added",
+    "CI inventory check and CLI alias updated",
+    "uv.lock regenerated offline for webanything distribution",
+    "docs/coupled-pipeline.md uses portable example paths"
+  ],
+  "upstream_uv_lock_sha256": "4fca718ab80b52696e4888681a42ec53b972d1ee420f39a02b0494f1a129ab32",
+  "upstream_coupled_pipeline_doc_sha256": "b56c6b819657f4210348768c0ca94a6551b59d880d8d6c9a37f2afee81664d01"
+}

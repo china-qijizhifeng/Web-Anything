@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://webanything.dev/schemas/discovery-package-v1.schema.json",
+  "title": "WebAnything discovery package",
+  "type": "object",
+  "required": ["schema", "source", "captured_at", "pages", "workflows", "controls", "resources", "limitations"],
+  "properties": {
+    "schema": {"const": "webanything-discovery-package-v1"},
+    "source": {
+      "type": "object",
+      "required": ["entry_url", "allowed_origins"],
+      "properties": {
+        "entry_url": {"type": "string", "format": "uri"},
+        "allowed_origins": {"type": "array", "items": {"type": "string", "format": "uri"}}
+      }
+    },
+    "captured_at": {"type": "string", "format": "date-time"},
+    "pages": {"type": "array", "items": {"type": "object"}},
+    "workflows": {"type": "array", "items": {"type": "object"}},
+    "controls": {"type": "array", "items": {"type": "object"}},
+    "resources": {"type": "array", "items": {"type": "object"}},
+    "limitations": {"type": "array", "items": {"type": "object"}},
+    "private_session_material_included": {"const": false}
+  },
+  "additionalProperties": true
+}

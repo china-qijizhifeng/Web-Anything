@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://webanything.dev/schemas/synthetic-verification-v1.schema.json",
+  "title": "WebAnything synthetic benchmark verification v1",
+  "type": "object",
+  "required": [
+    "schema", "status", "site", "build_mode", "candidate_identity_sha256",
+    "candidate_sha256", "contract_sha256", "checks", "reset", "tasks", "failures"
+  ],
+  "properties": {
+    "schema": {"const": "webanything-synthetic-verification-v1"},
+    "status": {"enum": ["passed", "failed"]},
+    "site": {"type": "string", "minLength": 1},
+    "build_mode": {"const": "benchmark_synthetic"},
+    "candidate_identity_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "candidate_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "contract_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "checks": {
+      "type": "object",
+      "required": ["contract", "routes", "tasks", "reset", "persistence", "determinism", "resource_privacy", "content_policy", "candidate_immutability"],
+      "additionalProperties": {"enum": ["passed", "failed"]}
+    },
+    "reset": {
+      "type": "object",
+      "required": ["first_sha256", "second_sha256", "identical"],
+      "properties": {
+        "first_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+        "second_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+        "identical": {"type": "boolean"}
+      }
+    },
+    "tasks": {"type": "array", "items": {"type": "object"}},
+    "failures": {"type": "array", "items": {"type": "object", "required": ["code", "message"]}}
+  },
+  "allOf": [{
+    "if": {"properties": {"status": {"const": "passed"}}},
+    "then": {"properties": {"failures": {"maxItems": 0}}}
+  }]
+}

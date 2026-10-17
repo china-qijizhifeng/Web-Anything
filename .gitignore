@@ -1,0 +1,36 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+.venv/
+.assets/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+node_modules/
+dist/
+build/
+*.egg-info/
+
+# Run-local material. Never publish SDK traces, private screenshots, cookies,
+# storage state, candidate runtime databases, or deployment archives.
+runs/
+generated/
+mirror_factory/evidence/**
+!mirror_factory/evidence/.gitkeep
+sites/*/instance/
+sites/*/runtime.db
+sites/*/vendor/
+sites/*/static/external_cache/
+**/private-upstream-screenshots/
+**/*storage-state*.json
+**/*storage_state*.json
+**/cookies*.json
+*.tar
+*.tar.gz
+*.sqlite-journal
+*.db-journal
+*.db-wal
+*.db-shm

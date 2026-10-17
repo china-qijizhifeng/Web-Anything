@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://webharbor.local/schemas/interaction-verification-checkpoint-v1.schema.json",
+  "title": "Atomic interaction verification checkpoint v1",
+  "type": "object",
+  "required": ["schema", "batch_id", "batch_index", "plan_identity", "candidate_sha256", "contract_sha256", "verifier", "viewport", "candidate_identity_sha256", "analyzer_implementation_sha256", "shared_artifacts", "assigned_ids", "status", "result", "result_sha256"],
+  "properties": {
+    "schema": {"const": "webharbor-interaction-verification-checkpoint-v1"},
+    "status": {"enum": ["passed", "failed", "timed_out"]},
+    "assigned_ids": {"type": "array", "minItems": 1, "uniqueItems": true},
+    "result_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "candidate_identity_sha256": {"type": ["string", "null"]},
+    "analyzer_implementation_sha256": {"type": ["string", "null"]},
+    "shared_artifacts": {"type": "object"}
+  }
+}

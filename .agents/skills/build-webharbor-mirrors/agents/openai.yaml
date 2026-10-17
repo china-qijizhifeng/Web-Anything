@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build WebAnything Mirrors"
+  short_description: "Build and prove resettable interactive mirrors"
+  default_prompt: "Use $build-webharbor-mirrors to turn this public URL into an isolated WebAnything/WebHarbor candidate with source-grounded visual evidence, meaningful local interactions, deterministic SQLite state, reset proof, and machine-readable handoff evidence."

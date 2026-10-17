@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "webanything"
+version = "0.1.0a1"
+description = "Reproducible source-grounded Web environment construction pipeline"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "WebAnything contributors" }]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+dependencies = []
+
+[project.optional-dependencies]
+browser = ["playwright>=1.48,<2", "lxml>=5,<7"]
+visual = ["playwright>=1.48,<2", "Pillow>=11,<12", "cryptography>=43,<47"]
+builder = [
+  "Flask==3.1.0",
+  "Flask-Bcrypt==1.0.1",
+  "Flask-Login==0.6.3",
+  "Flask-SQLAlchemy==3.1.1",
+  "Flask-WTF==1.2.2",
+  "Jinja2==3.1.4",
+  "Pillow==11.0.0",
+  "SQLAlchemy==2.0.36",
+  "WTForms==3.2.1",
+  "email-validator==2.2.0",
+  "requests==2.32.3",
+  "pyarrow==24.0.0",
+]
+e2b = ["e2b>=2.20,<3"]
+dev = ["pytest>=8,<10", "jsonschema>=4.23,<5", "PyYAML>=6,<7"]
+
+[project.scripts]
+webanything = "webanything.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "pipeline-tools/interaction-verifier-v1/tests"]
+addopts = "-q"
+pythonpath = ["."]

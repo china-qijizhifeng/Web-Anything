@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://webanything.dev/schemas/synthetic-visual-reference-v1.schema.json",
+  "title": "Frozen source-visible synthetic visual reference v1",
+  "type": "object",
+  "required": ["schema", "schema_version", "state", "created_at", "site", "source_origin_sha256", "capture_spec_sha256", "viewport", "sanitizer_version", "content_strategy", "auth", "blocked_resource_origin_sha256s", "thresholds", "weights", "routes", "raw_material_persisted", "reference_sha256"],
+  "properties": {
+    "schema": {"const": "webanything-synthetic-visual-reference-v1"},
+    "schema_version": {"const": 1},
+    "state": {"const": "reference_frozen"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "site": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_]*$"},
+    "source_origin_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "capture_spec_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "viewport": {"type": "object", "required": ["width", "height"]},
+    "browser_profile": {
+      "type": "object",
+      "properties": {
+        "locale": {"type": "string"},
+        "timezone_id": {"type": "string"},
+        "accept_language": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "sanitizer_version": {"const": 4},
+    "content_strategy": {"const": "source_visible"},
+    "auth": {
+      "type": "object",
+      "required": ["used", "profile_id"],
+      "properties": {
+        "used": {"type": "boolean"},
+        "profile_id": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"}
+      },
+      "additionalProperties": false
+    },
+    "blocked_resource_origin_sha256s": {
+      "type": "array",
+      "items": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+    },
+    "private_fields_replaced": {"type": "integer", "minimum": 0},
+    "thresholds": {"type": "object"},
+    "weights": {"type": "object"},
+    "routes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "synthetic_route", "source_url_sha256", "screenshot", "comparison_screenshot", "geometry", "metrics", "quality"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^route_[a-z0-9_]+$"},
+          "synthetic_route": {"type": "string", "pattern": "^/"},
+          "comparison_mode": {"enum": ["source_visible", "content_neutral"]},
+          "source_url_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "screenshot": {"$ref": "#/$defs/artifact"},
+          "comparison_screenshot": {"$ref": "#/$defs/artifact"},
+          "geometry": {"$ref": "#/$defs/artifact"},
+          "metrics": {"type": "object"},
+          "quality": {
+            "type": "object",
+            "required": ["status", "failures", "metrics"],
+            "properties": {
+              "status": {"const": "passed"},
+              "failures": {"type": "array", "maxItems": 0},
+              "metrics": {"type": "object"}
+            },
+            "additionalProperties": false
+          },
+          "accepted_quality_failure_codes": {
+            "type": "array",
+            "items": {"enum": ["landmarks_missing"]},
+            "uniqueItems": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "raw_material_persisted": {"const": true},
+    "reference_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "$defs": {
+    "artifact": {
+      "type": "object",
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://webharbor.local/schemas/interaction-verifier-batch-v1.schema.json",
+  "title": "Standalone WebHarbor interaction verifier four-worker batch v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "batch", "workers"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "batch": {"const": "webharbor-interaction-verifier-batch-v1"},
+    "workers": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["site", "workspace", "site_path", "contract", "evidence_dir", "browser_path", "dependency_path", "launch", "viewport", "budgets"],
+        "properties": {
+          "site": {"type": "string", "minLength": 1},
+          "workspace": {"type": "string", "minLength": 1},
+          "site_path": {"type": "string", "minLength": 1},
+          "contract": {"type": "string", "minLength": 1},
+          "evidence_dir": {"type": "string", "minLength": 1},
+          "browser_path": {"type": "string", "minLength": 1},
+          "dependency_path": {"type": "string", "minLength": 1},
+          "launch": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["command", "cwd", "base_url", "env"],
+            "properties": {
+              "command": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+              "cwd": {"type": "string", "minLength": 1},
+              "base_url": {"type": "string", "format": "uri"},
+              "env": {"type": "object", "additionalProperties": {"type": "string"}}
+            }
+          },
+          "viewport": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["width", "height"],
+            "properties": {
+              "width": {"type": "integer", "minimum": 1},
+              "height": {"type": "integer", "minimum": 1}
+            }
+          },
+          "gateway_prefix": {"type": ["string", "null"]},
+          "budgets": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["max_pages", "max_depth", "timeout_ms"],
+            "properties": {
+              "max_pages": {"type": "integer", "minimum": 1},
+              "max_depth": {"type": "integer", "minimum": 0},
+              "timeout_ms": {"type": "integer", "minimum": 1}
+            }
+          }
+        }
+      }
+    }
+  }
+}

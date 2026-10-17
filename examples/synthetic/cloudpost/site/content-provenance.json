@@ -1,0 +1,18 @@
+{
+  "schema": "webanything-synthetic-content-provenance-v1",
+  "synthetic": true,
+  "upstream_assets": [],
+  "assets": [
+    "index.html",
+    "reset.html",
+    "app.js",
+    "reset.js",
+    "styles.css",
+    "webanything-runtime.js",
+    "synthetic_contract.json",
+    "tasks.jsonl",
+    "fixtures/users.json",
+    "fixtures/messages.json",
+    "fixtures/initial-state.json"
+  ]
+}

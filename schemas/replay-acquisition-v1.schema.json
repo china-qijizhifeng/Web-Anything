@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://webanything.dev/schemas/replay-acquisition-v1.schema.json",
+  "title": "WebAnything URL-first replay acquisition result v1",
+  "type": "object",
+  "required": [
+    "schema", "status", "site", "seed_url", "source_origin", "routes", "actions",
+    "assets", "asset_bytes", "tasks", "skipped_discovered_routes", "product_profile", "coverage", "auth_used", "source_auth_persisted",
+    "private_fields_removed", "capture_bundle_sha256", "contract_sha256", "contract_path"
+  ],
+  "properties": {
+    "schema": {"const": "webanything-replay-acquisition-v1"},
+    "status": {"const": "completed"},
+    "site": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_]*$"},
+    "seed_url": {"type": "string", "format": "uri", "pattern": "^https?://"},
+    "source_origin": {"type": "string", "format": "uri", "pattern": "^https?://"},
+    "routes": {"type": "integer", "minimum": 1},
+    "actions": {"type": "integer", "minimum": 0},
+    "assets": {"type": "integer", "minimum": 0},
+    "asset_bytes": {"type": "integer", "minimum": 0},
+    "tasks": {"type": "integer", "minimum": 4},
+    "skipped_discovered_routes": {"type": "integer", "minimum": 0},
+    "product_profile": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+    "coverage": {
+      "type": "object",
+      "required": ["profile", "release_tier", "required_route_kinds", "required_workflows", "generic_fallback_allowed"]
+    },
+    "auth_used": {"type": "boolean"},
+    "source_auth_persisted": {"const": false},
+    "private_fields_removed": {"type": "integer", "minimum": 0},
+    "capture_bundle_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "contract_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "contract_path": {"const": "synthetic_replay_contract.json"}
+  },
+  "additionalProperties": false
+}

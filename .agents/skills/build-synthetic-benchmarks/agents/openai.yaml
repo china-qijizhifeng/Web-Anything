@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Synthetic Benchmarks"
+  short_description: "Build deterministic synthetic browser benchmarks"
+  default_prompt: "Use $build-synthetic-benchmarks to implement the frozen synthetic benchmark contract in the isolated candidate workspace."

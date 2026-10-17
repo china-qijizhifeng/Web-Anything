@@ -1,0 +1,4 @@
+interface:
+  display_name: Build Synthetic Replays
+  short_description: Build source-faithful local Flask/SQLite benchmark replays.
+  default_prompt: Use $build-synthetic-replays to implement the frozen benchmark_synthetic_replay contract.

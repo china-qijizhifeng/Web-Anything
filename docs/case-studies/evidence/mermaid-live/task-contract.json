@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "site_id": "mermaid-live-70609966d7",
+  "task_query_sha256": "66f77723c50b020e915e53d8199554839bc9077e0c2aceecc536e3ff85907c0e",
+  "steps": [
+    {"id":"open-editor","source_route":"/","local_route":"/","action":"navigate","target":"/","expected_state":"Editor route renders and first-load upsell is visible."},
+    {"id":"dismiss-upsell","source_route":"/edit","local_route":"/edit","action":"click","target":"#stay-on-mermaid","expected_state":"Upsell is hidden and Code editor plus preview canvas are visible."},
+    {"id":"edit-diagram","source_route":"/edit","local_route":"/edit","action":"type","target":"#editor","expected_state":"Editor contains flowchart TD with 草稿, 审核, 发布 and preview shows exactly three node rectangles."},
+    {"id":"open-actions","source_route":"/edit","local_route":"/edit","action":"click","target":"#actions","expected_state":"Actions menu is expanded and SVG control is visible."},
+    {"id":"export-svg","source_route":"/edit","local_route":"/export/svg","action":"click","target":"#export-svg","expected_state":"An SVG file named mermaid-diagram.svg downloads and contains the three labeled nodes."}
+  ],
+  "ordered_steps": [
+    {"id":"open-editor","source_route":"/","local_route":"/","action":"navigate","target":"/","expected_state":"Editor route renders and first-load upsell is visible."},
+    {"id":"dismiss-upsell","source_route":"/edit","local_route":"/edit","action":"click","target":"#stay-on-mermaid","expected_state":"Upsell is hidden and Code editor plus preview canvas are visible."},
+    {"id":"edit-diagram","source_route":"/edit","local_route":"/edit","action":"type","target":"#editor","expected_state":"Editor contains flowchart TD with 草稿, 审核, 发布 and preview shows exactly three node rectangles."},
+    {"id":"open-actions","source_route":"/edit","local_route":"/edit","action":"click","target":"#actions","expected_state":"Actions menu is expanded and SVG control is visible."},
+    {"id":"export-svg","source_route":"/edit","local_route":"/export/svg","action":"click","target":"#export-svg","expected_state":"An SVG file named mermaid-diagram.svg downloads and contains the three labeled nodes."}
+  ],
+  "terminal_expected_state":"Downloaded SVG contains 草稿, 审核, 发布 and three node rectangles."
+}

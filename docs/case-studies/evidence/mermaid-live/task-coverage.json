@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "site_id": "mermaid-live-70609966d7",
+  "task_query_sha256": "66f77723c50b020e915e53d8199554839bc9077e0c2aceecc536e3ff85907c0e",
+  "status": "passed",
+  "steps": [
+    {
+      "id": "open-editor",
+      "status": "passed",
+      "action": "navigate /",
+      "assertion": {
+        "url": "http://127.0.0.1:5100/",
+        "title": "Online FlowChart & Diagrams Editor - Mermaid Live Editor",
+        "modal": true,
+        "editor": "flowchart TD\n    A[Christmas] -->|Get money| B(Go shopping)\n    B --> C{Let me think}\n    C -->|One| D[Laptop]\n    C -->|Two| E[iPhone]\n    C -->|Three| F[fa:fa-car Car]",
+        "menu": false,
+        "nodes": 3,
+        "labels": [
+          "Christmas",
+          "Go shopping",
+          "Let me think",
+          "Laptop",
+          "iPhone",
+          "fa:fa-car Car"
+        ],
+        "overflow": {
+          "sw": 1920,
+          "cw": 1920,
+          "sh": 992,
+          "ch": 992
+        }
+      },
+      "evidence_paths": [
+        "step-01-entry.png"
+      ]
+    },
+    {
+      "id": "dismiss-upsell",
+      "status": "passed",
+      "action": "click #stay-on-mermaid",
+      "assertion": {
+        "url": "http://127.0.0.1:5100/",
+        "title": "Online FlowChart & Diagrams Editor - Mermaid Live Editor",
+        "modal": false,
+        "editor": "flowchart TD\n    A[Christmas] -->|Get money| B(Go shopping)\n    B --> C{Let me think}\n    C -->|One| D[Laptop]\n    C -->|Two| E[iPhone]\n    C -->|Three| F[fa:fa-car Car]",
+        "menu": false,
+        "nodes": 3,
+        "labels": [
+          "Christmas",
+          "Go shopping",
+          "Let me think",
+          "Laptop",
+          "iPhone",
+          "fa:fa-car Car"
+        ],
+        "overflow": {
+          "sw": 1920,
+          "cw": 1920,
+          "sh": 992,
+          "ch": 992
+        }
+      },
+      "evidence_paths": [
+        "step-02-dismiss.png"
+      ]
+    },
+    {
+      "id": "edit-diagram",
+      "status": "passed",
+      "action": "fill #editor",
+      "assertion": {
+        "url": "http://127.0.0.1:5100/",
+        "title": "Online FlowChart & Diagrams Editor - Mermaid Live Editor",
+        "modal": false,
+        "editor": "flowchart TD\n    A[草稿] --> B[审核]\n    B --> C[发布]",
+        "menu": false,
+        "nodes": 3,
+        "labels": [
+          "草稿",
+          "审核",
+          "发布"
+        ],
+        "overflow": {
+          "sw": 1920,
+          "cw": 1920,
+          "sh": 992,
+          "ch": 992
+        }
+      },
+      "evidence_paths": [
+        "step-03-edit.png"
+      ]
+    },
+    {
+      "id": "open-actions",
+      "status": "passed",
+      "action": "click #actions",
+      "assertion": {
+        "url": "http://127.0.0.1:5100/",
+        "title": "Online FlowChart & Diagrams Editor - Mermaid Live Editor",
+        "modal": false,
+        "editor": "flowchart TD\n    A[草稿] --> B[审核]\n    B --> C[发布]",
+        "menu": true,
+        "nodes": 3,
+        "labels": [
+          "草稿",
+          "审核",
+          "发布"
+        ],
+        "overflow": {
+          "sw": 1920,
+          "cw": 1920,
+          "sh": 992,
+          "ch": 992
+        }
+      },
+      "evidence_paths": [
+        "step-04-actions.png"
+      ]
+    },
+    {
+      "id": "export-svg",
+      "status": "passed",
+      "action": "click #export-svg",
+      "assertion": {
+        "filename": "mermaid-diagram.svg",
+        "svg_sha256": "df3a891faaa8f1caa75b41080571ee7fc4849dea7d9be0891a6a19926432dcee",
+        "labels": {
+          "草稿": 1,
+          "审核": 1,
+          "发布": 1
+        },
+        "rect_count": 3,
+        "bytes": 1094
+      },
+      "evidence_paths": [
+        "mermaid-diagram.svg"
+      ]
+    }
+  ],
+  "terminal_assertion": {
+    "status": "passed",
+    "expected": "Downloaded SVG contains 草稿, 审核, 发布 and three node rectangles.",
+    "observed": {
+      "filename": "mermaid-diagram.svg",
+      "svg_sha256": "df3a891faaa8f1caa75b41080571ee7fc4849dea7d9be0891a6a19926432dcee",
+      "labels": {
+        "草稿": 1,
+        "审核": 1,
+        "发布": 1
+      },
+      "rect_count": 3,
+      "bytes": 1094
+    },
+    "evidence_paths": [
+      "mermaid-diagram.svg"
+    ]
+  }
+}

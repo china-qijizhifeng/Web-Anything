@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://webharbor.local/schemas/code-interaction-inventory-v1.schema.json",
+  "title": "WebHarbor candidate code interaction inventory v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "inventory", "analyzer", "analyzer_implementation_sha256", "status", "site",
+    "selected_root", "source_identity", "seed_identity", "files",
+    "server_declarations", "template_relationships", "controls",
+    "interactions", "unresolved", "actual_route_map", "failures",
+    "payload_sha256"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "inventory": {"const": "webharbor-code-interaction-inventory-v1"},
+    "analyzer": {"const": "webharbor-immersive-code-analyzer-v1"},
+    "analyzer_implementation_sha256": {"$ref": "#/$defs/sha256"},
+    "status": {"enum": ["complete", "failed"]},
+    "site": {"type": "string", "minLength": 1},
+    "selected_root": {"type": "string", "minLength": 1},
+    "source_identity": {"$ref": "#/$defs/treeIdentity"},
+    "seed_identity": {"$ref": "#/$defs/treeIdentity"},
+    "files": {"type": "array", "items": {"$ref": "#/$defs/file"}},
+    "server_declarations": {"type": "array", "items": {"$ref": "#/$defs/sourceRecord"}},
+    "template_relationships": {"type": "array", "items": {"$ref": "#/$defs/sourceRecord"}},
+    "controls": {"type": "array", "items": {"$ref": "#/$defs/sourceRecord"}},
+    "interactions": {"type": "array", "items": {"$ref": "#/$defs/sourceRecord"}},
+    "unresolved": {"type": "array", "items": {"$ref": "#/$defs/sourceRecord"}},
+    "actual_route_map": {
+      "type": "object",
+      "required": [
+        "tool", "status", "timeout_seconds", "copy_strategy",
+        "source_hashes", "seed_hashes", "isolated_copy_hashes", "routes",
+        "public_get_routes", "excluded_routes", "failures"
+      ],
+      "properties": {
+        "tool": {"const": "webharbor-isolated-flask-route-map-v1"},
+        "status": {"enum": ["passed", "failed"]},
+        "timeout_seconds": {"type": "integer", "minimum": 1},
+        "copy_strategy": {"const": "selected_site_temporary_copy_with_seed_restored_runtime"},
+        "source_hashes": {"$ref": "#/$defs/hashComparison"},
+        "seed_hashes": {"$ref": "#/$defs/hashComparison"},
+        "isolated_copy_hashes": {"type": "object"},
+        "routes": {"type": "array", "items": {"$ref": "#/$defs/route"}},
+        "public_get_routes": {"type": "array", "items": {"$ref": "#/$defs/route"}},
+        "excluded_routes": {"type": "array", "items": {"$ref": "#/$defs/route"}},
+        "failures": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "source_closure": {"type": "object"},
+    "runtime_documents": {"type": "array"},
+    "runtime_loaded_assets": {"type": "array"},
+    "canonical_control_families": {"type": "array"},
+    "failures": {"type": "array", "items": {"type": "string"}},
+    "payload_sha256": {"$ref": "#/$defs/sha256"},
+    "candidate_fingerprint": {"type": "object"}
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "treeIdentity": {
+      "type": "object",
+      "required": ["algorithm", "sha256", "files", "bytes", "entries"],
+      "properties": {
+        "algorithm": {"const": "webharbor-selected-files-v1"},
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "files": {"type": "integer", "minimum": 0},
+        "bytes": {"type": "integer", "minimum": 0},
+        "entries": {"type": "array", "items": {"$ref": "#/$defs/file"}}
+      }
+    },
+    "file": {
+      "type": "object",
+      "required": ["path", "bytes", "sha256"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "bytes": {"type": "integer", "minimum": 0},
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "language": {"type": "string"},
+        "closure_status": {"type": "string"}
+      }
+    },
+    "sourceRecord": {
+      "type": "object",
+      "required": [
+        "id", "file", "line", "syntax_kind", "literal_target",
+        "normalized_target", "target_kind", "method", "event", "confidence"
+      ],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "file": {"type": "string", "minLength": 1},
+        "line": {"type": "integer", "minimum": 1},
+        "syntax_kind": {"type": "string", "minLength": 1},
+        "literal_target": {"type": ["string", "null"]},
+        "normalized_target": {"type": ["string", "null"]},
+        "target_kind": {"enum": ["none", "local", "external", "dynamic", "fragment", "endpoint", "template"]},
+        "method": {"type": ["string", "null"]},
+        "event": {"type": ["string", "null"]},
+        "confidence": {"enum": ["high", "medium", "unresolved"]}
+        ,"selector": {"type": ["string", "null"]}
+        ,"identity_selector": {"type": ["string", "null"]}
+        ,"runtime_selector": {"type": ["string", "null"]}
+        ,"control_identity": {"type": "object"}
+      }
+    },
+    "hashComparison": {
+      "type": "object",
+      "required": ["before", "after", "unchanged"],
+      "properties": {
+        "before": {"$ref": "#/$defs/treeIdentity"},
+        "after": {"$ref": "#/$defs/treeIdentity"},
+        "unchanged": {"type": "boolean"}
+      }
+    },
+    "route": {
+      "type": "object",
+      "required": ["rule", "endpoint", "methods", "public_get", "excluded_reason"],
+      "properties": {
+        "rule": {"type": "string", "pattern": "^/"},
+        "endpoint": {"type": "string", "minLength": 1},
+        "methods": {"type": "array", "items": {"type": "string"}},
+        "public_get": {"type": "boolean"},
+        "excluded_reason": {"type": ["string", "null"]}
+        ,"normalized_rule": {"type": "string"}
+      }
+    }
+  }
+}

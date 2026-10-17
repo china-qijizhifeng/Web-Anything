@@ -1,0 +1,132 @@
+{
+  "auth": {
+    "default_role": "member",
+    "default_user_id": "usr_demo_001",
+    "mode": "local_synthetic"
+  },
+  "brand": {
+    "fictional": true,
+    "name": "CloudPost"
+  },
+  "build_mode": "benchmark_synthetic",
+  "clock": {
+    "fixed_time": "2026-06-15T10:00:00Z",
+    "timezone": "UTC"
+  },
+  "content_policy": {
+    "forbidden_terms": [
+      "gmail",
+      "google"
+    ],
+    "private_user_data_allowed": false,
+    "synthetic_only": true,
+    "upstream_assets_allowed": false
+  },
+  "evaluator": {
+    "api_global": "window.__WEBANYTHING__",
+    "authoritative_surfaces": [
+      "dom",
+      "url",
+      "localStorage",
+      "network"
+    ]
+  },
+  "fixtures": [
+    {
+      "path": "fixtures/initial-state.json",
+      "sha256": "c4cde83d688b6c172ab034a0f2054b119c92fc0a731c04242c260d9789498a70"
+    },
+    {
+      "path": "fixtures/messages.json",
+      "sha256": "c2a55043cc559439e4f8e059fbae70a3a32c1d40815e950730e6c16f58585bb8"
+    },
+    {
+      "path": "fixtures/users.json",
+      "sha256": "786c888760e9b38c77641d3b26ffe08f78220e6d3f0043419d60a12372657e08"
+    }
+  ],
+  "network_policy": {
+    "allowed_origins": [],
+    "external_requests": 0
+  },
+  "product_archetype": "webmail",
+  "random": {
+    "algorithm": "mulberry32-v1",
+    "seed": 1515
+  },
+  "reset": {
+    "api": "window.__WEBANYTHING__.reset",
+    "entrypoint": "/reset.html",
+    "initial_url": "/inbox",
+    "supported": true
+  },
+  "routes": [
+    {
+      "id": "route_login",
+      "path": "/login",
+      "required_selectors": [
+        "[data-route=login]",
+        "[data-user-id=usr_demo_001]"
+      ],
+      "title": "Demo sign in"
+    },
+    {
+      "id": "route_inbox",
+      "path": "/inbox",
+      "required_selectors": [
+        "[data-route=inbox]",
+        "[data-object-id=msg_004]"
+      ],
+      "title": "Inbox"
+    },
+    {
+      "id": "route_message",
+      "path": "/message/msg_004",
+      "required_selectors": [
+        "[data-route=message]",
+        "[data-object-id=msg_004]"
+      ],
+      "title": "Message detail"
+    },
+    {
+      "id": "route_compose",
+      "path": "/compose",
+      "required_selectors": [
+        "[data-route=compose]",
+        "#compose-to",
+        "#compose-subject",
+        "#compose-body"
+      ],
+      "title": "Compose"
+    },
+    {
+      "id": "route_settings",
+      "path": "/settings",
+      "required_selectors": [
+        "[data-route=settings]",
+        "[data-setting-id=compact_mode]"
+      ],
+      "title": "Settings"
+    }
+  ],
+  "schema": "webanything-synthetic-contract-v1",
+  "schema_version": 1,
+  "seed_url": "https://mail.google.com/",
+  "site_id": "cloudpost",
+  "storage": {
+    "engine": "localStorage",
+    "namespace": "webanything.cloudpost.v1",
+    "schema_version": 1
+  },
+  "tasks": {
+    "count": 2,
+    "path": "tasks.jsonl",
+    "sha256": "f4f4c2ae980e7ae7938ed9224c2480786df43215ff939a665638fb2e50a2fdfa"
+  },
+  "visual_reference": {
+    "path": "visual-reference/synthetic_visual_reference.json",
+    "reference_sha256": "8402947f3d5f3cdfc97d2542aa601bed5fdee55c9e61266e9d4f590da2ed5b51",
+    "required": true,
+    "sha256": "82a72beea4042d5b76e178a993b2b5376400ad37cabe2b78284cac287a89ccdd"
+  }
+}

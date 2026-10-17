@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://webanything.dev/schemas/synthetic-visual-verification-v1.schema.json",
+  "title": "Independent synthetic structural visual verification v1",
+  "type": "object",
+  "required": ["schema", "status", "repairable", "site", "build_mode", "comparison_mode", "contract_sha256", "reference_manifest_sha256", "visual_reference_sha256", "candidate_identity_sha256", "candidate_sha256", "candidate", "routes", "network", "failures"],
+  "properties": {
+    "schema": {"const": "webanything-synthetic-visual-verification-v1"},
+    "status": {"enum": ["passed", "failed"]},
+    "repairable": {"type": "boolean"},
+    "site": {"type": "string", "minLength": 1},
+    "build_mode": {"enum": ["benchmark_synthetic", "benchmark_synthetic_replay"]},
+    "comparison_mode": {"enum": ["content_neutral", "source_visible"]},
+    "contract_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "reference_manifest_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "visual_reference_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "candidate_identity_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+    "candidate_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "candidate": {"type": "object", "required": ["pre_hash", "post_hash", "unchanged"]},
+    "routes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "comparison_mode": {"enum": ["content_neutral", "source_visible"]}
+        },
+        "required": ["comparison_mode"]
+      }
+    },
+    "network": {
+      "type": "object",
+      "required": ["unexpected_external_requests", "urls"],
+      "properties": {
+        "unexpected_external_requests": {"type": "integer", "minimum": 0},
+        "urls": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "failures": {"type": "array"}
+  },
+  "allOf": [{
+    "if": {"properties": {"status": {"const": "passed"}}},
+    "then": {
+      "properties": {
+        "repairable": {"const": false},
+        "failures": {"maxItems": 0},
+        "candidate": {"properties": {"unchanged": {"const": true}}},
+        "routes": {"minItems": 1},
+        "network": {
+          "properties": {
+            "unexpected_external_requests": {"const": 0},
+            "urls": {"maxItems": 0}
+          }
+        }
+      }
+    }
+  }, {
+    "if": {"properties": {"repairable": {"const": true}}},
+    "then": {"properties": {"status": {"const": "failed"}}}
+  }],
+  "additionalProperties": false
+}

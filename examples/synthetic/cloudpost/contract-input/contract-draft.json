@@ -1,0 +1,87 @@
+{
+  "schema": "webanything-synthetic-contract-draft-v1",
+  "seed_url": "https://mail.google.com/",
+  "site_id": "cloudpost",
+  "product_archetype": "webmail",
+  "brand": {
+    "name": "CloudPost",
+    "fictional": true
+  },
+  "clock": {
+    "fixed_time": "2026-06-15T10:00:00Z",
+    "timezone": "UTC"
+  },
+  "random": {
+    "algorithm": "mulberry32-v1",
+    "seed": 1515
+  },
+  "storage": {
+    "engine": "localStorage",
+    "schema_version": 1,
+    "namespace": "webanything.cloudpost.v1"
+  },
+  "auth": {
+    "mode": "local_synthetic",
+    "default_user_id": "usr_demo_001",
+    "default_role": "member"
+  },
+  "routes": [
+    {
+      "id": "route_login",
+      "path": "/login",
+      "title": "Demo sign in",
+      "required_selectors": ["[data-route=login]", "[data-user-id=usr_demo_001]"]
+    },
+    {
+      "id": "route_inbox",
+      "path": "/inbox",
+      "title": "Inbox",
+      "required_selectors": ["[data-route=inbox]", "[data-object-id=msg_004]"]
+    },
+    {
+      "id": "route_message",
+      "path": "/message/msg_004",
+      "title": "Message detail",
+      "required_selectors": ["[data-route=message]", "[data-object-id=msg_004]"]
+    },
+    {
+      "id": "route_compose",
+      "path": "/compose",
+      "title": "Compose",
+      "required_selectors": ["[data-route=compose]", "#compose-to", "#compose-subject", "#compose-body"]
+    },
+    {
+      "id": "route_settings",
+      "path": "/settings",
+      "title": "Settings",
+      "required_selectors": ["[data-route=settings]", "[data-setting-id=compact_mode]"]
+    }
+  ],
+  "reset": {
+    "supported": true,
+    "entrypoint": "/reset.html",
+    "initial_url": "/inbox",
+    "api": "window.__WEBANYTHING__.reset"
+  },
+  "network_policy": {
+    "external_requests": 0,
+    "allowed_origins": []
+  },
+  "content_policy": {
+    "synthetic_only": true,
+    "private_user_data_allowed": false,
+    "upstream_assets_allowed": false,
+    "forbidden_terms": ["gmail", "google"]
+  },
+  "fixtures": [
+    {"source": "fixtures/users.json", "path": "fixtures/users.json"},
+    {"source": "fixtures/messages.json", "path": "fixtures/messages.json"},
+    {"source": "fixtures/initial-state.json", "path": "fixtures/initial-state.json"}
+  ],
+  "visual_reference": {
+    "required": true,
+    "source": "visual-reference/synthetic_visual_reference.json",
+    "path": "visual-reference/synthetic_visual_reference.json"
+  },
+  "tasks_source": "tasks.jsonl"
+}

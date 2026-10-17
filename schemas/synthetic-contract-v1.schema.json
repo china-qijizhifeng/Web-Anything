@@ -1,0 +1,207 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://webanything.dev/schemas/synthetic-contract-v1.schema.json",
+  "title": "WebAnything synthetic benchmark contract v1",
+  "type": "object",
+  "required": [
+    "schema", "schema_version", "build_mode", "seed_url", "site_id",
+    "product_archetype", "brand", "clock", "random", "storage", "auth",
+    "routes", "reset", "network_policy", "content_policy", "fixtures", "tasks", "evaluator"
+  ],
+  "properties": {
+    "schema": {"const": "webanything-synthetic-contract-v1"},
+    "schema_version": {"const": 1},
+    "build_mode": {"const": "benchmark_synthetic"},
+    "seed_url": {"type": "string", "format": "uri", "pattern": "^https?://"},
+    "site_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_]*$"},
+    "product_archetype": {"type": "string", "minLength": 1},
+    "brand": {
+      "type": "object",
+      "required": ["name", "fictional"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "fictional": {"type": "boolean"}
+      },
+      "additionalProperties": false
+    },
+    "clock": {
+      "type": "object",
+      "required": ["fixed_time", "timezone"],
+      "properties": {
+        "fixed_time": {"type": "string", "format": "date-time"},
+        "timezone": {"const": "UTC"}
+      },
+      "additionalProperties": false
+    },
+    "random": {
+      "type": "object",
+      "required": ["algorithm", "seed"],
+      "properties": {
+        "algorithm": {"const": "mulberry32-v1"},
+        "seed": {"type": "integer", "minimum": 0, "maximum": 4294967295}
+      },
+      "additionalProperties": false
+    },
+    "storage": {
+      "type": "object",
+      "required": ["engine", "schema_version", "namespace"],
+      "properties": {
+        "engine": {"const": "localStorage"},
+        "schema_version": {"type": "integer", "minimum": 1},
+        "namespace": {"type": "string", "pattern": "^webanything\\.[a-z0-9][a-z0-9_]*\\.v[1-9][0-9]*$"}
+      },
+      "additionalProperties": false
+    },
+    "auth": {
+      "type": "object",
+      "required": ["mode", "default_user_id", "default_role"],
+      "properties": {
+        "mode": {"const": "local_synthetic"},
+        "default_user_id": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+        "default_role": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"}
+      },
+      "additionalProperties": false
+    },
+    "routes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "path", "title", "required_selectors"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^route_[a-z0-9_]+$"},
+          "path": {"type": "string", "pattern": "^/"},
+          "title": {"type": "string", "minLength": 1},
+          "required_selectors": {"type": "array", "items": {"type": "string", "minLength": 1}},
+          "required_action_ids": {
+            "type": "array",
+            "minItems": 1,
+            "items": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+            "uniqueItems": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "interaction_policy": {
+      "type": "object",
+      "required": ["mode", "inventory_selector", "action_attribute", "coverage"],
+      "properties": {
+        "mode": {"const": "all_visible_controls"},
+        "inventory_selector": {
+          "const": "button:not([disabled]),a[href],input:not([type=hidden]):not([disabled]),select:not([disabled]),textarea:not([disabled]),[role=button]:not([aria-disabled=true]),[role=link]"
+        },
+        "action_attribute": {"const": "data-action-id"},
+        "coverage": {"const": "all_declared_and_no_extra"}
+      },
+      "additionalProperties": false
+    },
+    "reset": {
+      "type": "object",
+      "required": ["supported", "entrypoint", "initial_url", "api"],
+      "properties": {
+        "supported": {"const": true},
+        "entrypoint": {"const": "/reset.html"},
+        "initial_url": {"type": "string", "pattern": "^/"},
+        "api": {"const": "window.__WEBANYTHING__.reset"}
+      },
+      "additionalProperties": false
+    },
+    "network_policy": {
+      "type": "object",
+      "required": ["external_requests", "allowed_origins"],
+      "properties": {
+        "external_requests": {"const": 0},
+        "allowed_origins": {"type": "array", "maxItems": 0}
+      },
+      "additionalProperties": false
+    },
+    "content_policy": {
+      "type": "object",
+      "required": ["synthetic_only", "private_user_data_allowed", "upstream_assets_allowed", "forbidden_terms"],
+      "properties": {
+        "mode": {"enum": ["fictional", "source_fidelity"]},
+        "synthetic_only": {"type": "boolean"},
+        "private_user_data_allowed": {"const": false},
+        "upstream_assets_allowed": {"type": "boolean"},
+        "forbidden_terms": {"type": "array", "items": {"type": "string", "minLength": 2}, "uniqueItems": true}
+      },
+      "allOf": [{
+        "if": {"required": ["mode"], "properties": {"mode": {"const": "source_fidelity"}}},
+        "then": {
+          "properties": {
+            "synthetic_only": {"const": false},
+            "upstream_assets_allowed": {"const": true},
+            "forbidden_terms": {"maxItems": 0}
+          }
+        },
+        "else": {
+          "properties": {
+            "synthetic_only": {"const": true},
+            "upstream_assets_allowed": {"const": false}
+          }
+        }
+      }],
+      "additionalProperties": false
+    },
+    "fixtures": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["path", "sha256"],
+        "properties": {
+          "path": {"type": "string", "pattern": "^fixtures/"},
+          "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "tasks": {
+      "type": "object",
+      "required": ["path", "sha256", "count"],
+      "properties": {
+        "path": {"const": "tasks.jsonl"},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "count": {"type": "integer", "minimum": 1}
+      },
+      "additionalProperties": false
+    },
+    "visual_reference": {
+      "type": "object",
+      "required": ["required", "path", "sha256", "reference_sha256"],
+      "properties": {
+        "required": {"const": true},
+        "path": {"type": "string", "pattern": "^visual-reference/"},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "reference_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      },
+      "additionalProperties": false
+    },
+    "evaluator": {
+      "type": "object",
+      "required": ["api_global", "authoritative_surfaces"],
+      "properties": {
+        "api_global": {"const": "window.__WEBANYTHING__"},
+        "authoritative_surfaces": {
+          "type": "array",
+          "const": ["dom", "url", "localStorage", "network"]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "allOf": [{
+    "if": {
+      "properties": {
+        "content_policy": {
+          "required": ["mode"],
+          "properties": {"mode": {"const": "source_fidelity"}}
+        }
+      }
+    },
+    "then": {"properties": {"brand": {"properties": {"fictional": {"const": false}}}}},
+    "else": {"properties": {"brand": {"properties": {"fictional": {"const": true}}}}}
+  }],
+  "additionalProperties": false
+}

@@ -1,0 +1,45 @@
+{
+  "schema": "webanything-synthetic-visual-capture-spec-v1",
+  "site": "cloudpost",
+  "source_origin": "http://127.0.0.1:41234",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "robots_policy": "not_applicable_local_test",
+  "auth": {
+    "required": false
+  },
+  "routes": [
+    {
+      "id": "route_login",
+      "source_url": "http://127.0.0.1:41234/login",
+      "synthetic_route": "/login",
+      "wait_for": "[data-route=login]"
+    },
+    {
+      "id": "route_inbox",
+      "source_url": "http://127.0.0.1:41234/inbox",
+      "synthetic_route": "/inbox",
+      "wait_for": "[data-route=inbox]"
+    },
+    {
+      "id": "route_message",
+      "source_url": "http://127.0.0.1:41234/message/msg_004",
+      "synthetic_route": "/message/msg_004",
+      "wait_for": "[data-route=message]"
+    },
+    {
+      "id": "route_compose",
+      "source_url": "http://127.0.0.1:41234/compose",
+      "synthetic_route": "/compose",
+      "wait_for": "[data-route=compose]"
+    },
+    {
+      "id": "route_settings",
+      "source_url": "http://127.0.0.1:41234/settings",
+      "synthetic_route": "/settings",
+      "wait_for": "[data-route=settings]"
+    }
+  ]
+}
