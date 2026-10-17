@@ -1039,7 +1039,7 @@
     {
       "best_similarity": 0.0,
       "best_upstream_path": null,
-      "bytes": 1167,
+      "bytes": 913,
       "classification": "legacy_name_only_or_unresolved",
       "comparison_method": null,
       "exact_upstream_paths": [],
@@ -1048,7 +1048,7 @@
       ],
       "path": "LICENSE-PENDING.md",
       "same_path_upstream": false,
-      "sha256": "ba6ac3e18be782a0f728a2e3947f095901884b2d2cea4c7661aa735aae14d5f7",
+      "sha256": "c73a3e4fd7a6ca2bf22e02198ce5a99aff97557b65742f059e5f5e7415a5f806",
       "text": true
     },
     {
@@ -1370,7 +1370,7 @@
     {
       "best_similarity": 0.0,
       "best_upstream_path": null,
-      "bytes": 3398,
+      "bytes": 3408,
       "classification": "legacy_name_only_or_unresolved",
       "comparison_method": null,
       "exact_upstream_paths": [],
@@ -1380,13 +1380,13 @@
       ],
       "path": "docs/licensing/MIT_RELEASE_DRAFT.md",
       "same_path_upstream": false,
-      "sha256": "69ee2cb957862652e90c593d481ab3903ce50166bc21eeeac3310256c9c738e9",
+      "sha256": "0ae003a23c5e22ddc4e303c67506f5404a2714c56bc9a936ed1043d340fcb09a",
       "text": true
     },
     {
       "best_similarity": 0.0,
       "best_upstream_path": null,
-      "bytes": 6921,
+      "bytes": 6862,
       "classification": "legacy_name_only_or_unresolved",
       "comparison_method": null,
       "exact_upstream_paths": [],
@@ -1397,7 +1397,7 @@
       ],
       "path": "docs/licensing/PROVENANCE_AUDIT.md",
       "same_path_upstream": false,
-      "sha256": "0065b798050063da66f3b32482dac2b91b45785d8caae84c3f9f4cf05e246039",
+      "sha256": "4aa610bd143c80344e22c05d8bcfbb931fe914eecaf82c1454ff6c34688fe629",
       "text": true
     },
     {
@@ -4631,44 +4631,16 @@
       "text": false
     }
   ],
-  "generated_at": "2026-10-17T07:34:12+00:00",
+  "generated_at": "2026-10-17T08:01:26+00:00",
   "local": {
-    "deleted_tracked_paths": [
-      "control_server.py",
-      "site_runner.py",
-      "websyn_start.sh"
-    ],
-    "dirty": true,
+    "deleted_tracked_paths": [],
+    "dirty": false,
     "files_audited": 336,
-    "head": "0571decd5592d1a7ba7e6b93ea44f3fd975c5f7c",
+    "head": "84ff12366e752943d6c1acfb80344e17a5a53724",
     "requested_ref": null,
     "root": "/Users/xietianci/.codex/.chatgpt-projects/g-p-6aace13402348191821b145027256c06/work/webanything",
     "scope": "working_tree",
-    "status": [
-      " M .agents/skills/build-webharbor-mirrors/scripts/build_from_upstream.py",
-      " M .agents/skills/build-webharbor-mirrors/scripts/build_historical.py",
-      " M .agents/skills/build-webharbor-mirrors/scripts/iterate_sdk_preview.py",
-      " M .agents/skills/build-webharbor-mirrors/scripts/reaudit_fidelity.py",
-      " M .agents/skills/build-webharbor-mirrors/scripts/run_owned_site_check.py",
-      " M Dockerfile",
-      " M LICENSE-PENDING.md",
-      " M README.md",
-      " M README.zh-CN.md",
-      " D control_server.py",
-      " M pyproject.toml",
-      " M scripts/verify_local_runtime_batches.py",
-      " M site_catalog.py",
-      " D site_runner.py",
-      " M src/webanything/synthetic_replay_verify.py",
-      " M src/webanything/synthetic_verify.py",
-      " M src/webanything/synthetic_visual_verify.py",
-      " M uv.lock",
-      " D websyn_start.sh",
-      "?? docs/licensing/",
-      "?? scripts/audit_public_provenance.py",
-      "?? src/webanything/runtime.py",
-      "?? tests/test_runtime.py"
-    ]
+    "status": []
   },
   "schema": "webanything-public-provenance-audit-v2",
   "summary": {
