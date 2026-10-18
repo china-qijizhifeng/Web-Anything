@@ -406,4 +406,4 @@ docs/                                   架构、证据和限制说明
 
 credentials、cookies、authorization headers、storage state、私有截图和 E2B 环境文件只能保存在当前进程或 secret manager 中，不得进入公开 artifact。安全说明见 [SECURITY.md](SECURITY.md)。
 
-当前 staging tree 的公开再分发许可证仍待项目所有者确认。在加入正式 `LICENSE` 和必要的 `NOTICE` 前不应公开发布；详情见 [LICENSE-PENDING.md](LICENSE-PENDING.md) 和 [docs/provenance.md](docs/provenance.md)。
+项目所有者已于 2026 年 10 月 18 日确认发布授权。WebAnything 自有代码采用 [MIT License](../LICENSE) 发布；第三方内容和素材继续遵循各自条款与声明。详情见 [provenance.md](provenance.md)。

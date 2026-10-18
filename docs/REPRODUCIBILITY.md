@@ -56,4 +56,4 @@ The source-coupled path is documented in `docs/coupled-pipeline.md`. Reproducing
 
 ## 5. Distribution
 
-This repository is prepared for local research use. `LICENSE-PENDING.md` remains in force. Website media, source-site content, private browser state, model credentials, run traces, and candidate databases must be reviewed separately before any public release.
+WebAnything-authored code is released under the root MIT License. Website media, source-site content, private browser state, model credentials, run traces, candidate databases, and other third-party material must still be reviewed separately before publication or redistribution.

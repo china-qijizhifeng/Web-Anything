@@ -75,7 +75,7 @@ docker run --rm -p 8000:8000 \
 | `sites/mermaid-live-task-svg/` | 可运行的 Mermaid 编辑器任务示例：编辑三个节点并导出 SVG；参见[案例研究](docs/case-studies/mermaid-live-editor.md) |
 | `tests/` | 单元测试和协议检查 |
 
-本仓库源码整理自现有 WebHarbor 产物库中历史版本 `ac48c8c62377e4724f2fc00c7c5f441aac614103` 的 `public-release/NexGarden` 目录，并包含 [`provenance/source_snapshot.json`](provenance/source_snapshot.json) 明确列出的工作区变更。原项目文档未经内容修改，保存在 [`docs/WEBANYTHING_UPSTREAM.md`](docs/WEBANYTHING_UPSTREAM.md)。
+本仓库源码整理自现有 WebHarbor 产物库中历史版本 `ac48c8c62377e4724f2fc00c7c5f441aac614103` 的 `public-release/NexGarden` 目录，并包含 [`provenance/source_snapshot.json`](provenance/source_snapshot.json) 明确列出的工作区变更。一份历史项目文档快照保存在 [`docs/WEBANYTHING_UPSTREAM.md`](docs/WEBANYTHING_UPSTREAM.md)，其中的发布状态说明已更新。
 
 ## 复现代码并审计清单
 
@@ -108,7 +108,7 @@ uv run python scripts/verify_site_inventory.py \
 
 244 站清单是元数据，**不是 244 个重建网站的资源包**。本仓库的 `sites/` 下仅包含三个有限范围的演示站点，另外还包含少量示例截图、字体和其他素材；没有收录 244 个历史站点的完整源码树或媒体资源。
 
-合并后的代码库**尚未确定项目级开源许可证**，详见 [`LICENSE-PENDING.md`](LICENSE-PENDING.md)。WebAnything 目前不声称这份合并代码库适用 MIT 或其他统一许可证。仓库公开可见并不意味着待核查的权利问题已经解决。
+WebAnything 自有代码采用 [MIT License](LICENSE) 发布。项目所有者已于 2026 年 10 月 18 日确认拥有此次发布所需的授权。仓库级 MIT 许可证不替代第三方素材各自适用的条款、声明与署名要求。
 
 第三方网站内容、截图、字体、Logo、名称及商标仍受各自权利人及适用条款约束。仓库内的演示分别附有说明：[USWDS Accordion](sites/uswds-task-accordion/THIRD_PARTY_NOTICES.md)、[Mermaid 编辑器](sites/mermaid-live-task-svg/THIRD_PARTY_NOTICES.md)，以及[两页 USWDS 演示](sites/uswds-docs-demo/README.md)。这些是独立的研究性重建，不代表源项目与 WebAnything 存在关联或背书。
 

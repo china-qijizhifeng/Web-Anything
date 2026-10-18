@@ -100,7 +100,7 @@ when a verification job needs them.
 | `sites/mermaid-live-task-svg/` | Runnable Mermaid editor task demo: edit three nodes and export SVG; see the [case study](docs/case-studies/mermaid-live-editor.md) |
 | `tests/` | Unit and protocol checks |
 
-The source was assembled from the historical `public-release/NexGarden` tree in the existing WebHarbor artifact store at commit `ac48c8c62377e4724f2fc00c7c5f441aac614103`, plus the explicitly listed working-tree changes in [`provenance/source_snapshot.json`](provenance/source_snapshot.json). The original project documentation is preserved without content edits at [`docs/WEBANYTHING_UPSTREAM.md`](docs/WEBANYTHING_UPSTREAM.md).
+The source was assembled from the historical `public-release/NexGarden` tree in the existing WebHarbor artifact store at commit `ac48c8c62377e4724f2fc00c7c5f441aac614103`, plus the explicitly listed working-tree changes in [`provenance/source_snapshot.json`](provenance/source_snapshot.json). A historical project-document snapshot, with its release-status note updated, is retained at [`docs/WEBANYTHING_UPSTREAM.md`](docs/WEBANYTHING_UPSTREAM.md).
 
 ## Reproduce the code and audit the inventory
 
@@ -133,7 +133,7 @@ The inventory selects 244 unique site IDs from several historical batches. A dir
 
 The 244-site inventory is metadata, **not a bundle of 244 reconstructed websites**. This repository includes three limited demos under `sites/`, along with selected screenshots, fonts, and other example assets. It does not include the complete source trees or media for the 244 historical sites.
 
-The combined codebase has **no project-wide open-source license yet**; see [`LICENSE-PENDING.md`](LICENSE-PENDING.md). WebAnything does not currently claim MIT or any other blanket license for this combined tree. Publishing this repository does not resolve the pending rights review.
+WebAnything-authored code is released under the [MIT License](LICENSE). The project owner confirmed authority to make this release on 2026-10-18. This repository-level license does not replace the separate terms, notices, or attribution requirements that apply to third-party material.
 
 Third-party website content, screenshots, fonts, logos, names, and trademarks retain their respective owners' rights and applicable terms. The included demos have their own notices: [USWDS Accordion](sites/uswds-task-accordion/THIRD_PARTY_NOTICES.md), [Mermaid editor](sites/mermaid-live-task-svg/THIRD_PARTY_NOTICES.md), and the [two-page USWDS demo](sites/uswds-docs-demo/README.md). These examples are independent research reconstructions and do not imply affiliation with or endorsement by the source projects.
 

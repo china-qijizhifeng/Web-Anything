@@ -747,8 +747,8 @@ E2B deployer 的具体流程：
 
 ## Current discussion checklist
 
-- `LICENSE-PENDING`: public redistribution is blocked until owners confirm license
-  and authority over copied/derived files.
+- License scope: the root MIT License covers WebAnything-authored code;
+  third-party content and assets remain governed by their own terms and notices.
 - Release Gate evidence binding: accepted JSON should bind to the exact candidate,
   contract, site path, and hash being frozen.
 - Privacy scan: release should require both private path cleanup and credential/secret

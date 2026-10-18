@@ -360,7 +360,7 @@
       "legacy_terms": [],
       "path": ".agents/skills/build-webharbor-mirrors/requirements-builder.txt",
       "same_path_upstream": false,
-      "sha256": "3755fe4490a08883a54f22607cd68b8aa1d2cbfb6f3bccec49bc4b48c00cd17e",
+      "sha256": "25874ca2bfbbc3151575b5f0c1d3bf3795bfd13bb424622edc45bda12ce661ef",
       "text": true
     },
     {
@@ -1039,22 +1039,20 @@
     {
       "best_similarity": 0.0,
       "best_upstream_path": null,
-      "bytes": 913,
-      "classification": "legacy_name_only_or_unresolved",
+      "bytes": 1081,
+      "classification": "no_material_public_overlap_detected",
       "comparison_method": null,
       "exact_upstream_paths": [],
-      "legacy_terms": [
-        "webharbor"
-      ],
-      "path": "LICENSE-PENDING.md",
+      "legacy_terms": [],
+      "path": "LICENSE",
       "same_path_upstream": false,
-      "sha256": "c73a3e4fd7a6ca2bf22e02198ce5a99aff97557b65742f059e5f5e7415a5f806",
+      "sha256": "5e38b6e43ffdef686d1680034865c56b5fa28d948e4f89d9ebae5e9cec67da71",
       "text": true
     },
     {
-      "best_similarity": 0.017678,
+      "best_similarity": 0.01853,
       "best_upstream_path": "README.md",
-      "bytes": 10096,
+      "bytes": 10118,
       "classification": "legacy_name_only_or_unresolved",
       "comparison_method": "same_path",
       "exact_upstream_paths": [],
@@ -1064,13 +1062,13 @@
       ],
       "path": "README.md",
       "same_path_upstream": true,
-      "sha256": "de48a9fb6e49b10e10c8247b4181f6f85ef75b083de857d04349fe6b7f3d5c32",
+      "sha256": "fe92ed88a36ca0aa2991d4384ce8bf9010626ccd88d6d833e3f74705461aee74",
       "text": true
     },
     {
       "best_similarity": 0.0,
       "best_upstream_path": null,
-      "bytes": 9540,
+      "bytes": 9543,
       "classification": "legacy_name_only_or_unresolved",
       "comparison_method": null,
       "exact_upstream_paths": [],
@@ -1080,7 +1078,7 @@
       ],
       "path": "README.zh-CN.md",
       "same_path_upstream": false,
-      "sha256": "20ec6377e2d7314e4932905cb948935e42f465ad98467a2adde187d468711b98",
+      "sha256": "ca03e0699926d74e0ed7bc5f725c3e05dd293133e39099ecdc16ad4a963b79ae",
       "text": true
     },
     {
@@ -1141,7 +1139,7 @@
     {
       "best_similarity": 0.0,
       "best_upstream_path": null,
-      "bytes": 4668,
+      "bytes": 4688,
       "classification": "legacy_name_only_or_unresolved",
       "comparison_method": null,
       "exact_upstream_paths": [],
@@ -1150,7 +1148,7 @@
       ],
       "path": "docs/REPRODUCIBILITY.md",
       "same_path_upstream": false,
-      "sha256": "9831f62b7d32d54a67d6031e2140c07604167120644acd7b0ec573c9a1b8d47c",
+      "sha256": "daa3f926e8816e36b82e8c7d97ad42105fcb06f7f0da8a1100a488d47fceaf9a",
       "text": true
     },
     {
@@ -1182,7 +1180,7 @@
     {
       "best_similarity": 0.0,
       "best_upstream_path": null,
-      "bytes": 17772,
+      "bytes": 17759,
       "classification": "legacy_name_only_or_unresolved",
       "comparison_method": null,
       "exact_upstream_paths": [],
@@ -1192,7 +1190,7 @@
       ],
       "path": "docs/WEBANYTHING_UPSTREAM.md",
       "same_path_upstream": false,
-      "sha256": "ba17185fd61e2e6aa5c50df57f3befc7bd17ab83349452de938cbab48aff58d6",
+      "sha256": "227359874ae0f0a7bb033e20d3714426728d1473b039bb3765bb7d7abd1fdde2",
       "text": true
     },
     {
@@ -1370,23 +1368,22 @@
     {
       "best_similarity": 0.0,
       "best_upstream_path": null,
-      "bytes": 3408,
+      "bytes": 1634,
       "classification": "legacy_name_only_or_unresolved",
       "comparison_method": null,
       "exact_upstream_paths": [],
       "legacy_terms": [
-        "webharbor",
-        "websyn"
+        "webharbor"
       ],
-      "path": "docs/licensing/MIT_RELEASE_DRAFT.md",
+      "path": "docs/licensing/MIT_LICENSE_DECISION.md",
       "same_path_upstream": false,
-      "sha256": "0ae003a23c5e22ddc4e303c67506f5404a2714c56bc9a936ed1043d340fcb09a",
+      "sha256": "6726174c21c5acc88327654d31c045dae28f1e4f0ccf7a6ab540ad7330c0bc3f",
       "text": true
     },
     {
       "best_similarity": 0.0,
       "best_upstream_path": null,
-      "bytes": 6862,
+      "bytes": 7187,
       "classification": "legacy_name_only_or_unresolved",
       "comparison_method": null,
       "exact_upstream_paths": [],
@@ -1397,7 +1394,7 @@
       ],
       "path": "docs/licensing/PROVENANCE_AUDIT.md",
       "same_path_upstream": false,
-      "sha256": "4aa610bd143c80344e22c05d8bcfbb931fe914eecaf82c1454ff6c34688fe629",
+      "sha256": "b2698da851e174acfd494f7ddb6e3a98b3ce0c10496253e9fadaad2851493fab",
       "text": true
     },
     {
@@ -1431,7 +1428,7 @@
     {
       "best_similarity": 0.0,
       "best_upstream_path": null,
-      "bytes": 30551,
+      "bytes": 30578,
       "classification": "legacy_name_only_or_unresolved",
       "comparison_method": null,
       "exact_upstream_paths": [],
@@ -1440,39 +1437,52 @@
       ],
       "path": "docs/pipeline-io-and-skill-map.md",
       "same_path_upstream": false,
-      "sha256": "58f99e138876ba83a79fddd9767af23590e3a4b8a4a45fa279e9a8fe07d22be4",
+      "sha256": "3b2d7d7ea51cb384d6c6460b7e889b5eb13a23b2e1401a46c16f047bf14f7f42",
       "text": true
     },
     {
       "best_similarity": 0.0,
       "best_upstream_path": null,
-      "bytes": 850,
+      "bytes": 960,
       "classification": "legacy_name_only_or_unresolved",
       "comparison_method": null,
       "exact_upstream_paths": [],
       "legacy_terms": [
-        "nexgarden",
         "webharbor"
       ],
       "path": "docs/provenance.md",
       "same_path_upstream": false,
-      "sha256": "5f0c9c294ef70baec98b996120dbada823a9b323017bddb56de058d5f59fc8cd",
+      "sha256": "b73b6c2c59f878ebad603f198a0ed971ddf8ce4fd73ce795c32870073193ec58",
       "text": true
     },
     {
       "best_similarity": 0.0,
       "best_upstream_path": null,
-      "bytes": 2044,
+      "bytes": 1931,
       "classification": "legacy_name_only_or_unresolved",
       "comparison_method": null,
       "exact_upstream_paths": [],
       "legacy_terms": [
-        "nexgarden",
         "webharbor"
       ],
       "path": "docs/release-status.md",
       "same_path_upstream": false,
-      "sha256": "ff73a90385d14970e32c1b3d58a2061f808a81a59e2ccf78a8852a7dd6316850",
+      "sha256": "99d74df6405c224d344485ea218a312d38de0de58c0888d7e0d5aa0bf3daa138",
+      "text": true
+    },
+    {
+      "best_similarity": 0.0,
+      "best_upstream_path": null,
+      "bytes": 1997,
+      "classification": "legacy_name_only_or_unresolved",
+      "comparison_method": null,
+      "exact_upstream_paths": [],
+      "legacy_terms": [
+        "webharbor"
+      ],
+      "path": "docs/releases/v0.1.0-alpha.md",
+      "same_path_upstream": false,
+      "sha256": "f454a491177f31956ba413cd244d34864f12224e1cbff1082070763d02674fa7",
       "text": true
     },
     {
@@ -2814,16 +2824,16 @@
       "text": true
     },
     {
-      "best_similarity": 0.101205,
+      "best_similarity": 0.096718,
       "best_upstream_path": "agent_demo/pyproject.toml",
-      "bytes": 1339,
+      "bytes": 1416,
       "classification": "no_material_public_overlap_detected",
       "comparison_method": "fuzzy_candidate",
       "exact_upstream_paths": [],
       "legacy_terms": [],
       "path": "pyproject.toml",
       "same_path_upstream": false,
-      "sha256": "c62b0adc01c796cf4e8235b2bce6ba868f7851beac59f1cd88f5173e33c3485a",
+      "sha256": "7b61f19986cdb91fe6c3aa51dc3f865c10d47887a352240cd6c89b1562f6a106",
       "text": true
     },
     {
@@ -3115,7 +3125,7 @@
     {
       "best_similarity": 0.0,
       "best_upstream_path": null,
-      "bytes": 12691,
+      "bytes": 12786,
       "classification": "legacy_name_only_or_unresolved",
       "comparison_method": null,
       "exact_upstream_paths": [],
@@ -3126,7 +3136,7 @@
       ],
       "path": "scripts/audit_public_provenance.py",
       "same_path_upstream": false,
-      "sha256": "309cf7d135ae6ea5d5595f820da371bfda077f3365a59eb30cde1bdf420abd75",
+      "sha256": "eab54261ce1a676b96194fc58b91d9010a3180aacbb8ee1f691f7bc645417d52",
       "text": true
     },
     {
@@ -3427,14 +3437,14 @@
     {
       "best_similarity": 0.0,
       "best_upstream_path": null,
-      "bytes": 1780,
+      "bytes": 1817,
       "classification": "no_material_public_overlap_detected",
       "comparison_method": null,
       "exact_upstream_paths": [],
       "legacy_terms": [],
       "path": "sites/mermaid-live-task-svg/THIRD_PARTY_NOTICES.md",
       "same_path_upstream": false,
-      "sha256": "b66f4437b69617c35dd27f6d9a90367aa9d32d400bf0fb7ac312db0497412bca",
+      "sha256": "82dad15a25b905bce2558f640d080d07a8a58ad49c40a0fc90a81ba4b26cdfc2",
       "text": true
     },
     {
@@ -3633,16 +3643,16 @@
       "text": true
     },
     {
-      "best_similarity": 0.030231,
+      "best_similarity": 0.03647,
       "best_upstream_path": "README.md",
-      "bytes": 1211,
+      "bytes": 1250,
       "classification": "no_material_public_overlap_detected",
       "comparison_method": "fuzzy_candidate",
       "exact_upstream_paths": [],
       "legacy_terms": [],
       "path": "sites/uswds-task-accordion/README.md",
       "same_path_upstream": false,
-      "sha256": "f56869b95c496666ab036fdd8cc0e961fcc2ab2328809e4ca345aeef17bc23b6",
+      "sha256": "6159aac09c4bf3ffb768856062ce1078d40465b055ba1f42640980afbdb5b968",
       "text": true
     },
     {
@@ -4620,35 +4630,55 @@
     {
       "best_similarity": 0.0,
       "best_upstream_path": null,
-      "bytes": 350824,
+      "bytes": 365740,
       "classification": "binary_no_exact_match",
       "comparison_method": null,
       "exact_upstream_paths": [],
       "legacy_terms": [],
       "path": "uv.lock",
       "same_path_upstream": false,
-      "sha256": "a21fb2d57c854490b9fbce553e7378c5a8560f7c5d25d8ff2da876b1e880dd96",
+      "sha256": "80aefcd0eae7845495b320f47524519cf913b37d4953d5983408d29d56184c28",
       "text": false
     }
   ],
-  "generated_at": "2026-10-17T08:01:26+00:00",
+  "generated_at": "2026-10-18T13:09:42+00:00",
   "local": {
-    "deleted_tracked_paths": [],
-    "dirty": false,
-    "files_audited": 336,
-    "head": "84ff12366e752943d6c1acfb80344e17a5a53724",
+    "deleted_tracked_paths": [
+      "LICENSE-PENDING.md",
+      "docs/licensing/MIT_RELEASE_DRAFT.md"
+    ],
+    "dirty": true,
+    "files_audited": 337,
+    "head": "1aa4e035d964f43492ab96ad2b947d2d1bc8085a",
     "requested_ref": null,
     "root": ".",
     "root_kind": "repository_root",
     "scope": "working_tree",
-    "status": []
+    "status": [
+      " D LICENSE-PENDING.md",
+      " M README.md",
+      " M README.zh-CN.md",
+      " M docs/REPRODUCIBILITY.md",
+      " M docs/WEBANYTHING_UPSTREAM.md",
+      " D docs/licensing/MIT_RELEASE_DRAFT.md",
+      " M docs/licensing/PROVENANCE_AUDIT.md",
+      " M docs/pipeline-io-and-skill-map.md",
+      " M docs/provenance.md",
+      " M docs/release-status.md",
+      " M docs/releases/v0.1.0-alpha.md",
+      " M pyproject.toml",
+      " M sites/mermaid-live-task-svg/THIRD_PARTY_NOTICES.md",
+      " M sites/uswds-task-accordion/README.md",
+      "?? LICENSE",
+      "?? docs/licensing/MIT_LICENSE_DECISION.md"
+    ]
   },
   "schema": "webanything-public-provenance-audit-v2",
   "summary": {
     "binary_no_exact_match": 38,
     "empty_placeholder_match": 5,
     "legacy_name_only_or_unresolved": 109,
-    "no_material_public_overlap_detected": 184
+    "no_material_public_overlap_detected": 185
   },
   "thresholds": {
     "high_similarity": 0.8,

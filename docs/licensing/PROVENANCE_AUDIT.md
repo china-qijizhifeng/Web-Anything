@@ -1,6 +1,6 @@
 # Public provenance audit
 
-Audit date: 2026-10-17
+Audit date: 2026-10-18
 
 ## Decision
 
@@ -9,14 +9,12 @@ medium-similarity match to the pinned public WebHarbor tree. The public branch
 was rebuilt from that tree as new root history on 2026-10-17, excluding the
 earlier runtime files and commits.
 
-One license blocker remains:
-
-1. The repository snapshot names an internal source commit, but that commit and
-   its author history are not present in this repository. The rights holder for
-   the remaining imported code therefore cannot be verified from this checkout
-   alone.
-
-The root `LICENSE-PENDING.md` remains the effective repository status.
+The repository snapshot names an internal source commit whose author history is
+not present in this checkout, so the audit cannot independently verify the
+rights holder from Git history alone. On 2026-10-18, the project owner
+explicitly confirmed ownership or authorization covering the current
+implementation and authorized release under MIT. The root `LICENSE` is now the
+effective license for WebAnything-authored code.
 
 ## Fixed comparison inputs
 
@@ -32,7 +30,7 @@ The public WebHarbor tree at the fixed revision contains 667 files and no root
 
 ## Current working-tree result
 
-The audit covered 336 tracked and untracked repository files while excluding
+The audit covered 337 tracked and untracked repository files while excluding
 its own generated JSON reports.
 
 | Classification | Files | Meaning |
@@ -42,7 +40,7 @@ its own generated JSON reports.
 | Medium public similarity, at least 0.50 | 0 | No medium textual match found |
 | Empty placeholder match | 5 | Empty `.gitkeep` or empty queue files; no expressive content |
 | Legacy name only or unresolved | 109 | Contains `WebHarbor`, `WebSyn`, or `NexGarden`, but no material content match was detected |
-| No material public overlap detected | 184 | Text comparison stayed below 0.50 |
+| No material public overlap detected | 185 | Text comparison stayed below 0.50 |
 | Binary with no exact match | 38 | Hash differs; semantic or visual derivation was not assessed |
 
 The rewritten `Dockerfile` has 0.121252 similarity to the same-path WebHarbor
@@ -82,7 +80,7 @@ insufficient. The 2026-10-17 release replaced that branch with clean root
 history. The adjacent history JSON is retained as the pre-rewrite audit record;
 it does not describe the ancestry of the rewritten branch.
 
-## Internal-source gap
+## Internal-source record
 
 `provenance/source_snapshot.json` says the staging tree was created from
 `public-release/NexGarden` at commit
@@ -92,8 +90,10 @@ initial WebAnything commit records `Codex <codex@local.invalid>` as author and
 committer, which documents packaging activity rather than the authorship of
 the imported implementation.
 
-Before applying MIT to the repository, retain one of the following as release
-evidence:
+The engineering audit cannot convert this incomplete internal history into
+independent proof of ownership. The release decision records the project
+owner's explicit authorization. Stronger supporting evidence may additionally
+include:
 
 - the original repository history showing that the relevant contributors
   authored the imported implementation and agreed to MIT;
@@ -101,12 +101,15 @@ evidence:
 - independently rewritten replacements with review notes that identify the
   specification used and exclude the old implementation from the new history.
 
+See [`MIT_LICENSE_DECISION.md`](MIT_LICENSE_DECISION.md) for the effective
+license decision and its scope.
+
 ## Third-party material
 
 The task demonstrations remain governed by their own notices. The USWDS case
 includes CC0/public-domain site terms and separate OFL/Apache font licenses.
-The Mermaid case includes its own source and trademark notice. A future root
-MIT license must not replace those terms.
+The Mermaid case includes its own source and trademark notice. The root MIT
+license does not replace those terms.
 
 ## Method and limitations
 

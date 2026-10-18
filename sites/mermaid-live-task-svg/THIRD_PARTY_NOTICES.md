@@ -10,4 +10,4 @@ This task demo was reconstructed from the public [Mermaid Live Editor](https://m
 >
 > THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-The Mermaid and MermaidChart names and marks belong to their respective owners. This independent demo does not imply endorsement. The repository-level license remains pending; see [LICENSE-PENDING.md](../../LICENSE-PENDING.md) before public distribution.
+The Mermaid and MermaidChart names and marks belong to their respective owners. This independent demo does not imply endorsement. WebAnything-authored code uses the repository [MIT License](../../LICENSE); this notice and the upstream terms continue to apply to the captured asset and marks.

@@ -1,6 +1,6 @@
 # Public release status
 
-Snapshot date: 2026-10-17
+Snapshot date: 2026-10-18
 
 WebAnything is an alpha research codebase. The package, CLI, schemas, runtime,
 documentation, and current user-facing examples use the `webanything` name.
@@ -32,11 +32,9 @@ retained as compatibility identifiers for existing frozen evidence.
 - source-site terms, content rights, authentication state, and generated site
   redistribution remain the user's responsibility.
 
-## Remaining release decision
+## License and alpha release
 
-The current technical release candidate is ready for an alpha tag. Activating
-the planned MIT license requires the project owner to confirm authority to
-license the internally developed implementation described in
-[`docs/licensing/PROVENANCE_AUDIT.md`](licensing/PROVENANCE_AUDIT.md). The
-repository must remain private until that confirmation, the root `LICENSE`,
-and the alpha release are committed together.
+The project owner confirmed release authority on 2026-10-18. The root
+[`LICENSE`](../LICENSE) applies the MIT License to WebAnything-authored code.
+Third-party examples and assets retain the separate terms recorded in their
+notices. `v0.1.0-alpha` is the first prerelease for this reviewed tree.
