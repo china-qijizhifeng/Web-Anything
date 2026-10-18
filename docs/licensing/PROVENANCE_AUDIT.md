@@ -20,7 +20,7 @@ effective license for WebAnything-authored code.
 
 | Input | Revision |
 | --- | --- |
-| WebAnything base `HEAD` | `0571decd5592d1a7ba7e6b93ea44f3fd975c5f7c` |
+| WebAnything licensed release base | `09607331b70f8c1d7a767b139c0bf0b3ea188c55` |
 | WebAnything initial import | `90fb918ca1fc3ef5071fbecc2868e339217fb875` |
 | Public WebHarbor source | `7269be89c93b72cf1d8596b4fde65ba1c7453c15` |
 | Current public WebHarbor default branch, supplemental | `381dbd9882680806c81ed626d226f114c464a321` |
@@ -28,7 +28,7 @@ effective license for WebAnything-authored code.
 The public WebHarbor tree at the fixed revision contains 667 files and no root
 `LICENSE`, `LICENSE.md`, `COPYING`, or `NOTICE` file.
 
-## Current working-tree result
+## Current release-tree result
 
 The audit covered 337 tracked and untracked repository files while excluding
 its own generated JSON reports.

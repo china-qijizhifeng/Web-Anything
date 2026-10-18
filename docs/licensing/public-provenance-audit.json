@@ -1394,7 +1394,7 @@
       ],
       "path": "docs/licensing/PROVENANCE_AUDIT.md",
       "same_path_upstream": false,
-      "sha256": "b2698da851e174acfd494f7ddb6e3a98b3ce0c10496253e9fadaad2851493fab",
+      "sha256": "227b0c3de5323791dc085fa5b28ac8d18958b6c0ec03270d4cb23e7e31cdb299",
       "text": true
     },
     {
@@ -2824,16 +2824,16 @@
       "text": true
     },
     {
-      "best_similarity": 0.096718,
+      "best_similarity": 0.098476,
       "best_upstream_path": "agent_demo/pyproject.toml",
-      "bytes": 1416,
+      "bytes": 1385,
       "classification": "no_material_public_overlap_detected",
       "comparison_method": "fuzzy_candidate",
       "exact_upstream_paths": [],
       "legacy_terms": [],
       "path": "pyproject.toml",
       "same_path_upstream": false,
-      "sha256": "7b61f19986cdb91fe6c3aa51dc3f865c10d47887a352240cd6c89b1562f6a106",
+      "sha256": "6a2ee106cc9dd35802b0f4f319c2a3b2b3790f2067c4e54402e627792e71e6c6",
       "text": true
     },
     {
@@ -4641,37 +4641,17 @@
       "text": false
     }
   ],
-  "generated_at": "2026-10-18T13:09:42+00:00",
+  "generated_at": "2026-10-18T13:18:27+00:00",
   "local": {
-    "deleted_tracked_paths": [
-      "LICENSE-PENDING.md",
-      "docs/licensing/MIT_RELEASE_DRAFT.md"
-    ],
-    "dirty": true,
+    "deleted_tracked_paths": [],
+    "dirty": false,
     "files_audited": 337,
-    "head": "1aa4e035d964f43492ab96ad2b947d2d1bc8085a",
-    "requested_ref": null,
+    "head": "09607331b70f8c1d7a767b139c0bf0b3ea188c55",
+    "requested_ref": "HEAD",
     "root": ".",
     "root_kind": "repository_root",
-    "scope": "working_tree",
-    "status": [
-      " D LICENSE-PENDING.md",
-      " M README.md",
-      " M README.zh-CN.md",
-      " M docs/REPRODUCIBILITY.md",
-      " M docs/WEBANYTHING_UPSTREAM.md",
-      " D docs/licensing/MIT_RELEASE_DRAFT.md",
-      " M docs/licensing/PROVENANCE_AUDIT.md",
-      " M docs/pipeline-io-and-skill-map.md",
-      " M docs/provenance.md",
-      " M docs/release-status.md",
-      " M docs/releases/v0.1.0-alpha.md",
-      " M pyproject.toml",
-      " M sites/mermaid-live-task-svg/THIRD_PARTY_NOTICES.md",
-      " M sites/uswds-task-accordion/README.md",
-      "?? LICENSE",
-      "?? docs/licensing/MIT_LICENSE_DECISION.md"
-    ]
+    "scope": "git_revision",
+    "status": []
   },
   "schema": "webanything-public-provenance-audit-v2",
   "summary": {
