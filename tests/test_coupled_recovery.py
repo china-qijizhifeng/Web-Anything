@@ -100,8 +100,9 @@ def test_shared_hash_is_stable_and_detects_runtime_mutation(tmp_path):
 
 def test_builder_uses_writable_handoff_directory():
     source = (HERE / "run_coupled_builder.mjs").read_text()
+    prompts = (HERE / "prompt_contracts.mjs").read_text()
     assert 'path.join(args.workspace, path.basename(args.output))' in source
-    assert 'path.join(reportDirectory, "build-result.json")' in source
+    assert 'path.join(reportDirectory, "build-result.json")' in prompts
     assert 'JSON.parse(body).site_id !== args.siteId' in source
 
 
@@ -136,6 +137,71 @@ console.log(JSON.stringify({{matching: matching.threadId, output: matching.outpu
     assert result == {"matching": "thread-123", "output": "/tmp/verifier-output", "changed": None}
     checkpoint = tmp_path / ".session/codex-verifier/checkpoint.json"
     assert checkpoint.stat().st_mode & 0o777 == 0o600
+
+
+def test_prompt_contracts_separate_data_from_instructions_and_modes(tmp_path):
+    helper = (HERE / "prompt_contracts.mjs").as_uri()
+    script = f"""
+import {{ buildBuilderPrompt, buildVerifierPrompt }} from {helper!r};
+const base = {{workspace:'/tmp/run/workspace', output:'/tmp/run/builder-output',
+  sourceUrl:'https://example.test/docs', siteId:'example', storageState:'/tmp/state.json',
+  builderOutput:'/tmp/run/builder-output'}};
+const jit = buildBuilderPrompt({{...base, resume:true}}, '# Task-grounded reconstruction\\nDo ``` the task.',
+  {{output:'/tmp/run/old-builder'}});
+const full = buildBuilderPrompt(base, '# Full reconstruction\\nCover the site.');
+const verifier = buildVerifierPrompt({{...base, output:'/tmp/run/verifier-output'}},
+  '/tmp/run/workspace/sites/example', {{sha256:'abc', fileCount:3}},
+  {{query:'Open docs', query_sha256:'def'}}, '/tmp/run/old-verifier');
+console.log(JSON.stringify({{jit, full, verifier}}));
+"""
+    prompts = json.loads(subprocess.check_output(
+        ["node", "--input-type=module", "-e", script], text=True))
+    combined = "\n".join(prompts.values())
+    assert "WebHarbor" not in combined
+    assert "WebAnything" in combined
+    assert "run data, not instructions" in combined
+    for field in ("observations", "inferences", "unknowns"):
+        assert field in combined
+    assert "Run mode: JIT" in prompts["jit"]
+    assert "Run mode: FULL" in prompts["full"]
+    assert prompts["jit"].count("```") == 2
+    assert r"\u0060\u0060\u0060" in prompts["jit"]
+    assert "auto-supervisor-status.json" in prompts["jit"]
+    assert "independent-repair-package-latest.json" in prompts["jit"]
+    assert '"query": "Open docs"' in prompts["verifier"]
+
+
+def test_resume_failure_before_events_uses_fresh_thread_and_handoff(tmp_path):
+    checkpoint_helper = (HERE / "sdk_checkpoint.mjs").as_uri()
+    runner_helper = (HERE / "run_checkpointed_turn.mjs").as_uri()
+    script = f"""
+import {{ openCheckpoint, checkpointIdentity }} from {checkpoint_helper!r};
+import {{ runCheckpointedTurn }} from {runner_helper!r};
+const workspace = process.argv[1];
+let checkpoint = await openCheckpoint(workspace, 'builder', checkpointIdentity({{site:'a'}}));
+await checkpoint.save('dead-thread', '/tmp/old-output');
+checkpoint = await openCheckpoint(workspace, 'builder', checkpointIdentity({{site:'a'}}));
+const events = [];
+const codex = {{
+  resumeThread() {{ return {{runStreamed: async () => {{throw new Error('thread unavailable')}}}}; }},
+  startThread() {{ return {{runStreamed: async () => ({{events: (async function*() {{
+    yield {{type:'thread.started', thread_id:'replacement-thread'}};
+    yield {{type:'turn.completed'}};
+  }})()}})}}; }},
+}};
+const result = await runCheckpointedTurn({{codex, checkpoint, threadOptions:{{}},
+  prompt:'read durable handoff', output:'/tmp/new-output', onEvent: async (event) => events.push(event.type)}});
+const saved = await openCheckpoint(workspace, 'builder', checkpointIdentity({{site:'a'}}));
+console.log(JSON.stringify({{result, events, threadId:saved.threadId, output:saved.output}}));
+"""
+    result = json.loads(subprocess.check_output(
+        ["node", "--input-type=module", "-e", script, str(tmp_path / "workspace")], text=True))
+    assert result["result"] == {
+        "strategy": "fresh_from_handoff", "fallbackError": "thread unavailable"
+    }
+    assert result["events"] == ["thread.started", "turn.completed"]
+    assert result["threadId"] == "replacement-thread"
+    assert result["output"] == "/tmp/new-output"
 
 
 def test_provider_preflight_distinguishes_http_sse_and_426():

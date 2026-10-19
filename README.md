@@ -18,6 +18,9 @@ New runs use `webanything` schema IDs, runtime names, and `WEBANYTHING_*` provid
 [![Conceptual WebAnything workflow from website URL through evidence gathering, reconstruction, independent verification, repair, and release](assets/webanything-workflow-concept.png)](assets/webanything-workflow-concept.png)
 
 Click the diagram to view it at full resolution. It is a conceptual overview; see [architecture](docs/architecture.md) and [known limitations](docs/limitations.md) for the implemented pipeline and coverage boundaries.
+The experimental Builder and Verifier prompt structure, evidence vocabulary, and
+thread-independent recovery behavior are documented in
+[Prompt architecture](docs/PROMPT_ARCHITECTURE.md).
 
 ## Quick start
 

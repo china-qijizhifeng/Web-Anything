@@ -22,16 +22,25 @@ export async function openCheckpoint(workspace, role, identity) {
   }
   const threadId = saved?.identity === identity && typeof saved.thread_id === "string"
     ? saved.thread_id : null;
+  const output = saved?.identity === identity && typeof saved.output === "string"
+    ? saved.output : null;
+  async function writeMetadata(fields) {
+    const temporary = `${metadataPath}.${process.pid}.tmp`;
+    await writeFile(temporary, JSON.stringify({ schema_version: 2, identity,
+      ...fields, updated_at: new Date().toISOString() }) + "\n", { mode: 0o600 });
+    await rename(temporary, metadataPath);
+  }
   return {
     codexHome: root,
     threadId,
-    output: threadId && typeof saved.output === "string" ? saved.output : null,
+    output,
     async save(id, output) {
       if (!id) return;
-      const temporary = `${metadataPath}.${process.pid}.tmp`;
-      await writeFile(temporary, JSON.stringify({ schema_version: 1, identity,
-        thread_id: id, output, updated_at: new Date().toISOString() }) + "\n", { mode: 0o600 });
-      await rename(temporary, metadataPath);
+      await writeMetadata({ thread_id: id, output });
+    },
+    async invalidateThread(reason) {
+      await writeMetadata({ thread_id: null, previous_thread_id: threadId, output,
+        invalidated_reason: String(reason || "resume failed").slice(0, 1000) });
     },
   };
 }

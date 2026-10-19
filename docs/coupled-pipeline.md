@@ -86,7 +86,10 @@ fictional deterministic local state.
 The supervisor defaults to 12 cycles and a 90-minute limit for each Builder or
 Verifier turn. It preserves valid work across timeouts. Builder and Verifier
 SDK thread IDs and session history are kept separately under the private
-`<run-dir>/.session/` directory. A retry resumes the matching SDK thread;
+`<run-dir>/.session/` directory. A retry first resumes the matching SDK thread.
+If that thread cannot be opened and no new event has arrived, the runner starts a
+fresh thread from the durable candidate, evidence, supervisor status, and repair
+handoff. Once an event has arrived, retries remain under supervisor control;
 Verifier retries within one supervisor run also reuse the same evidence
 directory. Changing the source,
 task, model, or frozen candidate invalidates the matching Verifier checkpoint.

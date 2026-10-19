@@ -157,6 +157,12 @@ The command prints a run directory and status. Report completion only when statu
 is `complete`. If complete, use `{command} preview 'RUN_DIR'` and show the local
 preview URL. For any other status, report the actual state and the run directory.
 Do not treat a screenshot or a running preview as independent verification.
+
+When explaining a run, separate persisted observations from inferences and
+unknowns. Cite run artifacts for observations. Label inferences and confidence.
+For each material unknown, state which gate it affects and the bounded check
+needed to resolve it. Missing evidence never proves that behavior is absent or
+equivalent, and a required gate with a material unknown cannot be reported as passed.
 """
 
 
