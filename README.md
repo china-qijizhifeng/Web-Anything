@@ -2,6 +2,8 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
+[![Website: WebAnything](https://img.shields.io/badge/Website-WebAnything-216b4e?style=flat-square)](https://china-qijizhifeng.github.io/Web-Anything/)
+
 <p align="center">
   <img src="assets/webanything-concept-logo.png" alt="WebAnything concept logo" width="560">
 </p>
