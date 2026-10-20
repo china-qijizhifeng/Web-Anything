@@ -248,3 +248,8 @@ window.WEBANYTHING_WALL_STATES = [
     description: "A settings state with deterministic controls and fixed local data."
   }
 ];
+
+window.WEBANYTHING_WALL_STATES = [
+  ...(window.WEBANYTHING_ENVIRONMENT_POOL || []),
+  ...window.WEBANYTHING_WALL_STATES
+];

@@ -87,7 +87,9 @@ const fallbackWallStates = [
 
 const buildHomeWall = () => {
   if (!homeWallWorld || homeWallWorld.childElementCount || compactWall.matches) return;
-  const states = window.WEBANYTHING_WALL_STATES?.length ? window.WEBANYTHING_WALL_STATES : fallbackWallStates;
+  const featuredPool = (window.WEBANYTHING_ENVIRONMENT_POOL || []).filter(state => state.featured);
+  const states = featuredPool.length ? featuredPool :
+    (window.WEBANYTHING_WALL_STATES?.length ? window.WEBANYTHING_WALL_STATES : fallbackWallStates);
 
   const columns = 10;
   const rows = 4;
@@ -96,7 +98,7 @@ const buildHomeWall = () => {
   const fragment = document.createDocumentFragment();
 
   for (let index = 0; index < columns * rows; index += 1) {
-    const state = states[(index * 7) % states.length];
+    const state = states[(index * 13) % states.length];
     const column = index % columns - (columns - 1) / 2;
     const row = Math.floor(index / columns) - (rows - 1) / 2;
     const theta = column * angleStep;

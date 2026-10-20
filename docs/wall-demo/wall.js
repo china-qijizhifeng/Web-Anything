@@ -1,5 +1,6 @@
 (() => {
   const states = window.WEBANYTHING_WALL_STATES || [];
+  const poolStates = states.filter(state => state.collection === 'environment-pool-244');
   const stage = document.querySelector('[data-stage]');
   const camera = document.querySelector('[data-camera]');
   const wall = document.querySelector('[data-wall]');
@@ -49,7 +50,7 @@
     caseLink: inspector.querySelector('[data-case-link]')
   };
 
-  document.querySelector('[data-state-count]').textContent = states.length;
+  document.querySelector('[data-state-count]').textContent = poolStates.length || states.length;
   document.querySelector('[data-panel-count]').textContent = PANEL_COUNT;
 
   function createLayouts() {
@@ -77,43 +78,34 @@
     return layouts;
   }
 
-  function interleaveStates(count, anchorIndex) {
-    const groups = [
-      states.filter(state => state.site === 'Mermaid Live Editor'),
-      states.filter(state => state.site === 'U.S. Web Design System'),
-      states.filter(state => state.site === 'CloudPost')
-    ];
-    const projectState = states.find(state => state.site === 'WebAnything');
-    let groupedIndex = 0;
-    const result = Array.from({ length: count }, (_, index) => {
-      if (projectState && (index === 3 || index === 31)) return projectState;
-      const group = groups[groupedIndex % groups.length];
-      const turn = Math.floor(groupedIndex / groups.length);
-      groupedIndex += 1;
-      return group[turn % group.length];
+  function selectPanelStates(count, anchorIndex) {
+    const featured = poolStates.filter(state => state.featured);
+    const source = featured.length >= count - 2 ? featured : poolStates;
+    const step = source.length > 1 ? 13 : 1;
+    const ordered = Array.from({ length: Math.min(count - 2, source.length) }, (_, index) =>
+      source[(index * step) % source.length]
+    );
+    const evidenceStates = [
+      states.find(state => state.id === 'mermaid-edit'),
+      states.find(state => state.id === 'uswds-overview-mirror')
+    ].filter(Boolean);
+    const result = [...ordered];
+    evidenceStates.forEach((state, index) => {
+      const position = index === 0 ? anchorIndex : Math.min(result.length, anchorIndex + 15);
+      result.splice(position, 0, state);
     });
-    const featureIndex = result.findIndex(state => state.id === 'mermaid-edit');
-    const [featureState] = result.splice(featureIndex, 1);
-    const arranged = [];
-    for (let index = 0; index < count; index += 1) {
-      if (index === anchorIndex) {
-        arranged.push(featureState);
-        continue;
-      }
-      const previousSite = arranged.at(-1)?.site;
-      const beforeAnchor = index === anchorIndex - 1;
-      let candidateIndex = result.findIndex(state =>
-        state.site !== previousSite && (!beforeAnchor || state.site !== featureState.site)
-      );
-      if (candidateIndex < 0) candidateIndex = 0;
-      arranged.push(result.splice(candidateIndex, 1)[0]);
+    let fillIndex = 0;
+    while (result.length < count && poolStates.length) {
+      const candidate = poolStates[fillIndex % poolStates.length];
+      if (!result.includes(candidate)) result.push(candidate);
+      fillIndex += 1;
     }
-    return arranged;
+    return result.slice(0, count);
   }
 
   const layouts = createLayouts();
   const anchorIndex = layouts.findIndex(layout => layout.anchor);
-  const panelStates = interleaveStates(PANEL_COUNT, anchorIndex);
+  const panelStates = selectPanelStates(PANEL_COUNT, anchorIndex);
   const occurrences = new Map();
 
   function createPanel(state, layout, index) {
@@ -323,7 +315,7 @@
   function renderInspectorImage(kind) {
     if (!activeState) return;
     const showingPrimary = kind === 'primary';
-    const src = showingPrimary ? activeState.image : activeState.compareImage;
+    const src = showingPrimary ? (activeState.inspectImage || activeState.image) : activeState.compareImage;
     const label = showingPrimary ? activeState.role : activeState.compareLabel;
     els.image.src = src;
     els.image.alt = `${activeState.site} — ${activeState.title}, ${label}`;
@@ -346,7 +338,9 @@
     els.evidence.textContent = state.evidence;
     els.role.textContent = state.role;
     els.source.textContent = state.source;
-    els.index.textContent = `CAPTURED STATE ${String(states.indexOf(state) + 1).padStart(2, '0')} · PANEL ${String(index + 1).padStart(2, '0')}`;
+    const itemIndex = state.collection === 'environment-pool-244' ? poolStates.indexOf(state) + 1 : states.indexOf(state) + 1;
+    const itemLabel = state.collection === 'environment-pool-244' ? 'ENVIRONMENT' : 'CAPTURED STATE';
+    els.index.textContent = `${itemLabel} ${String(itemIndex).padStart(3, '0')} · PANEL ${String(index + 1).padStart(2, '0')}`;
     els.browserUrl.textContent = state.url;
     els.switcher.hidden = !state.compareImage;
     els.caseLink.hidden = !state.caseUrl;

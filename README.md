@@ -133,7 +133,7 @@ The inventory selects 244 unique site IDs from several historical batches. A dir
 
 ## Copyright, licenses, and responsible use
 
-The 244-site inventory is metadata, **not a bundle of 244 reconstructed websites**. This repository includes three limited demos under `sites/`, along with selected screenshots, fonts, and other example assets. It does not include the complete source trees or media for the 244 historical sites.
+The 244-site inventory is metadata, **not a bundle of 244 reconstructed websites**. This repository includes three limited demos under `sites/` and downsampled homepage previews for the Website Wall. It does not include the complete source trees, full-resolution capture archive, or media bundles for the 244 historical sites. See the [Website Wall asset note](docs/wall-demo/README.md) for the preview sizes and evidence boundary.
 
 WebAnything-authored code is released under the [MIT License](LICENSE). The project owner confirmed authority to make this release on 2026-10-18. This repository-level license does not replace the separate terms, notices, or attribution requirements that apply to third-party material.
 
