@@ -93,8 +93,10 @@ const buildHomeWall = () => {
 
   const columns = 10;
   const rows = 4;
-  const radius = 1850;
   const angleStep = 9 * Math.PI / 180;
+  const panelStepX = 326;
+  const panelStepY = 198;
+  const radius = panelStepX / angleStep;
   const fragment = document.createDocumentFragment();
 
   for (let index = 0; index < columns * rows; index += 1) {
@@ -107,7 +109,7 @@ const buildHomeWall = () => {
     const screen = document.createElement("div");
     screen.className = "home-wall-screen";
     screen.style.setProperty("--x", `${x.toFixed(2)}px`);
-    screen.style.setProperty("--y", `${(row * 184).toFixed(2)}px`);
+    screen.style.setProperty("--y", `${(row * panelStepY).toFixed(2)}px`);
     screen.style.setProperty("--z", `${z.toFixed(2)}px`);
     screen.style.setProperty("--ry", `${(-theta * 180 / Math.PI).toFixed(2)}deg`);
 
