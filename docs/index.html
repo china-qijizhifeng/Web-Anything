@@ -137,34 +137,12 @@
         <p>The Builder and Verifier are separated by a frozen candidate boundary. Verification findings can trigger a focused loop without discarding the source evidence already collected.</p>
       </div>
 
-      <div class="pipeline-diagram reveal" aria-label="WebAnything reconstruction and verification pipeline">
-        <div class="pipeline-policy"><span>Coverage policy</span><b>Full / JIT</b><small>Predefined rules · automatic checking · continuous update</small></div>
-        <div class="pipeline-role builder-role">
-          <span class="brand-crop gardener-crop" aria-hidden="true"><img src="project-page-assets/webanything-workflow-concept.png" width="7528" height="3344" alt="" loading="lazy" decoding="async"></span>
-          <span>GARDENER</span><b>Builder Agent</b><small>Explore · Rebuild · Freeze</small>
-        </div>
-        <ol class="pipeline-flow">
-          <li class="brand-node">
-            <span class="brand-crop seed-crop" aria-hidden="true"><img src="project-page-assets/webanything-workflow-concept.png" width="7528" height="3344" alt="" loading="lazy" decoding="async"></span>
-            <span>SEED</span><b>Real Website URL</b><small>Public source</small>
-          </li>
-          <li><span>01</span><b>Exploration &amp; Capture</b><small>Pages · states · interactions</small></li>
-          <li><span>02</span><b>Observed Evidence</b><small>DOM · UI · screenshots · resources</small></li>
-          <li><span>03</span><b>Grounded Reconstruction</b><small>Layout · behavior · assets</small></li>
-          <li><span>04</span><b>Candidate Mirror</b><small>Frozen and versioned</small></li>
-          <li class="verifier-node">
-            <span class="brand-crop botanist-crop" aria-hidden="true"><img src="project-page-assets/webanything-workflow-concept.png" width="7528" height="3344" alt="" loading="lazy" decoding="async"></span>
-            <span>BOTANIST</span><b>Independent Verifier</b><small>Fidelity · functionality · safety</small>
-          </li>
-          <li><span>05</span><b>Verified Mirror</b><small>High fidelity · interactive</small></li>
-          <li class="brand-node"><span>DIGITAL GARDEN</span><b>Agent Environment Release</b><small>Evaluation · training</small></li>
-        </ol>
-        <div class="pipeline-loops" aria-label="Verification feedback loops">
-          <div><b>Implementation Error</b><span>Local Repair → Grounded Reconstruction</span></div>
-          <div><b>Evidence Gap</b><span>Targeted Recapture → Observed Evidence</span></div>
-        </div>
-        <div class="pipeline-role verifier-role"><span>CHECKPOINT</span><b>Frozen candidate boundary</b><small>Builder output is fixed before independent verification.</small></div>
-      </div>
+      <figure class="paper-figure pipeline-figure reveal">
+        <button class="figure-button" type="button" data-lightbox="project-page-assets/webanything-workflow-concept.png" aria-label="Open the WebAnything construction pipeline at full size">
+          <img src="project-page-assets/webanything-workflow-concept.png" width="7528" height="3344" alt="WebAnything pipeline from a real website seed through evidence capture, grounded reconstruction, independent verification, repair loops, and environment release" loading="lazy" decoding="async">
+        </button>
+        <figcaption><b>Figure 2.</b> The WebAnything Builder–Verifier pipeline used in the repository README, including Full/JIT coverage and the implementation-error and evidence-gap feedback loops.</figcaption>
+      </figure>
 
       <div class="method-tabs reveal" role="tablist" aria-label="WebAnything method stages">
         <button class="method-tab is-active" type="button" role="tab" aria-selected="true" data-method="explore"><span>01</span> Explore</button>
