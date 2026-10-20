@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An interactive spatial wall of website environments reconstructed with WebAnything.">
+  <meta name="theme-color" content="#07100d">
+  <title>Infinite Website Wall — WebAnything</title>
+  <link rel="icon" href="../project-page-assets/webanything-logo.png">
+  <link rel="stylesheet" href="wall.css?v=16">
+</head>
+<body>
+  <a class="skip-link" href="#wall">Skip to website wall</a>
+
+  <header class="demo-header">
+    <a class="brand" href="../" aria-label="Back to the WebAnything project page">
+      <span class="brand-mark" aria-hidden="true"><img src="../project-page-assets/webanything-logo.png" alt=""></span>
+      <span>WebAnything</span>
+    </a>
+    <div class="demo-title">
+      <span>Interactive study</span>
+      <strong>Infinite Website Wall</strong>
+    </div>
+    <a class="project-link" href="../#scaling" aria-label="Back to the WebAnything Scaling section">Back to Project <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="wall" class="wall-app">
+    <section class="wall-stage" data-stage aria-label="Spatial wall of captured website states">
+      <div class="scene-copy">
+        <div class="scene-heading">
+          <p>WEBANYTHING WEBSITE OBSERVATORY</p>
+          <h1>One wall.<br><em>Many possible worlds.</em></h1>
+        </div>
+        <div class="scene-evidence" aria-label="Demo evidence summary">
+          <span class="status-dot" aria-hidden="true"></span>
+          <div>
+            <strong><span data-state-count>19</span> repository-captured states</strong>
+            <p><span data-panel-count>36</span> spatial panels · demonstration repeats are labeled</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="wall-camera" data-camera>
+        <div class="wall-world" data-wall></div>
+      </div>
+
+      <div class="vignette" aria-hidden="true"></div>
+
+      <div class="wall-controls" aria-label="Wall controls">
+        <p><span aria-hidden="true">↔</span> Drag to explore <i></i> Hover to focus <i></i> Click to inspect</p>
+        <button type="button" data-reset>Reset view</button>
+      </div>
+
+      <div class="intro-curtain" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="inspector" data-inspector aria-labelledby="inspect-title">
+    <div class="inspector-shell">
+      <button class="inspector-close" type="button" data-close aria-label="Back to the website wall">
+        <span aria-hidden="true">←</span> Back to Wall
+      </button>
+
+      <div class="inspector-media">
+        <div class="browser-frame">
+          <div class="browser-bar" aria-hidden="true">
+            <span></span><span></span><span></span>
+            <div data-browser-url>captured-state.local</div>
+          </div>
+          <img data-inspect-image src="" alt="">
+        </div>
+        <div class="view-switch" data-view-switch hidden>
+          <button type="button" data-view="original">Original website</button>
+          <button type="button" data-view="mirror">Reconstructed mirror</button>
+        </div>
+      </div>
+
+      <article class="inspector-copy">
+        <p class="inspect-index" data-inspect-index>CAPTURED STATE 01</p>
+        <h2 id="inspect-title" data-inspect-title></h2>
+        <p class="inspect-category" data-inspect-category></p>
+        <p class="inspect-description" data-inspect-description></p>
+        <dl>
+          <div><dt>Evidence</dt><dd data-inspect-evidence></dd></div>
+          <div><dt>Role</dt><dd data-inspect-role></dd></div>
+          <div><dt>Source</dt><dd data-inspect-source></dd></div>
+        </dl>
+        <a class="case-link" data-case-link href="../case-studies/mermaid-live-editor.html" hidden>Read the evidence case study <span aria-hidden="true">↗</span></a>
+      </article>
+    </div>
+  </dialog>
+
+  <noscript>This demo requires JavaScript to arrange and inspect the website wall.</noscript>
+  <script src="wall-data.js?v=16"></script>
+  <script src="wall.js?v=16"></script>
+</body>
+</html>
