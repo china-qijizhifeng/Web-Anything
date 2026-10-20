@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="WebAnything turns public web pages into source-grounded, executable, and reusable web-agent environments through automated reconstruction and independent verification.">
-  <meta name="theme-color" content="#fafbf8">
+  <meta name="theme-color" content="#07100d">
   <meta property="og:title" content="WebAnything — Scalable Agent Environments from the Wild Web">
   <meta property="og:description" content="A fully automated framework for reconstructing source-grounded, executable web-agent environments from real URLs.">
-  <meta property="og:image" content="project-page-assets/motivation.png">
+  <meta property="og:image" content="project-page-assets/website-wall-preview.png">
   <title>WebAnything — Project Page</title>
   <link rel="icon" href="project-page-assets/webanything-logo.png">
-  <link rel="stylesheet" href="project-page.css">
+  <link rel="stylesheet" href="project-page.css?v=5">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -36,73 +36,30 @@
   </header>
 
   <main id="main">
-    <section id="top" class="hero section-shell">
-      <div class="hero-heading reveal">
-        <div class="eyebrow"><span></span> RESEARCH PROJECT · WEB ENVIRONMENTS</div>
-        <h1>
-          <span>WebAnything: From the Wild Web</span>
-          <em>to Scalable Agent Environments</em>
-          <small>via Fully Automated Reconstruction</small>
-        </h1>
-        <div class="paper-authors" aria-label="Paper authors">Anonymous Authors</div>
-        <div class="paper-affiliations" aria-label="Publication status">
-          <span>Anonymous submission</span>
-          <span>2026</span>
+    <section id="top" class="home-wall-hero" data-home-wall aria-label="WebAnything immersive website environment wall">
+      <div class="home-wall-stage" aria-hidden="true">
+        <div class="home-wall-world" data-home-wall-world></div>
+        <div class="home-wall-static"></div>
+        <div class="home-wall-shade"></div>
+      </div>
+
+      <div class="home-wall-content">
+        <p class="home-wall-eyebrow"><span></span> WEBANYTHING · RESEARCH PROJECT</p>
+        <h1>From the wild web<br><em>to scalable agent environments.</em></h1>
+        <p class="home-wall-lede">Automatically reconstructing interactive, source-grounded web environments for agent training and evaluation.</p>
+        <div class="home-wall-actions">
+          <a class="button home-button-primary" href="project-page-assets/webanything-paper.pdf">Paper <span aria-hidden="true">↗</span></a>
+          <a class="button home-button-secondary" href="https://github.com/china-qijizhifeng/Web-Anything">GitHub <span aria-hidden="true">↗</span></a>
+          <a class="button home-button-secondary" href="wall-demo/">Explore the Wall <span aria-hidden="true">↗</span></a>
         </div>
       </div>
 
-      <div class="hero-copy reveal" data-delay="1">
-        <p class="hero-lede">
-          WebAnything reconstructs real websites as source-grounded, executable, and reusable environments—then freezes each candidate and verifies it independently before release.
-        </p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="project-page-assets/webanything-paper.pdf">Read the paper <span aria-hidden="true">↗</span></a>
-          <a class="button button-secondary" href="https://github.com/china-qijizhifeng/Web-Anything">View code <span aria-hidden="true">↗</span></a>
-          <a class="button button-secondary" href="#case-study">View demo <span aria-hidden="true">↓</span></a>
-        </div>
-        <div class="hero-meta" aria-label="Project characteristics">
-          <span>URL + task query</span>
-          <span>Full / JIT coverage</span>
-          <span>Independent verifier</span>
-        </div>
+      <div class="home-wall-metrics" aria-label="Project scale">
+        <div><strong>244</strong><span>Website Artifacts</span></div>
+        <div><strong>14</strong><span>Application Domains</span></div>
+        <div><strong>53</strong><span>Fine-grained Categories</span></div>
       </div>
-
-      <div class="hero-visual reveal" data-delay="1">
-        <div class="hero-flow" aria-label="Real Website to WebAnything to Interactive Mirror">
-          <div class="hero-flow-labels" aria-hidden="true"><span>REAL WEBSITE</span><span>WEBANYTHING</span><span>INTERACTIVE MIRROR</span></div>
-          <div class="mini-browser source-browser">
-            <div class="mini-browser-bar"><i></i><i></i><i></i><span>source.example</span></div>
-            <div class="mini-browser-page">
-              <b></b><span class="line line-long"></span><span class="line"></span>
-              <div class="mini-cards"><i></i><i></i><i></i></div>
-            </div>
-            <small>Seed · browser-observed source</small>
-          </div>
-          <div class="portal-stage" aria-hidden="true">
-            <span class="flow-arrow">→</span>
-            <div class="portal-mark">
-              <img src="project-page-assets/webanything-logo.png" width="1672" height="941" alt="">
-            </div>
-            <small>capture · rebuild · verify</small>
-            <span class="flow-arrow">→</span>
-          </div>
-          <div class="mini-browser mirror-browser">
-            <div class="mini-browser-bar"><i></i><i></i><i></i><span>localhost</span><b>✓</b></div>
-            <div class="mini-browser-page">
-              <b></b><span class="line line-long"></span><span class="line"></span>
-              <div class="mini-cards"><i></i><i></i><i></i></div>
-            </div>
-            <small>Verified · resettable · executable</small>
-          </div>
-        </div>
-      </div>
-
-      <div class="metric-strip reveal" data-delay="2">
-        <article><strong>244</strong><span>website artifacts</span></article>
-        <article><strong>14</strong><span>application domains</span></article>
-        <article><strong>53</strong><span>fine-grained categories</span></article>
-        <article><strong>12,984</strong><span>executed + accepted tasks</span></article>
-      </div>
+      <a class="home-wall-scroll" href="#overview"><span>Discover the research</span><i aria-hidden="true">↓</i></a>
     </section>
 
     <section id="overview" class="section section-shell overview">
@@ -181,6 +138,7 @@
             <div><strong>229</strong><span>sites with accepted tasks in the newer batch</span></div>
             <div><strong>93.1%</strong><span>completion against the 7,320-task target quota</span></div>
           </div>
+          <a class="scale-gallery-link" href="wall-demo/">Explore Environment Gallery <span aria-hidden="true">↗</span></a>
         </div>
         <figure class="scale-figure">
           <button class="figure-button" type="button" data-lightbox="project-page-assets/resource-scale.png" aria-label="Open the resource scale figure at full size">
@@ -188,24 +146,6 @@
           </button>
         </figure>
       </div>
-
-      <a class="wall-feature reveal" href="wall-demo/" aria-label="Enter the interactive WebAnything Website Wall">
-        <div class="wall-feature-copy">
-          <p class="kicker">Interactive environment gallery</p>
-          <h3>One wall.<br><em>Many possible worlds.</em></h3>
-          <p>Explore reconstructed web environments in an immersive spatial gallery.</p>
-        </div>
-        <div class="wall-feature-preview">
-          <img src="project-page-assets/website-wall-preview.png" width="1920" height="900" alt="WebAnything Website Wall showing captured web environments on a curved, immersive display" loading="lazy">
-          <span class="wall-feature-status"><i></i> Interactive showcase</span>
-          <span class="wall-feature-controls">Drag · Focus · Inspect</span>
-        </div>
-        <div class="wall-feature-footer">
-          <span class="wall-feature-link">Explore the Website Wall <b aria-hidden="true">↗</b></span>
-          <span class="wall-feature-mode">Full-screen experience · Drag · Focus · Inspect</span>
-          <small>Preview currently displays 19 captured states across 44 panels; repeated panels are labeled.</small>
-        </div>
-      </a>
 
       <div class="task-depth reveal">
         <div class="task-depth-copy">
@@ -397,6 +337,7 @@ uv run webanything create https://example.org/ \
     <img alt="Expanded research figure" data-lightbox-image>
   </dialog>
 
-  <script src="project-page.js"></script>
+  <script src="wall-demo/wall-data.js?v=4"></script>
+  <script src="project-page.js?v=5"></script>
 </body>
 </html>
