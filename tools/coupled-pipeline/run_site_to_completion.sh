@@ -22,6 +22,7 @@ max_cycles=${4:-${WEBANYTHING_COUPLED_MAX_CYCLES:-12}}
 model=${WEBANYTHING_COUPLED_MODEL:-gpt-5.6-sol}
 reasoning_effort=${WEBANYTHING_COUPLED_REASONING_EFFORT:-xhigh}
 timeout_minutes=${WEBANYTHING_COUPLED_TIMEOUT_MINUTES:-90}
+coverage_profile=${WEBANYTHING_COVERAGE_PROFILE:-standard}
 allow_frozen_source_evidence=0
 if [[ ${WEBANYTHING_ALLOW_FROZEN_SOURCE_EVIDENCE:-0} == 1 || -f "$run_root/.allow-frozen-source-evidence.json" ]]; then
   allow_frozen_source_evidence=1
@@ -33,6 +34,10 @@ if [[ ! -f "$requirements" || ! -f "$storage_state" || ! -d "$workspace" ]]; the
 fi
 if [[ ! "$max_cycles" =~ ^[1-9][0-9]*$ ]]; then
   echo "MAX_CYCLES must be a positive integer" >&2
+  exit 64
+fi
+if [[ "$coverage_profile" != standard && "$coverage_profile" != fast ]]; then
+  echo "WEBANYTHING_COVERAGE_PROFILE must be standard or fast" >&2
   exit 64
 fi
 
@@ -303,6 +308,7 @@ for ((cycle=1; cycle<=max_cycles; cycle+=1)); do
       --model "$model" \
       --reasoning-effort "$reasoning_effort" \
       --timeout-minutes "$timeout_minutes" \
+      --coverage-profile "$coverage_profile" \
       "${builder_mode_args[@]}"
     builder_rc=$?
     set -u
@@ -352,6 +358,7 @@ for ((cycle=1; cycle<=max_cycles; cycle+=1)); do
     --model "$model" \
     --reasoning-effort "$reasoning_effort" \
     --timeout-minutes "$timeout_minutes" \
+    --coverage-profile "$coverage_profile" \
     "${task_request_args[@]}" \
     "${verifier_source_args[@]}"
   verifier_rc=$?

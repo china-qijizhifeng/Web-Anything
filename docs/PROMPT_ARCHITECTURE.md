@@ -53,6 +53,19 @@ implicitly because the worker may already have caused side effects.
 
 ## Evaluation
 
+### Fast Full contract
+
+`--profile fast` changes Full from URL-level breadth to frozen type-level
+coverage. The Builder maps up to 20 source pages and depth 2, then records route
+families, page templates, the global shell, interaction types, representative
+routes, and evidence-backed exclusions in `coverage-contract.json`. The
+Verifier independently audits that classification and writes
+`coverage-audit.json`. Candidate freeze, reset, resource, interaction, and
+visual gates still apply to the selected representatives.
+
+Fast Full is complete only relative to that persisted contract. It does not
+claim that every repeated content URL was copied.
+
 Compare this branch with `main` on the same URL, mode, task, model, reasoning
 effort, timeout, and provider. Useful measurements are:
 

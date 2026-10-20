@@ -44,10 +44,15 @@ uv run webanything setup
 
 ```bash
 uv run webanything create https://example.org/ --mode full
+uv run webanything create https://example.org/ --mode full --profile fast
 uv run webanything create https://example.org/ --mode jit --task "Find the second example and open it"
 ```
 
 `create` 使用 setup 中选定的模型，推理强度默认为 `high`。如果未运行 setup，默认模型 ID 为 `gpt-5.6-sol`；可用 `--model your-model-id` 覆盖，并按需使用 `--reasoning-effort`。`full` 探索可发现的公开路由和控件，并要求独立覆盖检查；`jit` 构建和检查完成指定任务所需的完整交互路径。站点 ID、需求文件和运行目录会自动生成。
+
+`--profile fast` 保留 Full 对全站结构的覆盖，但将源站探索限制为最多 20
+个页面和 2 层导航深度。完整性按路由族、页面模板、全局框架和独特交互类型
+闭合，每类选择代表页面；结果不会声称已经复制每一个同模板内容 URL。
 
 运行完成后，`webanything preview <run-dir>` 可在 `http://127.0.0.1:8000/` 本地预览生成的网站。命令会打印运行目录和权威状态；仅能打开页面，并不代表已经通过验证。配置路径、环境变量和运行行为详见[简易接口说明](docs/simple-interface.md)。
 

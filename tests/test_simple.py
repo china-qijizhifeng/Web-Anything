@@ -113,6 +113,11 @@ def test_simple_modes_enforce_task_boundary(tmp_path: Path):
     assert simple.run_identity("https://example.org/a", "full", None) != simple.run_identity(
         "https://example.org/a", "jit", "Do something"
     )
+    assert simple.run_identity("https://example.org/a", "full", None) != simple.run_identity(
+        "https://example.org/a", "full", None, "fast"
+    )
+    with pytest.raises(SystemExit, match="only in Full mode"):
+        simple.create(Namespace(**common, mode="jit", task="Do something", profile="fast"), tmp_path)
 
 
 def test_provider_rejects_readable_or_symlinked_config(tmp_path: Path, monkeypatch: pytest.MonkeyPatch):

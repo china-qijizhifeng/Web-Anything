@@ -21,6 +21,7 @@ function parseArgs(argv) {
     model: "gpt-5.6-sol",
     reasoningEffort: "xhigh",
     timeoutMinutes: 90,
+    coverageProfile: "standard",
     resume: false,
   };
   for (let index = 0; index < argv.length; index += 1) {
@@ -39,6 +40,7 @@ function parseArgs(argv) {
     else if (value === "--model") args.model = next();
     else if (value === "--reasoning-effort") args.reasoningEffort = next();
     else if (value === "--timeout-minutes") args.timeoutMinutes = Number(next());
+    else if (value === "--coverage-profile") args.coverageProfile = next();
     else if (value === "--resume") args.resume = true;
     else throw new Error(`unknown option: ${value}`);
   }
@@ -65,6 +67,9 @@ async function main() {
   for (const key of ["workspace", "output", "requirements", "sourceUrl", "siteId", "storageState"]) {
     if (!args[key]) throw new Error(`missing required argument: ${key}`);
   }
+  if (!["standard", "fast"].includes(args.coverageProfile)) {
+    throw new Error("coverage profile must be standard or fast");
+  }
   const apiKey = process.env.WEBANYTHING_RESPONSES_API_KEY ||
     process.env.CODEX_REFERENCE_AUDIT_API_KEY;
   const baseUrl = process.env.WEBANYTHING_RESPONSES_BASE_URL ||
@@ -81,6 +86,7 @@ async function main() {
   const checkpoint = await openCheckpoint(args.workspace, "builder", checkpointIdentity({
     role: "builder", workspace: args.workspace, source_url: args.sourceUrl,
     site_id: args.siteId, requirements, model: args.model,
+    coverage_profile: args.coverageProfile,
     reasoning_effort: args.reasoningEffort, provider_url: baseUrl,
   }));
   const eventsPath = path.join(args.output, "sdk-events.jsonl");
@@ -150,7 +156,7 @@ async function main() {
     await new Promise((resolve) => events.end(resolve));
   }
   await writeFile(path.join(args.output, "final.md"), `${finalResponse}\n`, { mode: 0o600 });
-  for (const name of ["build-result.json", "build-notes.md", "task-contract.json"]) {
+  for (const name of ["build-result.json", "build-notes.md", "task-contract.json", "coverage-contract.json"]) {
     try {
       const body = await readFile(path.join(reportDirectory, name), "utf8");
       if (name.endsWith(".json") && JSON.parse(body).site_id !== args.siteId) continue;

@@ -149,10 +149,13 @@ const base = {{workspace:'/tmp/run/workspace', output:'/tmp/run/builder-output',
 const jit = buildBuilderPrompt({{...base, resume:true}}, '# Task-grounded reconstruction\\nDo ``` the task.',
   {{output:'/tmp/run/old-builder'}});
 const full = buildBuilderPrompt(base, '# Full reconstruction\\nCover the site.');
+const fast = buildBuilderPrompt({{...base, coverageProfile:'fast'}}, '# Fast Full public-site reconstruction\\nCover types.');
 const verifier = buildVerifierPrompt({{...base, output:'/tmp/run/verifier-output'}},
   '/tmp/run/workspace/sites/example', {{sha256:'abc', fileCount:3}},
   {{query:'Open docs', query_sha256:'def'}}, '/tmp/run/old-verifier');
-console.log(JSON.stringify({{jit, full, verifier}}));
+const fastVerifier = buildVerifierPrompt({{...base, coverageProfile:'fast', output:'/tmp/run/verifier-output'}},
+  '/tmp/run/workspace/sites/example', {{sha256:'abc', fileCount:3}}, null, null);
+console.log(JSON.stringify({{jit, full, fast, verifier, fastVerifier}}));
 """
     prompts = json.loads(subprocess.check_output(
         ["node", "--input-type=module", "-e", script], text=True))
@@ -164,6 +167,11 @@ console.log(JSON.stringify({{jit, full, verifier}}));
         assert field in combined
     assert "Run mode: JIT" in prompts["jit"]
     assert "Run mode: FULL" in prompts["full"]
+    assert '"coverage_profile": "fast"' in prompts["fast"]
+    assert "coverage-contract.json" in prompts["fast"]
+    assert "20 source pages" in prompts["fast"]
+    assert "coverage-audit.json" in prompts["fastVerifier"]
+    assert "Independently inspect the source" in prompts["fastVerifier"]
     assert prompts["jit"].count("```") == 2
     assert r"\u0060\u0060\u0060" in prompts["jit"]
     assert "auto-supervisor-status.json" in prompts["jit"]

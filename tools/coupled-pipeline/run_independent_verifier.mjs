@@ -28,6 +28,7 @@ function parseArgs(argv) {
     model: "gpt-5.6-sol",
     reasoningEffort: "xhigh",
     timeoutMinutes: 90,
+    coverageProfile: "standard",
   };
   for (let index = 0; index < argv.length; index += 1) {
     const value = argv[index];
@@ -46,6 +47,7 @@ function parseArgs(argv) {
     else if (value === "--model") args.model = next();
     else if (value === "--reasoning-effort") args.reasoningEffort = next();
     else if (value === "--timeout-minutes") args.timeoutMinutes = Number(next());
+    else if (value === "--coverage-profile") args.coverageProfile = next();
     else throw new Error(`unknown option: ${value}`);
   }
   return args;
@@ -94,10 +96,37 @@ async function taskContractPreflight(args) {
     step_count: contract.steps?.length ?? 0 };
 }
 
+async function coverageContractPreflight(args) {
+  if (args.coverageProfile !== "fast") return null;
+  const contract = JSON.parse(await readFile(
+    path.join(args.builderOutput, "coverage-contract.json"), "utf8"));
+  const problems = [];
+  if (contract.schema_version !== 1 || contract.site_id !== args.siteId || contract.profile !== "fast") {
+    problems.push("schema, site ID, or profile differs from the frozen Fast Full run");
+  }
+  for (const field of ["route_families", "page_templates", "interaction_types", "representative_routes"]) {
+    if (!Array.isArray(contract[field]) || contract[field].length === 0) {
+      problems.push(`${field} must be a non-empty array`);
+    }
+  }
+  if (!Array.isArray(contract.exclusion_rules)) problems.push("exclusion_rules must be an array");
+  if (!contract.exploration_budget || typeof contract.exploration_budget !== "object") {
+    problems.push("exploration_budget is missing");
+  }
+  if (!contract.closure || typeof contract.closure !== "object") problems.push("closure is missing");
+  return { status: problems.length ? "failed" : "passed", problems,
+    family_count: contract.route_families?.length ?? 0,
+    template_count: contract.page_templates?.length ?? 0,
+    interaction_count: contract.interaction_types?.length ?? 0 };
+}
+
 async function main() {
   const args = parseArgs(process.argv.slice(2));
   for (const key of ["workspace", "output", "builderOutput", "sourceUrl", "siteId", "storageState"]) {
     if (!args[key]) throw new Error(`missing required argument: ${key}`);
+  }
+  if (!["standard", "fast"].includes(args.coverageProfile)) {
+    throw new Error("coverage profile must be standard or fast");
   }
   const apiKey = process.env.WEBANYTHING_RESPONSES_API_KEY ||
     process.env.CODEX_REFERENCE_AUDIT_API_KEY;
@@ -133,6 +162,31 @@ async function main() {
       return;
     }
   }
+  if (args.coverageProfile === "fast") {
+    let coverageCheck;
+    try {
+      coverageCheck = await coverageContractPreflight(args);
+    } catch (error) {
+      coverageCheck = { status: "failed", problems: [error.message] };
+    }
+    await writeFile(path.join(args.output, "coverage-contract-preflight.json"),
+      JSON.stringify(coverageCheck, null, 2) + "\n", { mode: 0o600 });
+    if (coverageCheck.status !== "passed") {
+      const failure = { gate: "coverage_contract",
+        expected: "Complete frozen Fast Full family, template, interaction, and representative inventory",
+        observed: coverageCheck.problems.join("; ") };
+      await writeFile(path.join(args.output, "repair-package.json"),
+        JSON.stringify({ schema_version: 1, site_id: args.siteId, failures: [failure] }, null, 2));
+      await writeFile(path.join(args.output, "verifier-result.json"),
+        JSON.stringify({ schema_version: 1, site_id: args.siteId, status: "failed",
+          gates: { coverage_contract: { status: "failed" } } }, null, 2));
+      await writeFile(path.join(args.output, "sdk-run.json"),
+        JSON.stringify({ schema_version: 1, site_id: args.siteId,
+          turn_status: "preflight_failed", candidate_unchanged: null }, null, 2));
+      process.exitCode = 2;
+      return;
+    }
+  }
   const repoPython = fileURLToPath(new URL("../../.venv/bin/python", import.meta.url));
   const preflightPython = process.env.WEBANYTHING_PYTHON ||
     (existsSync(repoPython) ? repoPython : "python3");
@@ -156,13 +210,17 @@ async function main() {
   const builderReport = await readFile(path.join(args.builderOutput, "build-result.json"), "utf8");
   const taskContract = taskRequest
     ? await readFile(path.join(args.builderOutput, "task-contract.json"), "utf8") : "";
+  const coverageContract = args.coverageProfile === "fast"
+    ? await readFile(path.join(args.builderOutput, "coverage-contract.json"), "utf8") : "";
   const checkpoint = await openCheckpoint(args.workspace, "verifier", checkpointIdentity({
     role: "verifier", workspace: args.workspace, source_url: args.sourceUrl,
     site_id: args.siteId, model: args.model, reasoning_effort: args.reasoningEffort,
+    coverage_profile: args.coverageProfile,
     task_request: taskRequest, candidate_sha256: before.sha256,
     builder_output: args.builderOutput, provider_url: baseUrl,
     builder_report_sha256: createHash("sha256").update(builderReport).digest("hex"),
     task_contract_sha256: createHash("sha256").update(taskContract).digest("hex"),
+    coverage_contract_sha256: createHash("sha256").update(coverageContract).digest("hex"),
   }));
   await writeFile(path.join(args.output, "candidate-freeze.json"), JSON.stringify({
     schema_version: 1,

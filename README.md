@@ -62,6 +62,7 @@ You can also pass the **source website URL** directly to the CLI:
 
 ```bash
 uv run webanything create https://example.org/ --mode full
+uv run webanything create https://example.org/ --mode full --profile fast
 uv run webanything create https://example.org/ --mode jit --task "Find the second example and open it"
 ```
 
@@ -76,6 +77,11 @@ the generated site at `http://127.0.0.1:8000/` for local inspection. The
 command prints the run directory and authoritative status; a generated page
 alone does not mean verification passed. See [the simple interface guide](docs/simple-interface.md)
 for configuration paths, environment variables, and run behavior.
+
+`--profile fast` keeps Full's broad site view while bounding exploration to 20
+source pages and depth 2. It closes coverage over route families, page templates,
+the global shell, and distinct interaction types with representative routes.
+The reports do not claim that every repeated content URL was copied.
 
 To preview one bundled example in a container:
 

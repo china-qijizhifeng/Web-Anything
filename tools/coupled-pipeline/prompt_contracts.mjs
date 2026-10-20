@@ -40,6 +40,8 @@ function builderMode(requirements) {
 
 export function buildBuilderPrompt(args, requirements, checkpoint = {}) {
   const mode = builderMode(requirements);
+  const coverageProfile = mode === "full" ? (args.coverageProfile ?? "standard") : null;
+  const fastFull = mode === "full" && coverageProfile === "fast";
   const reportDirectory = path.join(args.workspace, path.basename(args.output));
   const siteRoot = path.join(args.workspace, "sites", args.siteId);
   const evidenceRoot = path.join(args.workspace, "evidence");
@@ -48,13 +50,17 @@ export function buildBuilderPrompt(args, requirements, checkpoint = {}) {
 
   const scope = mode === "jit"
     ? "Follow the source-observed path from the entry URL to the requested terminal outcome. Build every route, control, and state transition on that path, with enough surrounding navigation for discovery. Preserve intermediate actions; do not replace them with direct deep links. Stop after the complete local task path passes."
-    : "Boundedly cover the source home, global navigation, search/menu behavior, and major public route families and service workflows that actually exist. Record auth-gated, duplicate, or unbounded families with concrete exclusion rules.";
+    : fastFull
+      ? "Close a shallow, type-level coverage contract for the public site. Inventory route families, page templates, global navigation surfaces, and distinct interaction types; build one or two representative routes per family and one executed example per interaction type. Repeated same-template content URLs do not need individual reconstruction."
+      : "Boundedly cover the source home, global navigation, search/menu behavior, and major public route families and service workflows that actually exist. Record auth-gated, duplicate, or unbounded families with concrete exclusion rules.";
 
   const workflow = [
     "Use Playwright with the authorized state path, a 1920x992 CSS viewport, and a normal desktop user agent. Never read or print the storage-state file itself.",
     mode === "jit"
       ? "Explore the source entry and each route or control on the requested task path. Capture the context needed to find each next step, then stop source exploration at the terminal outcome."
-      : "Explore the public route and control inventory defined by the Full scope. Include account, locale, forms, publications, registries, guidance, or transactions only when observed on the source.",
+      : fastFull
+        ? "Map the public site within 20 source pages and navigation depth 2. Cluster routes by path pattern, DOM structure, global shell, and interaction signature. Select at most two representatives per family and persist the reason for every representative and exclusion."
+        : "Explore the public route and control inventory defined by the Full scope. Include account, locale, forms, publications, registries, guidance, or transactions only when observed on the source.",
     "Persist bounded source evidence: final URLs, DOM snapshots, computed geometry and style summaries, screenshots, and successfully fetched official resources with provenance and hashes.",
     "Build a local Flask and SQLite site from observed DOM, CSS, and assets. Use deterministic local fixtures for data, local auth simulation, mutations, persistence, reset, and evaluator hooks. The released runtime must make no external requests.",
     "Run the local site and exercise every declared in-scope route and visible control. Capture matching local evidence, compare it with the source, and revisit the live source only for a concrete unresolved visual or interaction question.",
@@ -78,6 +84,13 @@ export function buildBuilderPrompt(args, requirements, checkpoint = {}) {
       source_url: args.sourceUrl,
       site_id: args.siteId,
       mode,
+      coverage_profile: coverageProfile,
+      coverage_budget: fastFull ? {
+        max_source_pages: 20,
+        max_navigation_depth: 2,
+        max_representatives_per_family: 2,
+        visual_samples_per_template: 1,
+      } : null,
       workspace: args.workspace,
       candidate_root: siteRoot,
       evidence_root: evidenceRoot,
@@ -102,18 +115,23 @@ export function buildBuilderPrompt(args, requirements, checkpoint = {}) {
     ],
     workflow,
     artifacts: [
-      `${path.join(reportDirectory, "build-result.json")}: schema_version, site_id, status, source_routes, local_routes, changed_files, checks, limitations, observations, inferences, unknowns, and evidence_paths.`,
+      `${path.join(reportDirectory, "build-result.json")}: schema_version, site_id, status, coverage_profile, coverage_contract_sha256 when applicable, source_routes, local_routes, changed_files, checks, limitations, observations, inferences, unknowns, and evidence_paths.`,
+      ...(fastFull ? [`${path.join(reportDirectory, "coverage-contract.json")}: schema_version 1, site_id, profile fast, exploration_budget, route_families, page_templates, interaction_types, representative_routes, exclusion_rules, and closure. Every family and interaction type must be represented, explicitly excluded, or blocked with evidence.`] : []),
       ...(mode === "jit" ? [`${path.join(reportDirectory, "task-contract.json")}: schema_version 1, site_id, task_query_sha256, ordered source-to-local interaction steps, and terminal_expected_state. Each target must select the actual control used.`] : []),
       `${path.join(reportDirectory, "build-notes.md")}: concise evidence-backed summary, including every material unknown and its required probe.`,
       "Expose reset at /_reset or /api/reset, export the Flask app as app in app.py, restore the seed database, and stop temporary servers and browsers.",
     ],
-    completion: "Write fresh reports for this candidate state. Status passed is allowed only after the applicable checks actually ran and passed; a screenshot, HTTP 200, prior report, or running preview alone is not completion.",
+    completion: fastFull
+      ? "Write fresh reports for this candidate state. Status passed means the frozen type-level coverage contract is closed and independently verifiable; it does not claim that every repeated content URL was copied. A screenshot, HTTP 200, prior report, or running preview alone is not completion."
+      : "Write fresh reports for this candidate state. Status passed is allowed only after the applicable checks actually ran and passed; a screenshot, HTTP 200, prior report, or running preview alone is not completion.",
   });
 }
 
 export function buildVerifierPrompt(args, candidateRoot, before, taskRequest, previousOutput) {
   const evidenceRoot = path.join(args.workspace, "evidence");
-  const mode = taskRequest ? "jit" : "full";
+  const coverageProfile = taskRequest ? null : (args.coverageProfile ?? "standard");
+  const fastFull = !taskRequest && coverageProfile === "fast";
+  const mode = taskRequest ? "jit" : fastFull ? "full-fast" : "full";
   const workflow = taskRequest ? [
     "Validate the Builder report and task contract against official source evidence. Inventory the routes and controls on the observed path from entry to terminal state.",
     "Replay every contracted step in order with real Playwright interactions, including entry-page discovery controls and the terminal assertion. Test stateful behavior where used.",
@@ -122,6 +140,13 @@ export function buildVerifierPrompt(args, candidateRoot, before, taskRequest, pr
     "Prove byte-identical reset to the seed database and hash.",
     "Compare each task route with valid source screenshots, DOM, and geometry at 1920x992 in equivalent settled states.",
     "Restore seed state, stop temporary processes, and confirm that verification did not change the frozen candidate.",
+  ] : fastFull ? [
+    "Independently inspect the source within the same frozen exploration budget. Audit the Builder's route-family, page-template, global-shell, and interaction-type classification rather than accepting its inventory as proof.",
+    "Check that every discovered family and distinct interaction type is represented, explicitly excluded with a defensible pattern and observation, or reported blocked. Fail unexplained gaps and classifications based only on URL naming.",
+    "Execute every representative route and interaction example with real Playwright actions. All visible controls on included routes must work; repeated same-template content URLs need not be replayed individually.",
+    "Verify one visual sample per page template at 1920x992, plus the global shell. HTTP 200, density, or similarity alone cannot establish fidelity or usability.",
+    "Trace the complete runtime request graph for representative routes and fail external requests, missing resources, source-dependent UI, console or HTTP errors, and desktop overflow.",
+    "Prove byte-identical reset and restore seed state, stop temporary processes, and confirm that verification did not change the frozen candidate.",
   ] : [
     "Independently inventory public same-origin route families and visible first-order controls. Compare them with the Builder report; fail unexplained missing in-scope routes or controls.",
     "Execute real Playwright interactions for navigation, forms, menus, filters, account entry, local auth, mutations, persistence, negative behavior, and reset where those workflows are in the Builder contract.",
@@ -140,6 +165,7 @@ export function buildVerifierPrompt(args, candidateRoot, before, taskRequest, pr
       schema_version: 1,
       role: "verifier",
       mode,
+      coverage_profile: coverageProfile,
       source_url: args.sourceUrl,
       site_id: args.siteId,
       candidate_root: candidateRoot,
@@ -166,8 +192,9 @@ export function buildVerifierPrompt(args, candidateRoot, before, taskRequest, pr
     ],
     workflow,
     artifacts: [
-      `${path.join(args.output, "verifier-result.json")}: schema_version, site_id, status, candidate_hash_before, gates, route_results, workflow_summary, source_limitations, observations, inferences, unknowns, and evidence_paths.`,
+      `${path.join(args.output, "verifier-result.json")}: schema_version, site_id, status, coverage_profile, coverage_contract_sha256 when applicable, candidate_hash_before, gates, route_results, workflow_summary, source_limitations, observations, inferences, unknowns, and evidence_paths.`,
       `${path.join(args.output, "click-coverage.json")}: executed control-to-assertion mapping.`,
+      ...(fastFull ? [`${path.join(args.output, "coverage-audit.json")}: independent family, template, interaction, representative, exclusion, budget, and closure audit bound to the Builder coverage-contract.json.`] : []),
       `${path.join(args.output, "repair-package.json")}: each failed gate with route, control, expected, observed, evidence, and required probe; use an empty failures array only when every gate passes.`,
       `${path.join(args.output, "verifier-notes.md")}: concise evidence-backed summary.`,
       ...(taskRequest ? [`${path.join(args.output, "task-coverage.json")}: query hash, ordered executed steps, evidence paths, and terminal assertion. Set gates.task_workflow.status in verifier-result.json.`] : []),

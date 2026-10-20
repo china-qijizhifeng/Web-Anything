@@ -67,6 +67,10 @@ def test_parser_exposes_hardened_pipeline_commands_and_options():
     capture_replay_help = commands["capture-replay"].format_help()
     for option in ("--route", "--product-profile", "--auth-profile", "--private-selector", "--authenticated-selector", "--max-actions-per-route"):
         assert option in capture_replay_help
+    assert "--profile" in commands["create"].format_help()
+    coupled_help = commands["coupled-pipeline"].format_help()
+    assert "--mode" in coupled_help
+    assert "--coverage-profile" in coupled_help
 
 
 def test_replay_boundary_restores_inputs_and_removes_private_candidate_evidence(tmp_path: Path, monkeypatch):

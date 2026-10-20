@@ -83,6 +83,13 @@ fictional deterministic local state.
 
 ## Completion and recovery
 
+Full runs use the `standard` profile unless `--coverage-profile fast` is
+selected. Fast Full closes a bounded type-level contract over route families,
+page templates, the global shell, and interaction types. The profile is part of
+the run manifest and SDK checkpoint identity, so it cannot change during
+resume. The Verifier rejects a missing or malformed Fast Full coverage contract
+before starting model work.
+
 The supervisor defaults to 12 cycles and a 90-minute limit for each Builder or
 Verifier turn. It preserves valid work across timeouts. Builder and Verifier
 SDK thread IDs and session history are kept separately under the private

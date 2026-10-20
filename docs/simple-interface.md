@@ -31,6 +31,7 @@ Use a public website URL with one of two modes:
 
 ```bash
 webanything create https://example.org/ --mode full
+webanything create https://example.org/ --mode full --profile fast
 webanything create https://example.org/ --mode jit --task 'Find a guide and open its second example'
 ```
 
@@ -42,6 +43,13 @@ to complete it. Both modes require the existing reset, resource, visual, and
 candidate-integrity gates. Authentication, access restrictions, and unbounded
 route families can stop or limit a run; `full` is not a promise to discover
 hidden or infinite content.
+
+Fast Full freezes a smaller, explicit coverage contract: at most 20 source
+pages, navigation depth 2, at most two representatives per route family, and
+one visual sample per page template. The Builder records families, templates,
+interactions, representatives, and exclusions in `coverage-contract.json`;
+the independent Verifier writes `coverage-audit.json`. Changing the profile
+requires a new run directory.
 
 The output appears under `runs/<derived-site-id>/`. Repeating the same URL,
 mode, and task selects the same checkpoint and resumes the pending Builder or

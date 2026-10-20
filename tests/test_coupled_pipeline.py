@@ -107,6 +107,42 @@ def test_task_query_creates_frozen_task_brief_and_rejects_changed_query(tmp_path
     assert launched["environment"]["WEBANYTHING_PYTHON"]
 
 
+def test_fast_full_freezes_representative_coverage_policy(tmp_path: Path, monkeypatch):
+    root = make_repository(tmp_path / "source")
+    run_root = tmp_path / "fast-run"
+    monkeypatch.setattr(coupled_pipeline, "repository_root", lambda: root)
+    argv = [
+        "https://example.com/", "--site", "example-fast", "--run-dir", str(run_root),
+        "--mode", "full", "--coverage-profile", "fast", "--initialize-only",
+    ]
+    assert coupled_pipeline.main(argv) == 0
+    manifest = json.loads((run_root / "coupled-run.json").read_text())
+    assert manifest["mode"] == "full"
+    assert manifest["coverage_profile"] == "fast"
+    assert manifest["coverage_budget"] == coupled_pipeline.FAST_COVERAGE_BUDGET
+    brief = (run_root / "requirements.md").read_text()
+    assert brief.startswith("# Fast Full public-site reconstruction")
+    assert "route family" in brief
+    assert "one or two representative routes" in brief
+    assert coupled_pipeline.main(argv) == 0
+    with pytest.raises(SystemExit, match="coverage profile differs"):
+        coupled_pipeline.main([
+            "https://example.com/", "--site", "example-fast", "--run-dir", str(run_root),
+            "--mode", "full", "--coverage-profile", "standard", "--initialize-only",
+        ])
+
+
+def test_fast_profile_is_rejected_outside_full(tmp_path: Path, monkeypatch):
+    root = make_repository(tmp_path / "source")
+    monkeypatch.setattr(coupled_pipeline, "repository_root", lambda: root)
+    with pytest.raises(SystemExit, match="only in Full mode"):
+        coupled_pipeline.main([
+            "https://example.com/", "--site", "example", "--run-dir", str(tmp_path / "run"),
+            "--mode", "jit", "--task-query", "Open docs", "--coverage-profile", "fast",
+            "--initialize-only",
+        ])
+
+
 def test_supervisor_retries_incomplete_verifier_without_rebuilding(tmp_path: Path):
     root = Path(__file__).resolve().parents[1]
     run_root = tmp_path / "run"

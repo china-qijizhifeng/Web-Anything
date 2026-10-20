@@ -143,6 +143,7 @@ When the user gives a source website URL and asks to reconstruct it, choose a sc
 
 - If they describe a task to perform on the site, use JIT with their task text.
 - If they explicitly request broad coverage, use Full.
+- If they want broad but shallow and faster coverage, use Full with `--profile fast`.
 - If the intended scope is unclear, ask for the task or whether they want Full.
 
 Run from a terminal (replace quoted placeholders with shell-quoted values):
@@ -150,6 +151,7 @@ Run from a terminal (replace quoted placeholders with shell-quoted values):
 ```bash
 {command} create 'SOURCE_URL' --mode jit --task 'USER_TASK'
 {command} create 'SOURCE_URL' --mode full
+{command} create 'SOURCE_URL' --mode full --profile fast
 ```
 
 Do not ask for or expose the API key in chat; setup has stored it separately.
@@ -199,21 +201,27 @@ def setup(args, root: Path) -> int:
     return 0
 
 
-def run_identity(source_url: str, mode: str, task: str | None) -> str:
+def run_identity(source_url: str, mode: str, task: str | None, profile: str = "standard") -> str:
     host = urlsplit(source_url).hostname or "site"
     slug = re.sub(r"[^a-z0-9]+", "-", host.lower()).strip("-")[:40] or "site"
-    identity = json.dumps({"url": source_url, "mode": mode, "task": task or ""}, sort_keys=True)
+    fields = {"url": source_url, "mode": mode, "task": task or ""}
+    if profile != "standard":
+        fields["profile"] = profile
+    identity = json.dumps(fields, sort_keys=True)
     return f"{slug}-{hashlib.sha256(identity.encode()).hexdigest()[:10]}"
 
 
 def create(args, root: Path) -> int:
     source_url = validate_url(args.url, label="website URL", allow_query=True)
     task = args.task.strip() if args.task else None
+    profile = getattr(args, "profile", "standard")
     if args.mode == "jit" and not task:
         raise SystemExit("JIT mode requires --task 'what the user needs to do'")
     if args.mode == "full" and task:
         raise SystemExit("Full mode does not accept --task; select --mode jit")
-    site = run_identity(source_url, args.mode, task)
+    if args.mode != "full" and profile != "standard":
+        raise SystemExit("--profile fast is available only in Full mode")
+    site = run_identity(source_url, args.mode, task, profile)
     run_dir = Path(args.run_dir).expanduser().resolve() if args.run_dir else root / "runs" / site
     environment = dict(os.environ)
     environment.pop("WEBANYTHING_ENV_FILE", None)
@@ -223,6 +231,7 @@ def create(args, root: Path) -> int:
         environment["WEBANYTHING_RESPONSES_API_KEY"] = api_key
     command = [sys.executable, str(root / "scripts/coupled_pipeline.py"), source_url,
                "--site", site, "--run-dir", str(run_dir), "--mode", args.mode,
+               "--coverage-profile", profile,
                "--model", args.model or selected_model(), "--reasoning-effort", args.reasoning_effort,
                "--timeout-minutes", str(args.timeout_minutes),
                "--max-cycles", str(args.max_cycles)]
@@ -236,7 +245,7 @@ def create(args, root: Path) -> int:
         status = manifest.get("status", "incomplete")
     except (OSError, ValueError):
         status = "incomplete"
-    print(f"Site: {site}\nMode: {args.mode}\nStatus: {status}\nRun: {run_dir}")
+    print(f"Site: {site}\nMode: {args.mode}\nProfile: {profile}\nStatus: {status}\nRun: {run_dir}")
     if status == "complete":
         print(f"Preview: webanything preview {run_dir}")
     return completed.returncode

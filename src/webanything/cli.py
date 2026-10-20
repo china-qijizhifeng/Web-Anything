@@ -1594,6 +1594,8 @@ def command_coupled_pipeline(args: argparse.Namespace) -> int:
         args.site,
         "--run-dir",
         str(Path(args.run_dir).expanduser().resolve()),
+        "--mode",
+        args.mode,
         "--model",
         args.model,
         "--reasoning-effort",
@@ -1607,6 +1609,7 @@ def command_coupled_pipeline(args: argparse.Namespace) -> int:
         command.extend(["--requirements-file", str(Path(args.requirements_file).expanduser().resolve())])
     if args.task_query:
         command.extend(["--task-query", args.task_query])
+    command.extend(["--coverage-profile", args.coverage_profile])
     if args.storage_state:
         command.extend(["--storage-state", str(Path(args.storage_state).expanduser().resolve())])
     if args.env_file:
@@ -1661,6 +1664,8 @@ def build_parser() -> argparse.ArgumentParser:
     create = subparsers.add_parser("create", help="reconstruct a website with Full or task-focused JIT coverage")
     create.add_argument("url", help="public source website URL")
     create.add_argument("--mode", choices=("full", "jit"), required=True)
+    create.add_argument("--profile", choices=("standard", "fast"), default="standard",
+                        help="Full coverage policy; fast closes route families and interaction types with representatives")
     create.add_argument("--task", help="required for JIT: the user task to reproduce")
     create.add_argument("--run-dir", help="optional output directory; default is runs/<derived-site-id>")
     create.add_argument("--model", help="override the model selected during setup")
@@ -1680,8 +1685,10 @@ def build_parser() -> argparse.ArgumentParser:
     coupled.add_argument("url")
     coupled.add_argument("--site", required=True)
     coupled.add_argument("--run-dir", required=True)
+    coupled.add_argument("--mode", choices=("auto", "full", "jit"), default="auto")
     coupled.add_argument("--requirements-file")
     coupled.add_argument("--task-query", help="user task to reconstruct through its complete interaction path")
+    coupled.add_argument("--coverage-profile", choices=("standard", "fast"), default="standard")
     coupled.add_argument("--storage-state")
     coupled.add_argument("--env-file")
     coupled.add_argument("--model", default="gpt-5.6-sol")

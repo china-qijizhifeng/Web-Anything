@@ -28,6 +28,13 @@ from urllib.parse import urlsplit
 SCHEMA = "webanything-coupled-run-v1"
 SITE_ID_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$")
 REASONING_EFFORTS = ("minimal", "low", "medium", "high", "xhigh")
+COVERAGE_PROFILES = ("standard", "fast")
+FAST_COVERAGE_BUDGET = {
+    "max_source_pages": 20,
+    "max_navigation_depth": 2,
+    "max_representatives_per_family": 2,
+    "visual_samples_per_template": 1,
+}
 
 
 def repository_root() -> Path:
@@ -111,7 +118,7 @@ def prepare_task_request(run_root: Path, source_url: str, raw_query: str | None)
 
 def prepare_requirements(
     run_root: Path, source: Path | None, task_request: dict[str, Any] | None = None,
-    *, auto_full: bool = False, source_url: str = "",
+    *, auto_full: bool = False, source_url: str = "", coverage_profile: str = "standard",
 ) -> Path:
     target = run_root / "requirements.md"
     if task_request is not None:
@@ -152,7 +159,27 @@ every contract step and the terminal outcome before a task run can complete.
         if not target.is_file():
             if not auto_full:
                 raise SystemExit("--requirements-file is required for a new coupled run")
-            target.write_text(f"""# Full public-site reconstruction
+            if coverage_profile == "fast":
+                target.write_text(f"""# Fast Full public-site reconstruction
+
+Source URL: {source_url}
+
+Construct a shallow but coverage-closed public website. Inventory every discoverable
+route family, page template, global navigation surface, and distinct interaction type
+within the frozen exploration budget. Build one or two representative routes for each
+family and one executed example for each interaction type. Repeated content pages,
+unbounded lists, authentication-gated areas, and duplicate templates may be excluded
+only with an explicit pattern, observation, and closure reason.
+
+Complete means that the frozen type-level coverage contract is closed: every discovered
+family and interaction type is represented, explicitly excluded, or reported as blocked.
+It does not mean that every same-template content URL was copied. All visible controls on
+included routes must work, the global shell must be complete, and the independent Verifier
+must audit the family classification, representative selection, interactions, reset,
+resources, and visual samples without weakening the normal candidate freeze.
+""", encoding="utf-8")
+            else:
+                target.write_text(f"""# Full public-site reconstruction
 
 Source URL: {source_url}
 
@@ -202,6 +229,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--requirements-file")
     parser.add_argument("--task-query", help="user task to reconstruct through its complete interaction path")
     parser.add_argument("--mode", choices=("auto", "full", "jit"), default="auto")
+    parser.add_argument("--coverage-profile", choices=COVERAGE_PROFILES, default="standard")
     parser.add_argument(
         "--storage-state",
         help="private Playwright storage-state path; injected at runtime and never copied",
@@ -233,17 +261,22 @@ def command(args: argparse.Namespace) -> int:
         raise SystemExit("JIT mode requires --task-query")
     if mode == "full" and task_request is not None:
         raise SystemExit("Full mode cannot use --task-query; use JIT mode")
+    if mode != "full" and args.coverage_profile != "standard":
+        raise SystemExit("--coverage-profile fast is available only in Full mode")
     existing_manifest = run_root / "coupled-run.json"
     if existing_manifest.is_file():
         saved = json.loads(existing_manifest.read_text(encoding="utf-8"))
         saved_mode = saved.get("mode") or ("jit" if saved.get("task_query_sha256") else "custom")
-        if saved.get("site_id") != args.site or saved.get("source_url") != source_url or saved_mode != mode:
-            raise SystemExit("source URL, site ID, or mode differs from this run checkpoint; use a new --run-dir")
+        saved_profile = saved.get("coverage_profile") or "standard"
+        if (saved.get("site_id") != args.site or saved.get("source_url") != source_url
+                or saved_mode != mode or saved_profile != args.coverage_profile):
+            raise SystemExit("source URL, site ID, mode, or coverage profile differs from this run checkpoint; use a new --run-dir")
     requirements = prepare_requirements(
         run_root,
         Path(args.requirements_file) if args.requirements_file else None,
         task_request,
         auto_full=args.mode == "full", source_url=source_url,
+        coverage_profile=args.coverage_profile,
     )
     storage_state, authorized_state_supplied = prepare_storage_state(
         run_root,
@@ -258,6 +291,8 @@ def command(args: argparse.Namespace) -> int:
         "created_at": utc_now(),
         "site_id": args.site,
         "mode": mode,
+        "coverage_profile": args.coverage_profile if mode == "full" else None,
+        "coverage_budget": FAST_COVERAGE_BUDGET if mode == "full" and args.coverage_profile == "fast" else None,
         "source_url": source_url,
         "workspace": str(workspace),
         "requirements": str(requirements),
@@ -285,6 +320,7 @@ def command(args: argparse.Namespace) -> int:
             "WEBANYTHING_COUPLED_REASONING_EFFORT": args.reasoning_effort,
             "WEBANYTHING_COUPLED_TIMEOUT_MINUTES": str(args.timeout_minutes),
             "WEBANYTHING_COUPLED_MAX_CYCLES": str(args.max_cycles),
+            "WEBANYTHING_COVERAGE_PROFILE": args.coverage_profile,
         }
     )
     # The independent preflight imports the candidate Flask app. Keep it on the
