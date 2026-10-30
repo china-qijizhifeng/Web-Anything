@@ -34,7 +34,7 @@ builder = [
   "WTForms==3.2.1",
   "email-validator==2.2.0",
   "requests==2.33.0",
-  "pyarrow==24.0.0",
+  "pyarrow==26.0.0",
 ]
 e2b = ["e2b>=2.20,<3"]
 dev = ["pytest>=8,<10", "jsonschema>=4.23,<5", "PyYAML>=6,<7"]
