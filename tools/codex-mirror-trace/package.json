@@ -7,6 +7,6 @@
     "test": "node --test"
   },
   "dependencies": {
-    "@openai/codex-sdk": "0.146.1"
+    "@openai/codex-sdk": "0.164.0"
   }
 }
