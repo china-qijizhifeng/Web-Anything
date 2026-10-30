@@ -32,8 +32,8 @@ builder = [
   "Pillow==13.0.0",
   "SQLAlchemy==2.0.36",
   "WTForms==3.2.1",
-  "email-validator==2.2.0",
-  "requests==2.33.0",
+  "email-validator==2.3.0",
+  "requests==2.34.2",
   "pyarrow==24.0.0",
 ]
 e2b = ["e2b>=2.20,<3"]
