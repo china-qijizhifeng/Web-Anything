@@ -71,7 +71,8 @@ code, pre { font-family: var(--mono); }
 .home-wall-content h1 { max-width: 730px; margin-top: 22px; font-size: clamp(48px, 5.8vw, 86px); font-weight: 620; letter-spacing: -5px; line-height: .96; text-wrap: balance; }
 .home-wall-content h1 em { color: #74dbaa; font-style: normal; }
 .home-wall-lede { max-width: 620px; margin-top: 27px; color: #b8c9c0; font-size: clamp(14px, 1.35vw, 18px); line-height: 1.75; }
-.home-wall-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 31px; }
+.home-wall-authors { max-width: 650px; margin-top: 15px; color: #d2e2d8; font-size: 11px; line-height: 1.75; }
+.home-wall-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 23px; }
 .button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 44px; padding: 11px 17px; border: 1px solid transparent; border-radius: 6px; font-size: 12px; font-weight: 650; transition: transform .18s ease, background .18s ease, border-color .18s ease; }
 .button:hover { transform: translateY(-2px); }
 .home-button-primary { border-color: #6ad4a1; color: #07120d; background: #6ad4a1; }
@@ -294,6 +295,7 @@ figcaption { margin-top: 11px; color: var(--muted); font-size: 10px; line-height
   .home-wall-eyebrow { font-size: 8px; }
   .home-wall-content h1 { margin-top: 16px; font-size: clamp(40px, 12vw, 53px); letter-spacing: -3px; line-height: .98; }
   .home-wall-lede { max-width: 430px; margin-top: 20px; font-size: 13px; }
+  .home-wall-authors { margin-top: 12px; font-size: 9px; line-height: 1.65; }
   .home-wall-actions { gap: 7px; margin-top: 23px; }
   .home-wall-actions .button { flex: 1 1 30%; min-height: 40px; padding: 9px 10px; font-size: 10px; }
   .home-wall-metrics { left: 18px; right: 18px; bottom: 58px; display: grid; grid-template-columns: repeat(3, 1fr); }

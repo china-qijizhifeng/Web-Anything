@@ -3,6 +3,7 @@
 [English](README.md) | [简体中文](README.zh-CN.md)
 
 [![项目主页：WebAnything](https://img.shields.io/badge/Website-WebAnything-216b4e?style=flat-square)](https://china-qijizhifeng.github.io/Web-Anything/)
+[![arXiv: 2610.37786](https://img.shields.io/badge/arXiv-2610.37786-b31b1b?style=flat-square)](https://arxiv.org/abs/2610.37786)
 
 <p align="center">
   <img src="assets/webanything-concept-logo.png" alt="WebAnything 概念 Logo" width="560">
@@ -11,6 +12,8 @@
 WebAnything 是一个研究代码库，依据源站证据构建可运行、可重置的 Web Agent 环境。本仓库包含构建流水线，以及 244 个历史网站产物的冻结清单。244 个网站的完整源码树和第三方媒体文件仍保存在原有产物库中，未打包进本仓库。
 
 Python 包和命令行入口均名为 `webanything`。新运行使用 `webanything` 的 schema ID、运行时名称和 `WEBANYTHING_*` 模型服务环境变量。已有的冻结运行目录保留原始名称与哈希；继续这些运行时，应使用创建它们的代码版本。
+
+**论文：** [WebAnything: From the Wild Web to Scalable Agent Environments](https://arxiv.org/abs/2610.37786)
 
 ## 工作流程概览
 
@@ -127,3 +130,14 @@ WebAnything 自有代码采用 [MIT License](LICENSE) 发布。项目所有者�
 ## 按用户任务重建
 
 使用 `webanything create URL --mode jit --task "..."`。任务运行会记录依据源站观察得到的操作序列，构建完成任务所需的路由与状态，并要求独立浏览器逐步重放通过后，才会报告完成。证据格式和 USWDS 示例见 [`docs/TASK_QUERY.md`](docs/TASK_QUERY.md)。如需手动指定站点 ID、需求文件和运行目录，仍可使用较底层的 `coupled-pipeline` 命令。
+
+## 引用
+
+```bibtex
+@article{xie2026webanything,
+  title   = {WebAnything: From the Wild Web to Scalable Agent Environments},
+  author  = {Xie, Tianci and Cai, Zikun and Zhang, Chaoyun and Guo, Pinxue and Li, Bingxuan and Zheng, Rui and Yan, Hang},
+  journal = {arXiv preprint arXiv:2610.37786},
+  year    = {2026}
+}
+```

@@ -3,6 +3,7 @@
 [English](README.md) | [简体中文](README.zh-CN.md)
 
 [![Website: WebAnything](https://img.shields.io/badge/Website-WebAnything-216b4e?style=flat-square)](https://china-qijizhifeng.github.io/Web-Anything/)
+[![arXiv: 2610.37786](https://img.shields.io/badge/arXiv-2610.37786-b31b1b?style=flat-square)](https://arxiv.org/abs/2610.37786)
 
 <p align="center">
   <img src="assets/webanything-concept-logo.png" alt="WebAnything concept logo" width="560">
@@ -12,6 +13,8 @@ WebAnything is a research codebase for constructing executable, resettable Web-a
 
 The Python package and command-line entry point are both named `webanything`.
 New runs use `webanything` schema IDs, runtime names, and `WEBANYTHING_*` provider variables. Existing frozen run directories retain their original names and hashes; continue those runs with the revision that created them.
+
+**Paper:** [WebAnything: From the Wild Web to Scalable Agent Environments](https://arxiv.org/abs/2610.37786)
 
 ## Workflow overview
 
@@ -157,3 +160,14 @@ complete it, and requires an independent browser replay of every step before
 reporting completion. See [`docs/TASK_QUERY.md`](docs/TASK_QUERY.md) for the
 evidence format and USWDS example. The older `coupled-pipeline` command remains
 available for explicit site IDs, requirements files, and run directories.
+
+## Citation
+
+```bibtex
+@article{xie2026webanything,
+  title   = {WebAnything: From the Wild Web to Scalable Agent Environments},
+  author  = {Xie, Tianci and Cai, Zikun and Zhang, Chaoyun and Guo, Pinxue and Li, Bingxuan and Zheng, Rui and Yan, Hang},
+  journal = {arXiv preprint arXiv:2610.37786},
+  year    = {2026}
+}
+```

@@ -42,6 +42,12 @@ dev = ["pytest>=8,<10", "jsonschema>=4.23,<5", "PyYAML>=6,<7"]
 [project.scripts]
 webanything = "webanything.cli:main"
 
+[project.urls]
+Homepage = "https://china-qijizhifeng.github.io/Web-Anything/"
+Paper = "https://arxiv.org/abs/2610.37786"
+Repository = "https://github.com/china-qijizhifeng/Web-Anything"
+Documentation = "https://github.com/china-qijizhifeng/Web-Anything#readme"
+
 [tool.setuptools]
 package-dir = {"" = "src"}
 

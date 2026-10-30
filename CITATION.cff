@@ -1,0 +1,46 @@
+cff-version: 1.2.0
+message: "If you use WebAnything, please cite the paper below."
+title: "WebAnything"
+type: software
+authors:
+  - family-names: Xie
+    given-names: Tianci
+  - family-names: Cai
+    given-names: Zikun
+  - family-names: Zhang
+    given-names: Chaoyun
+  - family-names: Guo
+    given-names: Pinxue
+  - family-names: Li
+    given-names: Bingxuan
+  - family-names: Zheng
+    given-names: Rui
+  - family-names: Yan
+    given-names: Hang
+repository-code: "https://github.com/china-qijizhifeng/Web-Anything"
+url: "https://china-qijizhifeng.github.io/Web-Anything/"
+license: MIT
+preferred-citation:
+  type: article
+  title: "WebAnything: From the Wild Web to Scalable Agent Environments"
+  authors:
+    - family-names: Xie
+      given-names: Tianci
+    - family-names: Cai
+      given-names: Zikun
+    - family-names: Zhang
+      given-names: Chaoyun
+    - family-names: Guo
+      given-names: Pinxue
+    - family-names: Li
+      given-names: Bingxuan
+    - family-names: Zheng
+      given-names: Rui
+    - family-names: Yan
+      given-names: Hang
+  journal: "arXiv"
+  year: 2026
+  identifiers:
+    - type: url
+      value: "https://arxiv.org/abs/2610.37786"
+      description: "arXiv:2610.37786"
