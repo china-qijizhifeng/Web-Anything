@@ -1,0 +1,528 @@
+{
+  "version": "2026-10-28",
+  "summary": {
+    "selected": 20,
+    "historically_accepted_selected": 20,
+    "engineering_verified": 20,
+    "clean_packages": 20,
+    "browser_api_checks": 366,
+    "packaged_new17_checks": 292,
+    "new_independent_sdk_acceptances": 0,
+    "public_upload_ready": 0,
+    "public_uploads": 0,
+    "model_calls": 0,
+    "original17_source_files_rechecked": 1496,
+    "original17_source_unchanged": true,
+    "prior3_source_files_rechecked": 2055,
+    "package_bytes": 335073773,
+    "mobile_diagnostic_overflows": [
+      {
+        "site_id": "trello",
+        "overflow_px": 95
+      },
+      {
+        "site_id": "airtable",
+        "overflow_px": 310
+      },
+      {
+        "site_id": "gitlab",
+        "overflow_px": 206
+      },
+      {
+        "site_id": "grafana",
+        "overflow_px": 660
+      },
+      {
+        "site_id": "wps",
+        "overflow_px": 66
+      }
+    ],
+    "rights_hold": "工程可复现与素材再分发权分开；未将私有审查包直接公开"
+  },
+  "sites": [
+    {
+      "rank": 1,
+      "site_id": "svgomg",
+      "name": "SVGOMG",
+      "actual_scope": "SVG 优化应用与设置",
+      "browser_api_checks": 19,
+      "clean_archive_verified": true,
+      "package_sha256": "d1820166165c78981230c9cd0f5e44aa2372b5dab9b9d4ecd70fd49276367f5e",
+      "package_bytes": 2301482,
+      "packaged_fonts": 3,
+      "packaged_images": 1,
+      "font_action": "Inconsolata：核对3份运行时字体与对应OFL；3份upstream缓存字体排除出运行包，勿重复发。",
+      "image_action": "排除fidelity的3张比较截图及非运行时源缓存；car-lite.svg等样例保留作者/公有领域声明，无法确认则用原创SVG。",
+      "trademark_action": "核对运行图标的实际来源；发布名称加“research reconstruction”，保留必要版权，避免官方背书表述。",
+      "other_release_blockers": "补boolbase 1.0.0通知及其余实际npm依赖许可；原私用范围说明不能直接删掉后当成已有授权。",
+      "official_sources": [
+        "https://github.com/jakearchibald/svgomg/blob/main/LICENSE.md"
+      ],
+      "public_upload_ready": false,
+      "mobile_diagnostic": null
+    },
+    {
+      "rank": 2,
+      "site_id": "jmespath",
+      "name": "JMESPath",
+      "actual_scope": "文档与查询 Playground（Fast 代表性覆盖）",
+      "browser_api_checks": 37,
+      "clean_archive_verified": true,
+      "package_sha256": "f94c324d9b8f717e49c76498e0e57ebab08ace69b1cec2893cd6ebcdd7474de1",
+      "package_bytes": 408573,
+      "packaged_fonts": 2,
+      "packaged_images": 3,
+      "font_action": "Open Sans：按确切字体文件补OFL；glyphicons-halflings-regular.woff另核对应Bootstrap/Glyphicons分发条款，不清楚则换原创SVG图标。",
+      "image_action": "核对3个小图像/图标及Sphinx样式来源；不必要的源页面证据移出运行包。",
+      "trademark_action": "保留JMESPath必要署名，清楚标注非官方研究环境；不把代码许可解释成标志许可。",
+      "other_release_blockers": "代码Apache-2.0与文档CC-BY-4.0分列，补文档署名、许可链接与改动说明。只称Fast代表性20页/查询范围。",
+      "official_sources": [
+        "https://github.com/jmespath/jmespath.site#license"
+      ],
+      "public_upload_ready": false,
+      "mobile_diagnostic": null
+    },
+    {
+      "rank": 3,
+      "site_id": "excalidraw",
+      "name": "Excalidraw",
+      "actual_scope": "绘图应用：画布、按钮、菜单、持久化与重置",
+      "browser_api_checks": 18,
+      "clean_archive_verified": true,
+      "package_sha256": "e1bf548a537442adda559b054d28a7c1b702b0aec28585b3b120bf8763e8adaf",
+      "package_bytes": 163022,
+      "packaged_fonts": 7,
+      "packaged_images": 0,
+      "font_action": "Assistant、Nunito、Excalifont补各自OFL和版权；Comic Shanns补MIT。字体家族名与文件版本保留映射。",
+      "image_action": "未发现独立图片文件；不代表没有内联图标。排除未被app.py入口引用的captured JS/CSS之前，先在发布副本验证引用与离线运行。",
+      "trademark_action": "查app.py内联图标/字标；首发可用原创项目标识，必要引用上游名称并说明无关联。",
+      "other_release_blockers": "确认本地app.py和祖先LICENSE-PENDING的来源链；种子中的用户样式标识需核为虚构，重置不带会话。",
+      "official_sources": [
+        "https://github.com/excalidraw/excalidraw/blob/master/LICENSE"
+      ],
+      "public_upload_ready": false,
+      "mobile_diagnostic": null
+    },
+    {
+      "rank": 4,
+      "site_id": "zotero",
+      "name": "Zotero",
+      "actual_scope": "资料库、集合、条目等限定应用任务",
+      "browser_api_checks": 18,
+      "clean_archive_verified": true,
+      "package_sha256": "dd205b83e38ffd493b07c3b4fc853a785b0ecafcd0682f44e71b62aa46c10473",
+      "package_bytes": 12757832,
+      "packaged_fonts": 3,
+      "packaged_images": 44,
+      "font_action": "avenir-regular/italic/semibold.woff2共3份：补允许打包再分发的适用授权，否则换官方OFL Inter/Noto Sans并复测排版。",
+      "image_action": "44个图像文件和1个媒体文件逐项归属；博客照片、宣传截图/视频默认移除或换原创。只保留虚构文献，不捎带真实论文全文/附件。",
+      "trademark_action": "Zotero字标、图标与软件许可分开处理；首发用原创标识，或按适用品牌规则保留必要说明。",
+      "other_release_blockers": "AGPL代码、2015年后Wiki CC-BY-SA4、主站/博客/第三方内容分开；不能整包只标AGPL。",
+      "official_sources": [
+        "https://www.zotero.org/support/licensing"
+      ],
+      "public_upload_ready": false,
+      "mobile_diagnostic": {
+        "body_client_width": 390,
+        "scroll_width": 390,
+        "not_full_mobile_acceptance": true
+      }
+    },
+    {
+      "rank": 5,
+      "site_id": "trello",
+      "name": "Trello",
+      "actual_scope": "看板、卡片、持久化与重置等限定应用任务",
+      "browser_api_checks": 18,
+      "clean_archive_verified": true,
+      "package_sha256": "cfdf314a54fce2badf60dcccd04717c0f5b93e18243920dabcf0d00411b717c0",
+      "package_bytes": 570604,
+      "packaged_fonts": 1,
+      "packaged_images": 2,
+      "font_action": "static/assets/atlassian.woff识别为Charlie Text：补再分发授权或替换为官方OFL Inter。",
+      "image_action": "board-space.png、welcome.jpg两张图片：无明确许可时换原创背景/欢迎图。",
+      "trademark_action": "模板/内联Trello、Atlassian标识替换或核对品牌规则；保留原来源说明与无关联声明。",
+      "other_release_blockers": "ATTRIBUTION原声明限隔离评估，缺整包分发依据；须核定实现代码和来源条款，字体/背景替换不是充分放行条件。",
+      "official_sources": [
+        "https://www.atlassian.com/legal/trademark"
+      ],
+      "public_upload_ready": false,
+      "mobile_diagnostic": {
+        "body_client_width": 390,
+        "scroll_width": 485,
+        "not_full_mobile_acceptance": true
+      }
+    },
+    {
+      "rank": 6,
+      "site_id": "shopify",
+      "name": "Shopify",
+      "actual_scope": "商品、库存、集合、草稿订单等限定应用任务",
+      "browser_api_checks": 18,
+      "clean_archive_verified": true,
+      "package_sha256": "7f3e9b4ad4cc76c7a2e5806fbe56db427a812a20579bb98ebb71eb137739a3ed",
+      "package_bytes": 320775,
+      "packaged_fonts": 8,
+      "packaged_images": 12,
+      "font_action": "7份普通Inter核版本/OFL；shopify-local.woff2识别为Shopify Inter Beta 0.29，需核它自身的授权，否则换官方Inter。",
+      "image_action": "12个图像文件含Admin SVG图标/插画；补各文件许可，或用原创商品图和图标重做。",
+      "trademark_action": "Shopify字标、购物袋等品牌符号与Admin图标单列；首发建议原创研究商店标识。",
+      "other_release_blockers": "ATTRIBUTION中第三方内容仍保留权利；后台样式/CSS、实现来源和条款仍须核定。",
+      "official_sources": [
+        "https://www.shopify.com/legal/trademarks"
+      ],
+      "public_upload_ready": false,
+      "mobile_diagnostic": {
+        "body_client_width": 390,
+        "scroll_width": 390,
+        "not_full_mobile_acceptance": true
+      }
+    },
+    {
+      "rank": 7,
+      "site_id": "huijiwiki",
+      "name": "灰机 Wiki",
+      "actual_scope": "搜索、讨论、关注、草稿与重置等限定流程",
+      "browser_api_checks": 18,
+      "clean_archive_verified": true,
+      "package_sha256": "f5b5f535109188036c6888f404c9d96ea1bbe13a6d11c8d529b012dde8331ccb",
+      "package_bytes": 667733,
+      "packaged_fonts": 0,
+      "packaged_images": 13,
+      "font_action": "未发现独立字体文件；仍检查CSS远程字体、data URI和内联资源。",
+      "image_action": "13个图像文件：huiji-logo.svg、游戏头像、app-preview-*.jpg、app-qr.webp等逐项许可；游戏头像/宣传截图/二维码优先换原创。",
+      "trademark_action": "灰机门户、下属百科、游戏作品的品牌需分别核对，不能套用某个Wiki的CC声明。",
+      "other_release_blockers": "门户新闻/文章、来源样式的许可未建立；发布虚构内容版本仍需另验收，不能继承原视觉分数。",
+      "official_sources": [],
+      "public_upload_ready": false,
+      "mobile_diagnostic": {
+        "body_client_width": 1100,
+        "scroll_width": 1100,
+        "not_full_mobile_acceptance": true
+      }
+    },
+    {
+      "rank": 8,
+      "site_id": "threads",
+      "name": "Threads",
+      "actual_scope": "原合同范围通过；全站覆盖和应用完整性未在本次逐项重审",
+      "browser_api_checks": 17,
+      "clean_archive_verified": true,
+      "package_sha256": "7538a865a9b3c005b96ca4db2708aa82987b9c770fde1c0b5a47123a609491eb",
+      "package_bytes": 88978,
+      "packaged_fonts": 0,
+      "packaged_images": 4,
+      "font_action": "未发现独立字体文件；仍核CSS/内嵌和远程引用。",
+      "image_action": "4个图像文件含brand-sprite.webp、qr-code.svg及favicon类资源；品牌sprite和二维码核来源，不清楚则换原创；示例头像/帖子只用虚构素材。",
+      "trademark_action": "Threads/Meta标识含内联形状，不能只检查图片目录；首发采用原创社交环境名称。",
+      "other_release_blockers": "原站文本、页面表达、实现来源与适用条款待核；合成帖子不等于整站许可。",
+      "official_sources": [],
+      "public_upload_ready": false,
+      "mobile_diagnostic": {
+        "body_client_width": 390,
+        "scroll_width": 390,
+        "not_full_mobile_acceptance": true
+      }
+    },
+    {
+      "rank": 9,
+      "site_id": "discord",
+      "name": "Discord",
+      "actual_scope": "官网视觉与本地虚拟身份好友、消息、服务器流程",
+      "browser_api_checks": 18,
+      "clean_archive_verified": true,
+      "package_sha256": "7120c376664c0a9c190d330ecb3efbd4f95126cf233967412858470b95aa22ee",
+      "package_bytes": 1205860,
+      "packaged_fonts": 1,
+      "packaged_images": 27,
+      "font_action": "static/assets/127465eff7b4a91feb3f8ac7f3cb2bde-187799611ffe1813.woff2未识别出有效家族；不按文件名猜许可，优先改系统字体/官方OFL字体。",
+      "image_action": "31个图像文件包含Wumpus、Clyde、Nelly、主Logo、login背景/字标和比较截图；角色插画/宣传图换原创，比较截图不进运行包。",
+      "trademark_action": "Discord/Clyde字标和吉祥物是独立审查项；默认用原创标识与人物。",
+      "other_release_blockers": "官方条款涉及官网设计/插画/文字及服务复制，须核实际适用范围或许可；仅换素材不能直接放行。",
+      "official_sources": [
+        "https://discord.com/terms"
+      ],
+      "public_upload_ready": false,
+      "mobile_diagnostic": {
+        "body_client_width": 390,
+        "scroll_width": 390,
+        "not_full_mobile_acceptance": true
+      }
+    },
+    {
+      "rank": 10,
+      "site_id": "airtable",
+      "name": "Airtable",
+      "actual_scope": "表格、记录、表单编辑与预览等限定应用任务",
+      "browser_api_checks": 18,
+      "clean_archive_verified": true,
+      "package_sha256": "e236d41636c9d0cfd053b1acce141edea027d248ca25ff9a53e5fd55789fa2f1",
+      "package_bytes": 3462263,
+      "packaged_fonts": 46,
+      "packaged_images": 27,
+      "font_action": "46份字体含AT Season Sans、GT Eesti、Neue Haas/Haas Grot及fontcustom/ios7图标字体；无逐文件依据则替换。普通Inter子集另补对应OFL，不能覆盖其他家族。",
+      "image_action": "27个图像文件含官方图标/截图；按用途换原创表格示例、缩略图和图标，移除非运行缓存。",
+      "trademark_action": "Airtable标识、应用图标、合作方标识单列；首发建议原创表格工具标识。",
+      "other_release_blockers": "采集CSS及代码来源未清理；static/official中的脱敏路径不重新读取，默认不进入发布包并做缺资源回归。",
+      "official_sources": [],
+      "public_upload_ready": false,
+      "mobile_diagnostic": {
+        "body_client_width": 390,
+        "scroll_width": 700,
+        "not_full_mobile_acceptance": true
+      }
+    },
+    {
+      "rank": 11,
+      "site_id": "gitlab",
+      "name": "GitLab",
+      "actual_scope": "GitLab 官网/限定本地环境，非完整 GitLab 托管产品",
+      "browser_api_checks": 17,
+      "clean_archive_verified": true,
+      "package_sha256": "605c79ae79c64a0c1149eb930a46a8c9f7764f31256326448febec004c6bc787",
+      "package_bytes": 526514,
+      "packaged_fonts": 2,
+      "packaged_images": 6,
+      "font_action": "GitLab Sans、GitLab Mono两份字体补官方OFL和版权；绑定实际文件版本。",
+      "image_action": "6个图像文件逐项核品牌SVG/营销图，不把GitLab社区程序MIT当官网图片许可。",
+      "trademark_action": "GitLab狐狸/字标、合作方标识单列；按品牌规则或许可保留，首发可改原创代码平台标识。",
+      "other_release_blockers": "about.gitlab.com营销内容、Explore、本地模拟、社区代码/EE/JH/文档范围分开列出。",
+      "official_sources": [
+        "https://gitlab.com/gitlab-org/frontend/fonts/-/blob/main/LICENSE",
+        "https://raw.githubusercontent.com/gitlabhq/gitlabhq/master/LICENSE"
+      ],
+      "public_upload_ready": false,
+      "mobile_diagnostic": {
+        "body_client_width": 390,
+        "scroll_width": 596,
+        "not_full_mobile_acceptance": true
+      }
+    },
+    {
+      "rank": 12,
+      "site_id": "grafana",
+      "name": "Grafana",
+      "actual_scope": "Grafana 产品官网，非完整 BI/监控应用",
+      "browser_api_checks": 15,
+      "clean_archive_verified": true,
+      "package_sha256": "2073f56286107333e11781a4c1a1ff942025259aa81fc53cd696e310de926030",
+      "package_bytes": 837356,
+      "packaged_fonts": 11,
+      "packaged_images": 8,
+      "font_action": "11份字体为Inter/Poppins多个版本/重复子集；按字节来源和确切版本补OFL，去重须验证引用。",
+      "image_action": "8个图像文件：dashboard.png、grafana-logo.svg、grot-chat.svg及功能图标等。仪表盘图/角色图需逐项许可或原创替换。",
+      "trademark_action": "Grafana标识与Grot形象按商标政策核用途；不符合规则时换原创标识，不能以AGPL授予商标权。",
+      "other_release_blockers": "官网文字和样式未获整包许可；AGPL覆盖程序的范围不自动延伸到grafana.com。",
+      "official_sources": [
+        "https://grafana.com/trademark-policy/",
+        "https://grafana.com/legal/terms/"
+      ],
+      "public_upload_ready": false,
+      "mobile_diagnostic": {
+        "body_client_width": 390,
+        "scroll_width": 1050,
+        "not_full_mobile_acceptance": true
+      }
+    },
+    {
+      "rank": 13,
+      "site_id": "prestashop",
+      "name": "PrestaShop",
+      "actual_scope": "PrestaShop 产品官网，非完整电商管理后台",
+      "browser_api_checks": 16,
+      "clean_archive_verified": true,
+      "package_sha256": "debaa93d22bfe80e3c4a6f18c3959a53adfd82ece3125ace5a3deb2189f6649f",
+      "package_bytes": 3828783,
+      "packaged_fonts": 1,
+      "packaged_images": 26,
+      "font_action": "Prestafont-Regular.woff2许可范围未确认；补该字体具体版本许可，或换原创SVG图标/系统字体。",
+      "image_action": "Version9Banner.png、backoffice.png、hummingbird*.png、orders.png等26图逐项核许可/替换；图中的第三方商标也需处理。",
+      "trademark_action": "logo.svg、PHP/Symfony/API Platform标志分开核对；建议首发用原创产品名称和标识。",
+      "other_release_blockers": "captured_pages.py等采集表达需确认来源许可；核心OSL和模块AFL不能直接覆盖产品官网。",
+      "official_sources": [],
+      "public_upload_ready": false,
+      "mobile_diagnostic": {
+        "body_client_width": 390,
+        "scroll_width": 390,
+        "not_full_mobile_acceptance": true
+      }
+    },
+    {
+      "rank": 14,
+      "site_id": "jitsi",
+      "name": "Jitsi",
+      "actual_scope": "Jitsi Meet 官网与限定本地会议流程，非完整实时通信服务",
+      "browser_api_checks": 17,
+      "clean_archive_verified": true,
+      "package_sha256": "79337faefa55e25ace7ca0683cce1599c88f607071f3cd1ab41428e075a3b4ab",
+      "package_bytes": 1592746,
+      "packaged_fonts": 13,
+      "packaged_images": 66,
+      "font_action": "13份字体含Roboto和Font Awesome 5 Brands/Free缓存副本；核确切版本的Apache/OFL及图标许可；不清楚的旧包换官方带许可版本。",
+      "image_action": "66图包含官网截图/照片与static/assets/logo.png；逐图核来源，宣传/人物图片默认原创替换，capture副本按引用排除。",
+      "trademark_action": "Jitsi、8x8等实际出现标识及FA Brands图标单列，品牌图标不能仅凭字体文件许可认定用途合规。",
+      "other_release_blockers": "jitsi-meet程序Apache许可不自动覆盖jitsi.org官网；清楚记录会议本地模拟边界。",
+      "official_sources": [
+        "https://github.com/jitsi/jitsi-meet/blob/master/LICENSE"
+      ],
+      "public_upload_ready": false,
+      "mobile_diagnostic": {
+        "body_client_width": 390,
+        "scroll_width": 390,
+        "not_full_mobile_acceptance": true
+      }
+    },
+    {
+      "rank": 15,
+      "site_id": "gitea",
+      "name": "Gitea",
+      "actual_scope": "about.gitea.com 官网，非完整代码托管服务",
+      "browser_api_checks": 15,
+      "clean_archive_verified": true,
+      "package_sha256": "1a0c05a33c9e5f43899921a981d40342c2f833bc36aa70e6a8bbbb0cb32ca559",
+      "package_bytes": 29624253,
+      "packaged_fonts": 7,
+      "packaged_images": 52,
+      "font_action": "Inter 5份、JetBrains Mono 2份：核版本、补OFL与版权；不清楚时换官方原包。",
+      "image_action": "52图含home-screenshot*.png、integration-logos.png、platform-logos.png、第三方客户标志；默认换原创截图，去掉客户背书区。",
+      "trademark_action": "gitea.svg、gitea-text.svg、Google/Mastercard/OpenStack等标志逐项处理；首发使用原创名称，引用来源写入NOTICE。",
+      "other_release_blockers": "本次核实官网条款2.1–2.3仅给访问使用许可并保留内容/商标权；旧go-gitea/website不能直接覆盖当前官网。无许可前原样包暂缓。",
+      "official_sources": [
+        "https://about.gitea.com/terms-of-service/"
+      ],
+      "public_upload_ready": false,
+      "mobile_diagnostic": {
+        "body_client_width": 390,
+        "scroll_width": 390,
+        "not_full_mobile_acceptance": true
+      }
+    },
+    {
+      "rank": 16,
+      "site_id": "ghost",
+      "name": "Ghost",
+      "actual_scope": "ghost.org 产品官网，非完整 CMS 编辑后台",
+      "browser_api_checks": 14,
+      "clean_archive_verified": true,
+      "package_sha256": "9fc26c260212ddd31586017119113ca95165dfeeb33bf71e378507088c5eff60",
+      "package_bytes": 28061898,
+      "packaged_fonts": 5,
+      "packaged_images": 122,
+      "font_action": "Inter Display/Variable共5份：核对应版本与OFL，保留版权和许可。",
+      "image_action": "122图含dashboard.webp、客户/刊物照片/标志和宣传图片；逐项授权或改原创，不能因软件MIT放行官网图片。",
+      "trademark_action": "Ghost字标、ghost图形、刊物/客户Logo分别列出；按官方商标规则保留或用原创替换。",
+      "other_release_blockers": "static/source.css与官网文章/营销文字需单独来源许可；不把CMS代码MIT套到全包。",
+      "official_sources": [
+        "https://ghost.org/terms/",
+        "https://ghost.org/trademark/"
+      ],
+      "public_upload_ready": false,
+      "mobile_diagnostic": {
+        "body_client_width": 390,
+        "scroll_width": 390,
+        "not_full_mobile_acceptance": true
+      }
+    },
+    {
+      "rank": 17,
+      "site_id": "penpot",
+      "name": "Penpot",
+      "actual_scope": "Penpot 官网和限定账户流程，非完整设计编辑器",
+      "browser_api_checks": 17,
+      "clean_archive_verified": true,
+      "package_sha256": "72eff76167e09ae41f18e599fa99a21da30f840a0362680eeca2331ee3ea29e5",
+      "package_bytes": 247190538,
+      "packaged_fonts": 6,
+      "packaged_images": 253,
+      "font_action": "Work Sans 5份、Inter 1份：核版本并补各自OFL/版权。",
+      "image_action": "253图含官网/博客/UI截图与客户素材；无依据的照片/截图换原创；3个旧扫描未哈希大文件明确排除本轮放行判断。",
+      "trademark_action": "Penpot/Kaleidos及博客、客户标识单列；MPL明确不授商标许可，不能统一随代码许可发出。",
+      "other_release_blockers": "官网/博客/账户流程和MPL程序分开。当前媒体未逐图权利判定，不能以6份字体可处理推断整个官网已可发。",
+      "official_sources": [
+        "https://penpot.app/terms",
+        "https://github.com/penpot/penpot/blob/develop/LICENSE"
+      ],
+      "public_upload_ready": false,
+      "mobile_diagnostic": {
+        "body_client_width": 390,
+        "scroll_width": 390,
+        "not_full_mobile_acceptance": true
+      }
+    },
+    {
+      "rank": 18,
+      "site_id": "figma",
+      "name": "Figma",
+      "actual_scope": "限定编辑器与评论任务，保留授权捕获范围",
+      "browser_api_checks": 18,
+      "clean_archive_verified": true,
+      "package_sha256": "f01eb1c91afe590f7ce7761b1591b600f0d33932e7d9a6c2e6feae206d62e4d3",
+      "package_bytes": 29547,
+      "packaged_fonts": 0,
+      "packaged_images": 0,
+      "font_action": "未发现独立字体文件；系统/CSS/内联字体仍需查。",
+      "image_action": "未发现独立图片文件；检查模板和app.py内联图标、示例设计及用户内容，不能按0张图片直接放行。",
+      "trademark_action": "内联Figma标志/名称核定用途；独立无品牌版本仍需复核代码来源、条款和最终包。",
+      "other_release_blockers": "已有浏览/采集授权范围不证明允许公开复刻；核官方条款2.2和具体授权，未解决不进入发布。",
+      "official_sources": [
+        "https://www.figma.com/legal/tos/"
+      ],
+      "public_upload_ready": false,
+      "mobile_diagnostic": {
+        "body_client_width": 390,
+        "scroll_width": 390,
+        "not_full_mobile_acceptance": true
+      }
+    },
+    {
+      "rank": 19,
+      "site_id": "linear",
+      "name": "Linear",
+      "actual_scope": "限定问题管理任务，源应用证据范围有限",
+      "browser_api_checks": 18,
+      "clean_archive_verified": true,
+      "package_sha256": "ee739353f1b1dda12e9d9a36bb7e66aff54b992bf0976b562b1881ae505f5818",
+      "package_bytes": 38728,
+      "packaged_fonts": 0,
+      "packaged_images": 0,
+      "font_action": "未发现独立字体文件；仍查内嵌/远程引用。",
+      "image_action": "未发现独立图片文件；核内联图标、模板及虚构项目/用户内容。",
+      "trademark_action": "Linear图形/字标及仿官方登录需核定，首发用原创问题管理环境标识；改名本身不是放行依据。",
+      "other_release_blockers": "条款2.2及来源授权前置核定，种子中的非保留样式标识须确认为虚构。",
+      "official_sources": [
+        "https://linear.app/terms"
+      ],
+      "public_upload_ready": false,
+      "mobile_diagnostic": {
+        "body_client_width": 390,
+        "scroll_width": 390,
+        "not_full_mobile_acceptance": true
+      }
+    },
+    {
+      "rank": 20,
+      "site_id": "wps",
+      "name": "WPS",
+      "actual_scope": "原合同范围通过；全站覆盖和应用完整性未在本次逐项重审",
+      "browser_api_checks": 20,
+      "clean_archive_verified": true,
+      "package_sha256": "74718768e1af326546d36d2ef9907f9fc388bcef72325cdf493c214ce797c39e",
+      "package_bytes": 1396288,
+      "packaged_fonts": 0,
+      "packaged_images": 3,
+      "font_action": "未发现独立字体文件；仍核源CSS的内嵌或远程字体。",
+      "image_action": "logo-kingsoft-office.svg、logo-wps-office.svg、office_wps_newly.png三项：补适用许可或全部改原创；宣传图不能随自写Flask统一许可。",
+      "trademark_action": "WPS/金山字标、页面内品牌和模仿官方登录核定，首发默认原创研究办公环境标识。",
+      "other_release_blockers": "官网文字/采集表达、代码来源与服务条款需核定；仍是待授权备选，不能称现包已可公开，也不宣称完整办公套件。",
+      "official_sources": [
+        "https://privacy.wps.cn/policies/agreements/wps-online-service"
+      ],
+      "public_upload_ready": false,
+      "mobile_diagnostic": {
+        "body_client_width": 390,
+        "scroll_width": 456,
+        "not_full_mobile_acceptance": true
+      }
+    }
+  ]
+}
